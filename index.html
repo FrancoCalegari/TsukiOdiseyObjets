@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Objetos</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/css/img/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div>
+            <p class="logo">TO Objets</p>
+        </div>
+        <div >
+            <ul class="header-div">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Objetos</a></li>
+                <li><a href="#">Telegram</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="presentation">
+        <div>
+            <p>Bienvenido a nuestro inventario de objetos donde podes fijarte el objeto que estas buscando y ver a que precio esta en el juego.</p>
+        </div>
+        <div>
+            <img src="./assets/css/img/#" alt="">
+        </div>        
+    </section>
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar objetos...">
+        <select id="filterSelect">
+            <option value="">Seleccionar filtro</option>
+            <option value="común">Común</option>
+            <option value="raro">Raro</option>
+            <option value="épico">Épico</option>
+            <option value="electrónica">Electrónica</option>
+            <option value="hogar">Hogar</option>
+            <option value="deporte">Deporte</option>
+        </select>
+        <button id="filterButton">Filtrar</button>
+    </section>
+    <section id="itemListContainer">
+        <!-- Las secciones de categorías y los objetos se insertarán aquí dinámicamente -->
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

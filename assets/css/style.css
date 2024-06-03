@@ -1,0 +1,176 @@
+:root {
+    --defaultCard: #F1EBD5;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #A3C0AA;
+}
+
+header {
+    background-color: #4B4B4B;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header div p {
+    background-color: #A1A1A1;
+    padding: 8px;
+    border-radius: 9px;
+    color: black;
+    font-size: 25px;
+}
+
+.header-div {
+    display: flex;
+    list-style: none;
+    
+
+}
+
+.header-div li {
+    background-color: #A1A1A1;
+    margin-left: 2rem;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.presentation {
+    padding: 1em;
+    text-align: center;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 1em 0;
+}
+
+#searchInput, #filterSelect {
+    padding: 0.5em;
+    font-size: 1em;
+    margin: 0.5em;
+}
+
+#filterButton {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#filterButton:hover {
+    background-color: #45a049;
+}
+
+.category-section {
+    margin: 2em 0;
+}
+
+.categoria-titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.category-section h2 {
+    text-align: center;
+    border: dotted 7px #A1A1A1;
+    background-color: #4B4B4B;
+    padding: 1em;
+    margin: 0;
+    color: #A1A1A1;
+    font-size: 2.5rem;
+    border-radius: 15px;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.item {
+    display: flex;
+    border: 5px dotted #DDD7BD;
+    border-radius: 15px;
+    width: 30rem;
+    margin: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: var(--defaultCard);
+
+}
+
+.item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.item img {
+    width: 10rem; /* Ajustar según sea necesario */
+    height: fit-content;
+    border-right: 1px solid #ddd;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: #DDD7BD;
+    border-radius: 50%;
+    
+}
+
+.item-details {
+    flex-grow: 1;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DDD7BD;
+    margin: .5rem;
+    border-radius: 15px;
+}
+
+.item-name {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.item-price {
+    color: #4CAF50;
+    font-size: 1.1em;
+    margin: 0.5em 0;
+}
+
+.item-category, .item-rarity {
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+
+.item-category {
+    color: #007BFF; /* Color para la categoría */
+}
+
+.item-rarity {
+    color: #FF5733; /* Color para la rareza */
+}
+
+
+.more-info {
+    display: none;
+    padding: 0.8rem;
+    background-color: #c5bfa6;
+    border-top: 1px solid #ddd;
+    margin-top: 0.5em;
+    border-radius: 9px;
+}
+
+.item.active .more-info {
+    display: block;
+}
