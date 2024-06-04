@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${item.image}" alt="${item.name}">
                     <div class="item-details">
                         <div class="item-name">${item.name}</div>
-                        <div class="item-price">${item.price}</div>
+                        <div class="item-price"><img src="https://cdn-icons-png.flaticon.com/512/2556/2556893.png" style="width: 20px; height: fit-content; border-radius: 1px; padding: 0; margin: 0; background-color: transparent; border-radius: 0;">${item.price}</div>
                         <div class="item-category">Categoría: ${item.category}</div>
                         <div class="item-rarity">Rareza: ${item.rarity}</div>
                         <div class="more-info">${item.description}</div>

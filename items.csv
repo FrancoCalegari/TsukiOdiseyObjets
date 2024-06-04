@@ -1,21 +1,4 @@
 id,name,price,image,description,category,rarity
-1,Estante de plantas,$1500,../assets/img/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
-2,Objeto 2,$20,https://via.placeholder.com/300,Descripción detallada del objeto 2.,Muebles,Raro
-3,Objeto 3,$30,https://via.placeholder.com/300,Descripción detallada del objeto 3.,Muebles,Épico
-4,Objeto 4,$40,https://via.placeholder.com/300,Descripción detallada del objeto 4.,Muebles,Legendario
-5,Objeto 5,$50,https://via.placeholder.com/300,Descripción detallada del objeto 5.,Muebles,Común
-6,Objeto 6,$60,https://via.placeholder.com/300,Descripción detallada del objeto 6.,Muebles,Raro
-7,Objeto 7,$70,https://via.placeholder.com/300,Descripción detallada del objeto 7.,Muebles,Épico
-8,Objeto 8,$80,https://via.placeholder.com/300,Descripción detallada del objeto 8.,Muebles,Legendario
-9,Objeto 9,$90,https://via.placeholder.com/300,Descripción detallada del objeto 9.,Muebles,Común
-10,Objeto 10,$100,https://via.placeholder.com/300,Descripción detallada del objeto 10.,Muebles,Raro
-11,Objeto 11,$110,https://via.placeholder.com/300,Descripción detallada del objeto 11.,Muebles,Épico
-12,Objeto 12,$120,https://via.placeholder.com/300,Descripción detallada del objeto 12.,Muebles,Legendario
-13,Objeto 13,$130,https://via.placeholder.com/300,Descripción detallada del objeto 13.,Muebles,Común
-14,Objeto 14,$140,https://via.placeholder.com/300,Descripción detallada del objeto 14.,Muebles,Raro
-15,Objeto 15,$150,https://via.placeholder.com/300,Descripción detallada del objeto 15.,Muebles,Épico
-16,Objeto 16,$160,https://via.placeholder.com/300,Descripción detallada del objeto 16.,Muebles,Legendario
-17,Objeto 17,$170,https://via.placeholder.com/300,Descripción detallada del objeto 17.,Muebles,Común
-18,Objeto 18,$180,https://via.placeholder.com/300,Descripción detallada del objeto 18.,Muebles,Raro
-19,Objeto 19,$190,https://via.placeholder.com/300,Descripción detallada del objeto 19.,Muebles,Épico
-20,Objeto 20,$200,https://via.placeholder.com/300,Descripción detallada del objeto 20.,Muebles,Legendario
+1,Estante de plantas,1500,../assets/img/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
+2,Antique Cabinet,2600,../assets/img/item2.webp,"El cuerpo inerte de la rata cae al costado de su gabinete soltando las preciosas cerámicas. Caen al suelo rompiéndose en pedazos y alertando a todos los guardias de la propiedad" - Kobayashi,Muebles,Epico
+3,Bark Bookshelf,1250,../assets/img/item3.png,The books are free of charge.,Muebles,Común
