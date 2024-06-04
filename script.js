@@ -26,20 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderItemsByCategory(itemsToRender) {
         const categories = [...new Set(itemsToRender.map(item => item.category))];
         itemListContainer.innerHTML = '';
-
+    
         categories.forEach(category => {
             const section = document.createElement('section');
             section.classList.add('category-section');
             section.innerHTML = `<div class="categoria-titulo"><h2>${category}</h2></div>`;
             const itemList = document.createElement('div');
             itemList.classList.add('item-list');
-
+    
             const itemsInCategory = itemsToRender.filter(item => item.category === category);
             itemsInCategory.forEach(item => {
                 const itemElement = document.createElement('div');
-                itemElement.classList.add('item');
+                itemElement.classList.add('item', 'fade-in');
                 itemElement.innerHTML = `
-                
                     <img src="${item.image}" alt="${item.name}">
                     <div class="item-details">
                         <div class="item-name">${item.name}</div>
@@ -48,18 +47,34 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="item-rarity">Rareza: ${item.rarity}</div>
                         <div class="more-info">${item.description}</div>
                     </div>
-                
                 `;
+    
+                // Agregar clase de rareza para asignar el color de fondo
+                switch (item.rarity.toLowerCase()) {
+                    case 'común':
+                        itemElement.classList.add('common');
+                        break;
+                    case 'raro':
+                        itemElement.classList.add('rare');
+                        break;
+                    case 'legendario':
+                        itemElement.classList.add('legendary');
+                        break;
+                    default:
+                        break;
+                }
+    
                 itemElement.addEventListener('click', () => {
                     itemElement.classList.toggle('active');
                 });
                 itemList.appendChild(itemElement);
             });
-
+    
             section.appendChild(itemList);
             itemListContainer.appendChild(section);
         });
     }
+    
 
     function fetchItems() {
         fetch('items.csv')
