@@ -1,3 +1,9 @@
+@font-face {
+    font-family: CoffeFont;
+    src: url(/./assets/fonts/Coffee\ Fills.ttf);
+  }
+
+
 :root {
     --defaultCard: #F1EBD5;
 }
@@ -40,10 +46,38 @@ header div p {
     border-radius: 8px;
 }
 
+.Backgoundz {
+    background-color: #1a18188e;
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    
+}
+
 .presentation {
     padding: 1rem;
+    display: flex;
     text-align: center;
     height: 60vh;
+    justify-content: center;
+    align-items: center;
+    font-family: CoffeFont;
+    background-image: url(/assets/img/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFECCF;
+}
+
+.presentation img{
+    filter: drop-shadow( 1px 1px 120px #e3797767);
+}
+
+.presentation h2 {
+    font-size: 2rem;
+}
+
+.presentation p {
+    font-size: 1.5rem;
 }
 
 .search-bar {
