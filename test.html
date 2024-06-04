@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo dinámico SVG</title>
+    <style>
+
+#fondo {
+  position: absolute;
+  overflow: hidden;
+}
+#fondo img {
+    position: absolute;
+    width: 30px;
+    animation: moverDiagonal 20s alternate infinite;
+}
+
+@keyframes moverDiagonal {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  100% {
+    transform: translateX(90px) translateY(90px); /* Ajustar la distancia según la diagonal deseada */
+  }
+}
+
+    </style>
+</head>
+<body id="fondo">
+    <div ></div>
+
+    <script>
+        const fondo = document.getElementById('fondo');
+
+function generarFondo() {
+    // Crear un fragmento de documento para optimizar el rendimiento
+    const fragmento = document.createDocumentFragment();
+
+    // Calcular cuántas filas y columnas de SVG se necesitan para cubrir la pantalla
+    const anchoPantalla = window.innerWidth;
+    const altoPantalla = window.innerHeight;
+    const anchoSVG = 20 + 60; // Ancho del SVG con margen
+    const altoSVG = 20 + 60; // Alto del SVG con margen
+    const filas = Math.ceil(altoPantalla / altoSVG);
+    const columnas = Math.ceil(anchoPantalla / anchoSVG);
+
+    // Crear y agregar los elementos SVG al fragmento
+    for (let i = -10; i < filas; i++) {
+        for (let j = -10; j < columnas; j++) {
+            const svg = document.createElement('img');
+            svg.src = 'https://cdn-icons-png.flaticon.com/512/2556/2556893.png';
+            svg.style.position = 'absolute';
+            svg.style.left = `${j * anchoSVG}px`;
+            svg.style.top = `${i * altoSVG}px`;
+            fragmento.appendChild(svg);
+        }
+    }
+
+    // Agregar el fragmento al elemento `fondo`
+    fondo.appendChild(fragmento);
+}
+
+// Generar el fondo al cargar la página
+generarFondo();
+
+// Generar el fondo nuevamente cuando cambie el tamaño de la ventana
+window.addEventListener('resize', generarFondo);
+    </script>
+</body>
+</html>
