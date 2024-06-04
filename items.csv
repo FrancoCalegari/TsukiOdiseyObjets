@@ -1,5 +1,5 @@
 id,name,price,image,description,category,rarity
-1,Estante de plantas,$1500,../assets/css/img/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
+1,Estante de plantas,$1500,../assets/img/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
 2,Objeto 2,$20,https://via.placeholder.com/300,Descripción detallada del objeto 2.,Muebles,Raro
 3,Objeto 3,$30,https://via.placeholder.com/300,Descripción detallada del objeto 3.,Muebles,Épico
 4,Objeto 4,$40,https://via.placeholder.com/300,Descripción detallada del objeto 4.,Muebles,Legendario
