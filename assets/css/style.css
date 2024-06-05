@@ -167,16 +167,28 @@ header div p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: dashed #A1A1A1 .5rem;
+    border: solid #A1A1A1 3px;
     border-radius: 19px 19px;
     background-color: #A3C0AA;
     margin: 15px;
+    position: relative;
+    padding: 1rem;
      
+}
+
+.item-list::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 3px dashed #A1A1A1;
+    border-radius: 14px;
+    pointer-events: none;
+
 }
 
 .item {
     display: flex;
-    border: 5px dotted #DDD7BD;
+    border: 3px solid #DDD7BD;
     border-radius: 15px;
     width: 25rem;
     margin: 1em;
@@ -184,8 +196,19 @@ header div p {
     transition: box-shadow 0.3s ease;
     background-color: var(--defaultCard);
     box-shadow: #4B4B4B 2px 2px 10px;
-     
+    position: relative;
     cursor: pointer;
+    padding: 0.5rem;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 3px dashed #DDD7BD;
+    border-radius: 14px;
+    pointer-events: none;
+
 }
 
 .item:hover {
@@ -293,4 +316,72 @@ header div p {
 
 .legendary {
     background-color: #f8d7da;
+}
+
+#custom-map {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#map-image {
+    width: 100%;
+    display: block;
+}
+
+.pin {
+    position: absolute;
+    width: auto; /* Ajusta el tamaño de los pines según sea necesario */
+    height: 5rem;
+    cursor: pointer;
+    transition: all 700ms;
+    background-color: #f1f1f162;
+    backdrop-filter: blur(3px);
+    border-radius: 50%;
+}
+
+.pin:hover {
+    transform: scale(1.2);
+    transition: all 700ms;
+}
+
+#pin-info-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.719);
+    backdrop-filter: blur(3px);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+#pin-info-box h2 {
+    margin-top: 0;
+}
+
+#pin-info-box .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 900;
 }

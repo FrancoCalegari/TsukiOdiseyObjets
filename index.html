@@ -30,26 +30,46 @@
                 </p>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
     </section>
+
+    <section id="custom-map">
+        <img src="./assets/img/Map.webp" alt="Mapa Personalizado" id="map-image">
+        <img src="./assets/img/RosemarysPlantShop.png" class="pin" data-title="Rosemary's Plant Shop" 
+             data-description="Una pequeña florería al norte de Mushroom Village, administrada por Rosemary." 
+             data-common-fish="Trucha, Carpa" 
+             data-legendary-fish="Salmon Dorado" 
+             style="top: 22.8%; left: 56.9%;">
+        <img src="./assets/img/DawnsWorkshop.png" class="pin" data-title="Dawn's Workshop" 
+             data-description="El Taller de Dawn se puede ubicar en el extremo izquierdo del mapa en el nivel inferior." 
+             data-common-fish="Bagre, Perca" 
+             data-legendary-fish="Siluro Gigante" 
+             style="top: 48.4%; left: 17%;">
+        <img src="./assets/img/MermaidCoast.png" class="pin" data-title="Mermaid Coast" 
+             data-description="Mermaid Coast se encuentra en el extremo sur de Mushroom Village, donde puedes encontrar un faro con un muelle." 
+             data-common-fish="Caballa, Sardina" 
+             data-legendary-fish="Pez Espada" 
+             style="top: 61.6%; left: 56%;">
+    </section>
+    <div id="overlay"></div>
+    <div id="pin-info-box">
+        <button class="close-btn">&times;</button>
+        <h2 id="pin-title"></h2>
+        <p id="pin-description"></p>
+        <h3>Peces Comunes</h3>
+        <ul id="common-fish-list"></ul>
+        <h3>Peces Legendarios</h3>
+        <ul id="legendary-fish-list"></ul>
+    </div>
     <section class="search-bar">
         <input type="text" id="searchInput" placeholder="Buscar objetos...">
         <select id="filterSelect">
-            <option value="">Seleccionar filtro</option>
+            <option value="">Todos</option>
             <option value="común">Común</option>
             <option value="raro">Raro</option>
             <option value="épico">Épico</option>
-            <option value="electrónica">Electrónica</option>
-            <option value="hogar">Hogar</option>
-            <option value="deporte">Deporte</option>
+            <option value="Muebles">Mueble</option>
+            <option value="Objetos">Objetos</option>
+            <option value="Plantas">Plantas</option>
         </select>
         <button id="filterButton">Filtrar</button>
     </section>

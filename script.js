@@ -100,3 +100,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchItems();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const pins = document.querySelectorAll('.pin');
+    const infoBox = document.getElementById('pin-info-box');
+    const overlay = document.getElementById('overlay');
+    const pinTitle = document.getElementById('pin-title');
+    const pinDescription = document.getElementById('pin-description');
+    const commonFishList = document.getElementById('common-fish-list');
+    const legendaryFishList = document.getElementById('legendary-fish-list');
+    const closeBtn = document.querySelector('.close-btn');
+
+    pins.forEach(pin => {
+        pin.addEventListener('click', () => {
+            const title = pin.getAttribute('data-title');
+            const description = pin.getAttribute('data-description');
+            const commonFish = pin.getAttribute('data-common-fish').split(', ');
+            const legendaryFish = pin.getAttribute('data-legendary-fish').split(', ');
+
+            pinTitle.textContent = title;
+            pinDescription.textContent = description;
+
+            commonFishList.innerHTML = '';
+            legendaryFishList.innerHTML = '';
+
+            commonFish.forEach(fish => {
+                const li = document.createElement('li');
+                li.textContent = fish;
+                commonFishList.appendChild(li);
+            });
+
+            legendaryFish.forEach(fish => {
+                const li = document.createElement('li');
+                li.textContent = fish;
+                legendaryFishList.appendChild(li);
+            });
+
+            infoBox.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        infoBox.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        infoBox.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+});
