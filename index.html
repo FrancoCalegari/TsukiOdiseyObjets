@@ -36,18 +36,18 @@
         <img src="./assets/img/Map.webp" alt="Mapa Personalizado" id="map-image">
         <img src="./assets/img/RosemarysPlantShop.png" class="pin" data-title="Rosemary's Plant Shop" 
              data-description="Una pequeña florería al norte de Mushroom Village, administrada por Rosemary." 
-             data-common-fish="Trucha, Carpa" 
-             data-legendary-fish="Salmon Dorado" 
+             data-common-fish="Betta, Crayfish, Danio, Flying Fox, Goldfish, Guppy, Hermitcrab, Molly, Mosquitofish Mud Crab, Neon Tetra Pond Snail, Pumpkin Seed, Scup Tench" 
+             data-legendary-fish="Arrowana, Butterflyfish, Sawfish, Sturgeon, Tiger Fish" 
              style="top: 22.8%; left: 56.9%;">
         <img src="./assets/img/DawnsWorkshop.png" class="pin" data-title="Dawn's Workshop" 
              data-description="El Taller de Dawn se puede ubicar en el extremo izquierdo del mapa en el nivel inferior." 
-             data-common-fish="Bagre, Perca" 
-             data-legendary-fish="Siluro Gigante" 
+             data-common-fish="Angel fish, Archer Fish, Bluegill, Caracha, Carp, Crappie, Grasscarp, Largemouth Bass, Loach, Milkfish, Minnow, Porgy, Rosette, Trout" 
+             data-legendary-fish="Bull Shark, Giant Catfish, Giant Stingray, Snake Head, Tiger Fish" 
              style="top: 48.4%; left: 17%;">
         <img src="./assets/img/MermaidCoast.png" class="pin" data-title="Mermaid Coast" 
              data-description="Mermaid Coast se encuentra en el extremo sur de Mushroom Village, donde puedes encontrar un faro con un muelle." 
-             data-common-fish="Caballa, Sardina" 
-             data-legendary-fish="Pez Espada" 
+             data-common-fish="Anchovy, Black Seabass, Bluecrab, Bumper, Cod, Coral Shrimp, Damsel, Flounder, Flying Fish, Herring, Mackerel, Moon Wrasse, Seahorse, Squid" 
+             data-legendary-fish="Arapaima, Goliath Grouper, Hammerhead Shark, Marlin, Sand Shark, The Dragon King" 
              style="top: 61.6%; left: 56%;">
     </section>
     <div id="overlay"></div>
@@ -55,10 +55,17 @@
         <button class="close-btn">&times;</button>
         <h2 id="pin-title"></h2>
         <p id="pin-description"></p>
-        <h3>Peces Comunes</h3>
-        <ul id="common-fish-list"></ul>
-        <h3>Peces Legendarios</h3>
-        <ul id="legendary-fish-list"></ul>
+        <div class="pin-div">
+            <div>           
+                <h3>Peces Comunes</h3>
+                <ul id="common-fish-list"></ul>
+            </div>
+            <div>
+                <h3>Peces Legendarios</h3>
+                <ul id="legendary-fish-list"></ul>
+            </div>
+        </div>
+        
     </div>
     <section class="search-bar">
         <input type="text" id="searchInput" placeholder="Buscar objetos...">
