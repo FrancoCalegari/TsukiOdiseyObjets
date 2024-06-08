@@ -11,11 +11,30 @@ const fishData = [
     { type: 'Pez Perro', place: 'Mermaid Coast/Muelle', startHour: 7, endHour: 14 },
     { type: 'Pez Murciélago Oscuro', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 18, endHour: 23 },
     { type: 'Electric Eel', place: 'Dawns Workshop', startHour: 10, endHour: 23 },
+    { type: 'Pez Elefante', place: 'Rosemarys Plant Shop', startHour: 6, endHour: 14 },
+    { type: 'Cangrejo Buscador', place: 'Rosemarys Plant Shop', startHour: 4, endHour: 9 },
+    { type: 'Cuerno de flor', place: 'Rosemarys Plant Shop', startHour: 7, endHour: 16 },
+    { type: 'Gar', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 1, endHour: 7 },
+    { type: 'Almeja gigante', place: 'Dawns Workshop', startHour: 2, endHour: 6 },
+    { type: 'Pez Dorado', place: 'Dawns Workshop', startHour: 18, endHour: 23 },
+    { type: 'Gourami', place: 'Rosemarys Plant Shop', startHour: 19, endHour: 23 },
+    { type: 'Cangrejo de Herradura', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 18 },
+    { type: 'Kouhaku Koi', place: 'Rosemarys Plant Shop', startHour: 10, endHour: 20 },
+    { type: 'Labeo', place: 'Rosemarys Plant Shop', startHour: 5, endHour: 9 },
+    { type: 'Lamprea', place: 'Mermaid Coast/Muelle', startHour: 5, endHour: 17 },
+    { type: 'Pez León', place: 'Mermaid Coast/Muelle', startHour: 10, endHour: 19 },
+    { type: 'Pez dorado cabeza de león', place: 'Rosemarys Plant Shop', startHour: 7, endHour: 10 },
+    { type: 'Pez Pulmonado', place: 'Dawns Workshop', startHour: 10, endHour: 14 },
+    { type: 'Mahi-Mahi', place: 'Dawns Workshop', startHour: 7, endHour: 11 },
+    { type: 'Man o war', place: 'Dawns Workshop', startHour: 0, endHour: 23 },
+    { type: 'Pez Gelatina De Luna', place: 'Mermaid Coast/Muelle', startHour: 2, endHour: 7 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
-    
-    
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
     
     
     // Agrega más pescados según sea necesario
