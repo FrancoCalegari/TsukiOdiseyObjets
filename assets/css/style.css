@@ -8,6 +8,10 @@
     --defaultCard: #F1EBD5;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -367,24 +371,7 @@ header div p {
     backdrop-filter: blur(1px);
 }
 
-#pin-info-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    max-width: 50rem;
-    transform: translate(-50%, -50%);
-    background-color: #1a18188e;
-    backdrop-filter: blur(3px);
-    color: #FEE6CA;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 1000;
-    border: 6px double #FEE6CA;
-    font-family: CoffeFont;
-    overflow-y: auto;
-}
+
 
 #pin-info-box h2 {
     margin-top: 0;
@@ -393,16 +380,7 @@ header div p {
     
 }
 
-#pin-info-box .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #FEE6CA;
-}
+
 
 #pin-description{
     font-size: 1.4rem;
@@ -437,17 +415,50 @@ header div p {
     font-size: 1.3rem;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+#pin-info-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 50rem;
+    transform: translate(-50%, -50%);
+    background-color: #1a18188e;
+    backdrop-filter: blur(3px);
+    color: #FEE6CA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1001;
+    border: 6px double #FEE6CA;
+    font-family: CoffeFont;
+    overflow-y: 200px;
+}
+
+#pin-info-box .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #FEE6CA;
+}
+
 #overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 900;
+    z-index: 1000;
 }
-
 
 /*pescados linea de tiempo*/
 
@@ -706,6 +717,32 @@ footer a:visited{
         position: relative;
         cursor: pointer;
         padding: 0.5rem;
+    }
+
+    #pin-info-box h2 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 2rem;
+        
+    }
+
+    #pin-description{
+        font-size: 1rem;
+        text-align: center;
+        background-color: #1a18189a;
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid #FEE6CA;
+        filter: drop-shadow( 1px 1px 120px #fee6ca9f);
+    }
+
+    .pin-div div h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .pin-div div li {
+        font-size: 1rem;
     }
     
 }

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Variables y funciones para el manejo de los artículos
     const itemListContainer = document.getElementById('itemListContainer');
     const searchInput = document.getElementById('searchInput');
     const filterSelect = document.getElementById('filterSelect');
@@ -74,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
             itemListContainer.appendChild(section);
         });
     }
-    
 
     function fetchItems() {
         fetch('items.csv')
@@ -99,12 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     fetchItems();
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Variables y funciones para el manejo del mapa
     const pins = document.querySelectorAll('.pin');
-    const infoBox = document.getElementById('pin-info-box');
     const overlay = document.getElementById('overlay');
+    const pinInfoBox = document.getElementById('pin-info-box');
     const pinTitle = document.getElementById('pin-title');
     const pinDescription = document.getElementById('pin-description');
     const commonFishList = document.getElementById('common-fish-list');
@@ -136,18 +135,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 legendaryFishList.appendChild(li);
             });
 
-            infoBox.style.display = 'block';
             overlay.style.display = 'block';
+            pinInfoBox.style.display = 'block';
+            document.body.classList.add('no-scroll');
         });
     });
 
     closeBtn.addEventListener('click', () => {
-        infoBox.style.display = 'none';
         overlay.style.display = 'none';
+        pinInfoBox.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     });
 
     overlay.addEventListener('click', () => {
-        infoBox.style.display = 'none';
         overlay.style.display = 'none';
+        pinInfoBox.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     });
 });
