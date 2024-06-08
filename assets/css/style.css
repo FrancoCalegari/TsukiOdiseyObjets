@@ -371,7 +371,7 @@ header div p {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 60vw;
+    max-width: 50rem;
     transform: translate(-50%, -50%);
     background-color: #1a18188e;
     backdrop-filter: blur(3px);
