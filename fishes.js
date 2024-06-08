@@ -28,13 +28,21 @@ const fishData = [
     { type: 'Mahi-Mahi', place: 'Dawns Workshop', startHour: 7, endHour: 11 },
     { type: 'Man o war', place: 'Dawns Workshop', startHour: 0, endHour: 23 },
     { type: 'Pez Gelatina De Luna', place: 'Mermaid Coast/Muelle', startHour: 2, endHour: 7 },
+    { type: 'Morenas', place: 'Mermaid Coast/Muelle/Dawns Workshop', startHour: 1, endHour: 5 },
+    { type: 'Saltador de Barro', place: 'Dawns Workshop', startHour: 17, endHour: 22 },
+    { type: 'pez remo', place: 'Rosemarys Plant Shop', startHour: 6, endHour: 13 },
+    { type: 'Oscar', place: 'Rosemarys Plant Shop', startHour: 6, endHour: 14 },
+    { type: 'Pacu', place: 'Rosemarys Plant Shop', startHour: 9, endHour: 11 },
+    { type: 'Pez Loro', place: 'Mermaid Coast/Muelle', startHour: 6, endHour: 11 },
+    { type: 'Pelicano', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 3 },
+    { type: 'Perca', place: 'Rosemarys Plant Shop/Dawns Workshop', startHour: 1, endHour: 8 },
+    { type: 'Pez Lucio', place: 'Todos lo lugares/All locations', startHour: 8, endHour: 11 },
+    { type: 'Piraña', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 16, endHour: 20 },
+    { type: 'Pleco', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 1, endHour: 13 },
+    { type: 'Abadejo', place: 'Mermaid Coast/Muelle', startHour: 17, endHour: 23 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
-    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
-    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
-    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
-    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
-    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+
     
     
     // Agrega más pescados según sea necesario

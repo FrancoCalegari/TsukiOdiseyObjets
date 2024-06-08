@@ -8,6 +8,11 @@
     --defaultCard: #F1EBD5;
 }
 
+
+html{
+    scroll-behavior: smooth;
+}
+
 body.no-scroll {
     overflow: hidden;
 }
