@@ -32,6 +32,24 @@
         </div>
     </section>
 
+    <section class="timelinefishes">
+
+        <div class="time-container">
+            <h1>Línea de Tiempo de Pesca</h1>
+            <div id="timeline"></div>
+            <button id="show-all-schedules">Todos Los Horarios</button>
+        </div>
+
+    </section>
+
+        <!-- Menú emergente -->
+        <div id="schedule-popup" class="popup">
+            <div class="popup-content">
+                <span id="close-popup" class="close">&times;</span>
+                <div id="fish-schedules"></div>
+            </div>
+        </div>
+    
     <section id="custom-map">
         <img src="./assets/img/Map.webp" alt="Mapa Personalizado" id="map-image">
         <img src="./assets/img/RosemarysPlantShop.png" class="pin" data-title="Rosemary's Plant Shop" 
@@ -84,5 +102,6 @@
         <!-- Las secciones de categorías y los objetos se insertarán aquí dinámicamente -->
     </section>
     <script src="script.js"></script>
+    <script src="./fishes.js"></script>
 </body>
 </html>
