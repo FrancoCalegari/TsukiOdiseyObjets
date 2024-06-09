@@ -348,14 +348,15 @@ header div p {
 }
 
 #map-image {
-    width: 100%;
+    width: 90%;
     display: block;
+    margin: auto;
 }
 
 .pin {
     position: absolute;
     width: auto; /* Ajusta el tamaño de los pines según sea necesario */
-    height: 5rem;
+    height: 4.5rem;
     cursor: pointer;
     transition: all 700ms;
     border-radius: 25%;
