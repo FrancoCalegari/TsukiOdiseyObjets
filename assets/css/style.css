@@ -758,14 +758,20 @@ footer a:visited{
 
 
 .code-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
     background-color: #1a18188e;
     backdrop-filter: blur(3px);
     border-radius: 15px;
-    width: 85%;
+    width: 100%;
     font-family: CoffeFont;
+}
+
+.code-container p {
+    color: #DDD7BD;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .code-section {
@@ -782,8 +788,8 @@ footer a:visited{
 }
 
 .code-card {
-    width: 100%;
-    max-width: 10rem;
+    width: fit-content;
+    max-width: 15rem;
     background-color: #1a18188e;
     border: 1px solid #ddd;
     margin-bottom: 10px;
@@ -824,9 +830,10 @@ footer a:visited{
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #1a18189e;
+    color: #DDD7BD;
     border-radius: 5px;
+    border: solid 3px #DDD7BD;
 }
 
 .code-show {
