@@ -40,6 +40,13 @@ const fishData = [
     { type: 'Piraña', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 16, endHour: 20 },
     { type: 'Pleco', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 1, endHour: 13 },
     { type: 'Abadejo', place: 'Mermaid Coast/Muelle', startHour: 17, endHour: 23 },
+    { type: 'Pez Globo', place: 'Mermaid Coast/Muelle', startHour: 17, endHour: 23 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
 
