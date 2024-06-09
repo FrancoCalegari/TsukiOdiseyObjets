@@ -47,7 +47,14 @@ const fishData = [
     { type: 'Salmon', place: 'Dawns Workshop', startHour: 5, endHour: 11 },
     { type: 'Shiro-Utsuri Koi', place: 'Rosemarys Plant Shop', startHour: 5, endHour: 10 },
     { type: 'Showa Koi', place: 'Rosemarys Plant Shop', startHour: 16, endHour: 22 },
-    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'Anchoa', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 23 },
+    { type: 'Mixtape Costero', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 23 },
+    { type: 'Lubina Negra', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 23 },
+    { type: 'Cazon', place: 'Mermaid Coast/Muelle', startHour: 8, endHour: 12 },
+    { type: 'Meduza Luna', place: 'Mermaid Coast/Muelle', startHour: 15, endHour: 17 },
+    { type: 'Espinozo', place: 'Mermaid Coast/Muelle', startHour: 9, endHour: 9 },
+    { type: 'Rayo manchado', place: 'Mermaid Coast/Muelle', startHour: 13, endHour: 17 },
+    { type: 'Pez Sapo', place: 'Mermaid Coast/Muelle', startHour: 15, endHour: 17 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
 
     
