@@ -30,7 +30,7 @@ const fishData = [
     { type: 'Pez Gelatina De Luna', place: 'Mermaid Coast/Muelle', startHour: 2, endHour: 7 },
     { type: 'Morenas', place: 'Mermaid Coast/Muelle/Dawns Workshop', startHour: 1, endHour: 5 },
     { type: 'Saltador de Barro', place: 'Dawns Workshop', startHour: 17, endHour: 22 },
-    { type: 'pez remo', place: 'Rosemarys Plant Shop', startHour: 6, endHour: 13 },
+    { type: 'Pez remo', place: 'Rosemarys Plant Shop', startHour: 6, endHour: 13 },
     { type: 'Oscar', place: 'Rosemarys Plant Shop', startHour: 6, endHour: 14 },
     { type: 'Pacu', place: 'Rosemarys Plant Shop', startHour: 9, endHour: 11 },
     { type: 'Pez Loro', place: 'Mermaid Coast/Muelle', startHour: 6, endHour: 11 },
