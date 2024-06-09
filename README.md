@@ -24,3 +24,6 @@
 Explora todo lo que Tsuki Odisey Objets tiene para ofrecer y lleva tu juego al siguiente nivel. ¡Visítanos hoy en [Tsuki Odisey Objets](https://francocalegari.github.io/TsukiOdiseyObjets/)!
 
 ¡No esperes más y comienza tu viaje hacia la maestría en Tsuki Odisey!
+
+### Notas:
+- Los peces comunes o los objetos comunes de pesca no aparecen en la app ya que los sacas siempre, cada 20peces que sacas empieza a salir basura.
