@@ -1,4 +1,4 @@
-<h1>**Tsuki Odisey Objets: Tu Guía Definitiva para Dominar Tsuki Odisey**</h1>
+<h1>Tsuki Odisey Objets: Tu Guía Definitiva para Dominar Tsuki Odisey</h1>
 
 ¡Bienvenido a **Tsuki Odisey Objets**, la web app creada por Franco Calegari para ayudarte a maximizar tu experiencia en el encantador mundo de Tsuki Odisey! Nuestra plataforma está diseñada específicamente para brindarte las mejores estrategias y consejos sobre qué comprar y cuándo pescar dentro del juego, utilizando de manera eficiente la moneda del juego, las "carrots".
 
