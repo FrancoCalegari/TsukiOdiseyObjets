@@ -5,81 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tsuki Odisey Objets - Códigos de Canje</title>
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+        body { font-family: Arial, sans-serif; }
         .container { max-width: 800px; margin: auto; padding: 20px; }
         .section { margin-bottom: 20px; }
         h2 { color: #333; }
-        .card { width: 100%; max-width: 10rem; background-color: #f9f9f9; border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; cursor: pointer; display: flex; flex-direction: column;
-        gap: 20px; border-radius: 15px; justify-content: center; text-align: center;}
-        .card p { margin: 0; background-color: #eee; padding: 3px; border-radius: 5px;}
+        .code-card { width: 10rem; height: auto; background-color: #f9f9f9; border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; cursor: pointer; display: flex; flex-direction: column; gap: 10px; border-radius: 15px; justify-content: center; text-align: center; }
+        .code-card p { margin: 0; background-color: #eee; padding: 3px; border-radius: 5px; }
         .expired { color: #999; text-decoration: line-through; cursor: pointer; }
         .popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #333; color: #fff; border-radius: 5px; }
-        .show { display: block; }
-        .card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+        .code-show { display: block; }
         @media only screen and (max-width: 600px) {
             .container { padding: 10px; }
-        }
-        #active-codes {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-
-        #inactive-codes {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-            flex-wrap: wrap;
         }
     </style>
 </head>
 <body>
-    <section id="Codes">
-
-        <div class="container">
-            <h1>Códigos de Canje - Tsuki Odisey Objets</h1>
-            <div class="containercards">
-                <div class="section">
-                    <h2>Códigos Funcionales</h2>
-                    <div id="active-codes"></div>
-                </div>
-                <div class="section">
-                    <h2>Códigos Inactivos</h2>
-                    <div id="inactive-codes"></div>
-                </div>
-            </div>
-    
+    <div class="container">
+        <h1>Códigos de Canje - Tsuki Odisey Objets</h1>
+        <div class="section">
+            <h2>Códigos Funcionales</h2>
+            <div id="active-codes"></div>
         </div>
-
-    </section>
-
+        <div class="section">
+            <h2>Códigos Inactivos</h2>
+            <div id="inactive-codes"></div>
+        </div>
+    </div>
     <div id="popup" class="popup">Código copiado</div>
-
-    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const codes = [
-                { text: "Test1", date: "2024-06-01", type: "temporal" },
-                { text: "test2", date: "2024-05-30", type: "temporal" },
-                { text: "test213", date: "2024-06-09", type: "temporal" },
-                { text: "Test1", date: "2024-06-01", type: "temporal" },
-                { text: "test2", date: "2024-05-30", type: "temporal" },
-                { text: "test213", date: "2024-06-09", type: "temporal" },
-                { text: "Test1", date: "2024-06-01", type: "temporal" },
-                { text: "test2", date: "2024-05-30", type: "temporal" },
-                { text: "test213", date: "2024-06-09", type: "temporal" },
-                { text: "Test1", date: "2024-06-01", type: "temporal" },
-                { text: "test2", date: "2024-05-30", type: "temporal" },
-                { text: "test213", date: "2024-06-09", type: "temporal" },
-                { text: "Test1", date: "2024-06-01", type: "temporal" },
-                { text: "test2", date: "2024-05-30", type: "temporal" },
-                { text: "test213", date: "2024-06-09", type: "temporal" },
-                { text: "test3", date: "2023-12-01", type: "permanente" }
+                { text: "TsukiLovesiceCream", date: "2024-06-07", type: "permanente" },
+                { text: "yourock", date: "2024-06-06", type: "permanente" },
+                { text: "ElMariana", date: "2024-06-04", type: "temporal" },
+                { text: "AyorittGift", date: "2024-06-9", type: "temporal" },
+                { text: "to30vg7", date: "2024-05-30", type: "temporal" },
+                { text: "to28lv9", date: "2024-05-29", type: "permanente" },
+                { text: "tsukilovesmate", date: "2024-05-29", type: "permanente" },
+                { text: "30KCLUB", date: "2024-05-29", type: "permanente" },
+                { text: "314DAY", date: "2024-06-04", type: "permanente" },
+                { text: "to18st0", date: "2024-06-04", type: "permanente" },
+                { text: "vegeta777", date: "2024-06-04", type: "temporal" },
             ];
 
             const TEMPORAL_DAYS = 1;
@@ -89,13 +55,11 @@
             const popup = document.getElementById('popup');
 
             function showPopup() {
-                popup.classList.add('show');
+                popup.classList.add('code-show');
                 setTimeout(() => {
-                    popup.classList.remove('show');
+                    popup.classList.remove('code-show');
                 }, 2000);
             }
-
-            console.log("Fecha actual:", today.toLocaleString());
 
             function updateRemainingTime() {
                 const now = new Date();
@@ -105,16 +69,25 @@
                         expirationDate.setDate(expirationDate.getDate() + TEMPORAL_DAYS);
                         const difference = expirationDate.getTime() - now.getTime();
 
-                        if (difference > 86400000) { // Si es mayor a 24 horas
-                            const remainingDays = Math.floor(difference / (1000 * 60 * 60 * 24));
-                            const card = document.getElementById(code.text);
-                            card.lastChild.textContent = `Tiempo restante: ${remainingDays} días`;
-                        } else {
-                            const remainingHours = Math.floor(difference / (1000 * 60 * 60));
-                            const remainingMinutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                            const remainingSeconds = Math.floor((difference % (1000 * 60)) / 1000);
-                            const card = document.getElementById(code.text);
-                            card.lastChild.textContent = `Tiempo restante: ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s`;
+                        const card = document.getElementById(code.text);
+                        if (!card) return; // Skip if the card is not found
+
+                        const remainingTimeElement = card.querySelector('.remaining-time');
+                        if (!remainingTimeElement) return; // Skip if the remaining time element is not found
+
+                        if (difference > 0) { // Si el código todavía no ha expirado
+                            if (difference > 86400000) { // Si es mayor a 24 horas
+                                const remainingDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+                                remainingTimeElement.textContent = `Tiempo restante: ${remainingDays} días`;
+                            } else {
+                                const remainingHours = Math.floor(difference / (1000 * 60 * 60));
+                                const remainingMinutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                                const remainingSeconds = Math.floor((difference % (1000 * 60)) / 1000);
+                                remainingTimeElement.textContent = `Tiempo restante: ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s`;
+                            }
+                        } else { // Si el código ha expirado
+                            card.classList.add('expired');
+                            inactiveCodesContainer.appendChild(card); // Mover el código a la sección de códigos inactivos
                         }
                     }
                 });
@@ -136,7 +109,7 @@
 
                 const codeElement = document.createElement('div');
                 codeElement.id = code.text; // Usar el código como ID para actualizar el tiempo restante
-                codeElement.className = 'card';
+                codeElement.className = 'code-card';
 
                 const codeText = document.createElement('p');
                 codeText.textContent = code.text;
@@ -148,17 +121,9 @@
 
                 if (isActive) {
                     if (code.type === "temporal") {
-                        const expirationDate = new Date(issuedDate);
-                        expirationDate.setDate(expirationDate.getDate() + TEMPORAL_DAYS);
-                        if (today <= expirationDate) {
-                            const remainingTime = document.createElement('p');
-                            remainingTime.textContent = `Tiempo restante: ${TEMPORAL_DAYS} días`; // Mostrar tiempo restante inicial
-                            codeElement.appendChild(remainingTime);
-                        } else {
-                            const expired = document.createElement('p');
-                            expired.textContent = `Expirado`;
-                            codeElement.appendChild(expired);
-                        }
+                        const remainingTime = document.createElement('p');
+                        remainingTime.className = 'remaining-time';
+                        codeElement.appendChild(remainingTime);
                     }
 
                     codeElement.addEventListener('click', () => {
@@ -177,6 +142,8 @@
                     inactiveCodesContainer.appendChild(codeElement);
                 }
             });
+
+            updateRemainingTime(); // Initial call to show remaining time immediately
         });
     </script>
 </body>
