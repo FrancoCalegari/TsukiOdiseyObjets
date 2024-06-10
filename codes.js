@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const remainingHours = Math.floor(difference / (1000 * 60 * 60));
                         const remainingMinutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                         const remainingSeconds = Math.floor((difference % (1000 * 60)) / 1000);
-                        remainingTimeElement.textContent = `Tiempo restante: ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s`;
+                        remainingTimeElement.textContent = `Por Expirar: ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s`;
                     }
                 } else { // Si el código ha expirado
                     card.classList.add('expired');
