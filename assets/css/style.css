@@ -764,13 +764,13 @@ footer a:visited{
     background-color: #1a18188e;
     backdrop-filter: blur(3px);
     border-radius: 15px;
-    width: 100%;
+    width: 90%;
     font-family: CoffeFont;
 }
 
 .code-container p {
     color: #DDD7BD;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -789,7 +789,7 @@ footer a:visited{
 
 .code-card {
     width: fit-content;
-    max-width: 15rem;
+    max-width: 14rem;
     background-color: #1a18188e;
     border: 1px solid #ddd;
     margin-bottom: 10px;
@@ -802,6 +802,7 @@ footer a:visited{
     justify-content: center;
     text-align: center;
     transition: 500ms all;
+    
 }
 
 .code-card:hover{
@@ -815,6 +816,7 @@ footer a:visited{
     border: 3px double #DDD7BD;
     padding: 3px;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .code-expired {
