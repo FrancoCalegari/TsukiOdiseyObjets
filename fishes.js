@@ -52,7 +52,7 @@ const fishData = [
     { type: 'Lubina Negra', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 23 },
     { type: 'Cazon', place: 'Mermaid Coast/Muelle', startHour: 8, endHour: 12 },
     { type: 'Meduza Luna', place: 'Mermaid Coast/Muelle', startHour: 15, endHour: 17 },
-    { type: 'Espinozo', place: 'Mermaid Coast/Muelle', startHour: 9, endHour: 9 },
+    { type: 'Espinozo', place: 'Mermaid Coast/Muelle', startHour: 9, endHour: 10 },
     { type: 'Rayo manchado', place: 'Mermaid Coast/Muelle', startHour: 13, endHour: 17 },
     { type: 'Pez Sapo', place: 'Mermaid Coast/Muelle', startHour: 15, endHour: 17 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
