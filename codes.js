@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "314DAY", date: "2024-06-04", type: "temporal" },
         { text: "to18st0", date: "2024-06-04", type: "temporal" },
         { text: "to06pl1", date: "2024-06-10", type: "temporal" },
+        { text: "to30cg7", date: "2023-06-10", type: "temporal" },
+        { text: "Matsuri23", date: "2023-06-10", type: "temporal" },
+        { text: "PARTY", date: "2023-06-10", type: "temporal" },
+        { text: "LNY2024", date: "2024-03-10", type: "temporal" },
     ];
 
     const TEMPORAL_DAYS = 1;
