@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "30KCLUB", date: "2024-05-29", type: "permanente" },
         { text: "314DAY", date: "2024-06-04", type: "temporal" },
         { text: "to18st0", date: "2024-06-04", type: "temporal" },
+        { text: "to06pl1", date: "2024-06-10", type: "temporal" },
     ];
 
     const TEMPORAL_DAYS = 1;
