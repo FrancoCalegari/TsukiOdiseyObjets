@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "to30cg7", date: "2023-06-10", type: "temporal" },
         { text: "Matsuri23", date: "2023-06-10", type: "temporal" },
         { text: "PARTY", date: "2023-06-10", type: "temporal" },
+        { text: "Riversgift", date: "2024-06-11", type: "temporal" },
         { text: "LNY2024", date: "2024-03-10", type: "temporal" },
     ];
 
