@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const codes = [
         { text: "TsukiLovesiceCream", date: "2024-06-07", type: "permanente" },
         { text: "yourock", date: "2024-06-06", type: "permanente" },
-        { text: "ElMariana", date: "2024-06-9", type: "temporal" },
-        { text: "AyorittGift", date: "2024-06-9", type: "temporal" },
+        { text: "ElMariana", date: "2024-06-10", type: "temporal" },
+        { text: "AyorittGift", date: "2024-06-10", type: "temporal" },
         { text: "to30vg7", date: "2024-06-10", type: "temporal" },
         { text: "to28lv9", date: "2024-05-29", type: "temporal" },
         { text: "tsukilovesmate", date: "2024-05-29", type: "temporal" },

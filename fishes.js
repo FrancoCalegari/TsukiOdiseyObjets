@@ -56,6 +56,12 @@ const fishData = [
     { type: 'Rayo manchado', place: 'Mermaid Coast/Muelle', startHour: 13, endHour: 17 },
     { type: 'Pez Sapo', place: 'Mermaid Coast/Muelle', startHour: 15, endHour: 17 },
     { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'default', place: 'default', startHour: 8, endHour: 11 },
 
     
     
