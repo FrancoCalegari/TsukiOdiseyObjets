@@ -26,7 +26,7 @@ const fishData = [
     { type: 'Pez dorado cabeza de león', place: 'Rosemarys Plant Shop', startHour: 7, endHour: 10 },
     { type: 'Pez Pulmonado', place: 'Dawns Workshop', startHour: 10, endHour: 14 },
     { type: 'Mahi-Mahi', place: 'Dawns Workshop', startHour: 7, endHour: 11 },
-    { type: 'Man o war', place: 'Dawns Workshop', startHour: 0, endHour: 23 },
+    { type: 'Man o war', place: 'Dawns Workshop', startHour: 0, endHour: 0 },
     { type: 'Pez Gelatina De Luna', place: 'Mermaid Coast/Muelle', startHour: 2, endHour: 7 },
     { type: 'Morenas', place: 'Mermaid Coast/Muelle/Dawns Workshop', startHour: 1, endHour: 5 },
     { type: 'Saltador de Barro', place: 'Dawns Workshop', startHour: 17, endHour: 22 },
