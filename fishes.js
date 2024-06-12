@@ -60,7 +60,7 @@ const fishData = [
     { type: 'Cangrejo Violinista', place: 'Rosemarys Plant Shop', startHour: 4, endHour: 9 },
     { type: 'Gruami', place: 'Rosemarys Plant Shop', startHour: 19, endHour: 23 },
     { type: 'Comuns Crab', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 10 },
-    { type: 'Cangrejo Vampiro', place: 'default', startHour: 8, endHour: 11 },
+    { type: 'Cangrejo Vampiro', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 8, endHour: 11 },
     { type: 'Tilapia', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 4 },
     // { type: 'default', place: 'default', startHour: 0, endHour: 1 },
     // { type: 'default', place: 'default', startHour: 0, endHour: 1 },
