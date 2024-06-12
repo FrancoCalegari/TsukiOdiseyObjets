@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const codes = [
         { text: "TsukiLovesiceCream", date: "2024-06-07", type: "permanente" },
-        { text: "yourock", date: "2024-06-06", type: "permanente" },
-        { text: "ElMariana", date: "2024-06-10", type: "temporal" },
-        { text: "AyorittGift", date: "2024-06-10", type: "temporal" },
+        { text: "YOUROCK", date: "2024-06-06", type: "permanente" },
+        { text: "ElMariana", date: "2024-06-15", type: "temporal" },
+        { text: "AyorittGift", date: "2024-06-14", type: "temporal" },
         { text: "to30vg7", date: "2024-06-10", type: "temporal" },
         { text: "to28lv9", date: "2024-05-29", type: "temporal" },
         { text: "tsukilovesmate", date: "2024-05-29", type: "temporal" },
-        { text: "30KCLUB", date: "2024-05-29", type: "permanente" },
+        { text: "30KCLUB", date: "2024-05-29", type: "temporal" },
         { text: "314DAY", date: "2024-06-04", type: "temporal" },
         { text: "to18st0", date: "2024-06-04", type: "temporal" },
         { text: "to06pl1", date: "2024-06-10", type: "temporal" },
         { text: "to30cg7", date: "2023-06-10", type: "temporal" },
         { text: "Matsuri23", date: "2023-06-10", type: "temporal" },
         { text: "PARTY", date: "2023-06-10", type: "temporal" },
-        { text: "Riversgift", date: "2024-06-11", type: "temporal" },
+        { text: "Riversgift", date: "2024-06-14", type: "temporal" },
         { text: "LNY2024", date: "2024-03-10", type: "temporal" },
     ];
 
@@ -42,18 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.getElementById(code.text);
                 if (!card) return; // Skip if the card is not found
 
+                const expiraEnElement = card.querySelector('.expira-en');
                 const remainingTimeElement = card.querySelector('.remaining-time');
-                if (!remainingTimeElement) return; // Skip if the remaining time element is not found
+                if (!expiraEnElement || !remainingTimeElement) return; // Skip if the elements are not found
 
                 if (difference > 0) { // Si el código todavía no ha expirado
+                    expiraEnElement.textContent = 'Expira en:';
                     if (difference > 86400000) { // Si es mayor a 24 horas
                         const remainingDays = Math.floor(difference / (1000 * 60 * 60 * 24));
-                        remainingTimeElement.textContent = `Expira en: ${remainingDays} días`;
+                        remainingTimeElement.textContent = `${remainingDays} días`;
                     } else {
                         const remainingHours = Math.floor(difference / (1000 * 60 * 60));
                         const remainingMinutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                         const remainingSeconds = Math.floor((difference % (1000 * 60)) / 1000);
-                        remainingTimeElement.textContent = `Expira en: ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s`;
+                        remainingTimeElement.textContent = `${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s`;
                     }
                 } else { // Si el código ha expirado
                     card.classList.add('expired');
@@ -91,6 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isActive) {
             if (code.type === "temporal") {
+                const expiraEn = document.createElement('p');
+                expiraEn.className = 'expira-en';
+                codeElement.appendChild(expiraEn);
+
                 const remainingTime = document.createElement('p');
                 remainingTime.className = 'remaining-time';
                 codeElement.appendChild(remainingTime);
