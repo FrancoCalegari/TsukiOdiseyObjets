@@ -56,7 +56,7 @@ const fishData = [
     { type: 'Rayo manchado', place: 'Mermaid Coast/Muelle', startHour: 13, endHour: 17 },
     { type: 'Pez Sapo', place: 'Mermaid Coast/Muelle', startHour: 15, endHour: 17 },
     { type: 'Lengueta', place: 'Rosemarys Plant Shop', startHour: 14, endHour: 15 },
-    { type: 'Beta', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 23 },
+    { type: 'Pez Betta', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 23 },
     { type: 'Cangrejo Violinista', place: 'Rosemarys Plant Shop', startHour: 4, endHour: 9 },
     { type: 'Gruami', place: 'Rosemarys Plant Shop', startHour: 19, endHour: 23 },
     { type: 'Comuns Crab', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 10 },
