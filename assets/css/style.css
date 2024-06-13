@@ -658,6 +658,8 @@ footer {
     justify-content: center;
     border-radius: 15px 15px 0px 0px;
     backdrop-filter: blur(3px);
+    font-family: CoffeFont;
+    color: #DDD7BD;
 }
 
 footer a{
@@ -668,6 +670,10 @@ footer a{
 footer a:visited{
     color: #DDD7BD;
     
+}
+
+footer p {
+    margin-left: 1rem;
 }
 
 
@@ -948,4 +954,114 @@ footer a:visited{
 #reloj {
     font-size: 1.8rem;
     
+}
+
+
+/*Tips section*/
+
+
+
+#galeria-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    font-family: CoffeFont;
+    color: #DDD7BD;
+}
+
+#galeria-container {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.tarjeta {
+    flex: 0 0 auto;
+    height: 40%;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #1a181860;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 500ms all;
+}
+
+.tarjeta img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tarjeta p {
+    font-size: 1em;
+    text-align: center;
+}
+
+.tarjeta:focus {
+    filter: drop-shadow(1px 1px 20px  #DDD7BD);
+    transition: 500ms all;
+}
+
+.tarjeta1 {
+    flex: 0 0 auto;
+    height: fit-content;
+    width: 1500px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #1a181800;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta1 img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tarjeta1 p {
+    font-size: 1em;
+    text-align: center;
+}
+
+#galeria-section button {
+    background-color: #1a181860;
+    backdrop-filter: blur(2px);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+#galeria-section button:hover {
+    background-color: #0056b3;
 }

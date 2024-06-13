@@ -3,83 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora Actual</title>
+    <title>Galería de Consejos para el Juego</title>
     <style>
         body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#galeria-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
 }
 
-#reloj-section {
-    background-color: #fff;
+#galeria-container {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+.tarjeta {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 10px;
     padding: 20px;
+    background-color: red;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#reloj {
-    font-size: 2em;
+.tarjeta img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tarjeta p {
+    font-size: 1em;
     color: #333;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff61;
+    backdrop-filter: blur(2px);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
     </style>
 </head>
 <body>
-    <section id="reloj-section">
-        <div id="reloj"></div>
-        <button id="toggleFormato">AM/PM</button>
+    <section id="galeria-section">
+        <div id="galeria-container">
+            <div class="tarjeta">
+                <img src="imagen1.jpg" alt="Consejo 1 Imagen 1">
+                <p>Consejo 1: Mantén la calma en situaciones difíciles.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="imagen2.jpg" alt="Consejo 2 Imagen 1">
+                <img src="imagen3.jpg" alt="Consejo 2 Imagen 2">
+                <p>Consejo 2: Utiliza los recursos sabiamente.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="imagen4.jpg" alt="Consejo 3 Imagen 1">
+                <p>Consejo 3: Aprende de tus errores.</p>
+            </div>
+            <!-- Agrega más tarjetas según sea necesario -->
+        </div>
+        <button id="prev">⬅️</button>
+        <button id="next">➡️</button>
     </section>
     <script>
-const reloj = document.getElementById('reloj');
-const botonToggle = document.getElementById('toggleFormato');
-let formato24Horas = true;
+        const galeriaContainer = document.getElementById('galeria-container');
+const tarjetas = document.querySelectorAll('.tarjeta');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
 
-// Cargar configuración del formato desde el cache del navegador
-if (localStorage.getItem('formato24Horas') !== null) {
-    formato24Horas = JSON.parse(localStorage.getItem('formato24Horas'));
+let index = 0;
+const totalTarjetas = tarjetas.length;
+
+function mostrarTarjeta(index) {
+    const tarjetaWidth = tarjetas[0].offsetWidth + 20; // 20 is the margin
+    const offset = index * tarjetaWidth;
+    galeriaContainer.scroll({
+        left: offset,
+        behavior: 'smooth'
+    });
 }
 
-// Actualizar el texto del botón según el formato actual
-function actualizarTextoBoton() {
-    if (formato24Horas) {
-        botonToggle.textContent = 'AM/PM';
-    } else {
-        botonToggle.textContent = '24hs';
-    }
+function siguienteTarjeta() {
+    index = (index + 1) % totalTarjetas;
+    mostrarTarjeta(index);
 }
 
-function actualizarHora() {
-    const ahora = new Date();
-    let horas = ahora.getHours();
-    const minutos = String(ahora.getMinutes()).padStart(2, '0');
-    const segundos = String(ahora.getSeconds()).padStart(2, '0');
-    let periodo = '';
-
-    if (!formato24Horas) {
-        periodo = horas >= 12 ? 'PM' : 'AM';
-        horas = horas % 12;
-        horas = horas ? horas : 12; // El 0 se convierte en 12
-    }
-    horas = String(horas).padStart(2, '0');
-
-    reloj.textContent = `${horas}:${minutos}:${segundos} ${periodo}`;
+function anteriorTarjeta() {
+    index = (index - 1 + totalTarjetas) % totalTarjetas;
+    mostrarTarjeta(index);
 }
 
-botonToggle.addEventListener('click', () => {
-    formato24Horas = !formato24Horas;
-    localStorage.setItem('formato24Horas', JSON.stringify(formato24Horas));
-    actualizarTextoBoton();
-    actualizarHora();
-});
+prevButton.addEventListener('click', anteriorTarjeta);
+nextButton.addEventListener('click', siguienteTarjeta);
 
-setInterval(actualizarHora, 1000);
-actualizarTextoBoton();
-actualizarHora(); // Llamada inicial para mostrar la hora inmediatamente
+setInterval(siguienteTarjeta, 10000); // Cambiar cada 10 segundos
 
     </script>
 </body>
