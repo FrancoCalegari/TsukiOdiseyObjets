@@ -117,6 +117,44 @@ header div p {
     font-size: 1.2rem;
 }
 
+
+
+
+.presentacion-ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-inline-start: 0px;
+}
+
+.presentacion-ul li {
+    background-color: #1a18188e;
+    backdrop-filter: blur(3px);
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 8px;
+    box-shadow: #1a1818 2px 2px 10px;
+    transition: 500ms all;
+}
+
+.presentacion-ul li a {
+    color: #FFECCF;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.presentacion-ul li a:visited {
+    color: #FFECCF;
+} 
+
+.presentacion-ul li:hover {
+    transform: scale(1.2);
+    transition: all 500ms;
+    box-shadow: 1px 1px 10px #FFECCF;
+}
+
+
+
 .search-bar {
     text-align: center;
     margin: 1em 0;
