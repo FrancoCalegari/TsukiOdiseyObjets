@@ -1,4 +1,4 @@
 id,name,price,image,description,category,rarity
-1,Estante de plantas,1500,./assets/img/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
-2,Antique Cabinet,2600,./assets/img/item2.webp,"El cuerpo inerte de la rata cae al costado de su gabinete soltando las preciosas cerámicas. Caen al suelo rompiéndose en pedazos y alertando a todos los guardias de la propiedad" - Kobayashi,Muebles,Epico
-3,Bark Bookshelf,1250,./assets/img/item3.png,The books are free of charge.,Muebles,Común
+1,Estante de plantas,1500,./assets/img/objets/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
+2,Antique Cabinet,2600,./assets/img/objets/item2.webp,"El cuerpo inerte de la rata cae al costado de su gabinete soltando las preciosas cerámicas. Caen al suelo rompiéndose en pedazos y alertando a todos los guardias de la propiedad" - Kobayashi,Muebles,Epico
+3,Bark Bookshelf,1250,./assets/img/objets/item3.png,The books are free of charge.,Muebles,Común

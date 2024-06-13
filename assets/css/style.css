@@ -965,12 +965,13 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: fit-content;
     overflow: hidden;
     background-color: transparent;
     position: relative;
     font-family: CoffeFont;
     color: #DDD7BD;
+    margin-top: 2rem;
 }
 
 #galeria-container {
@@ -985,7 +986,7 @@ footer p {
 
 .tarjeta {
     flex: 0 0 auto;
-    height: 40%;
+    height: fit-content;
     width: 300px;
     margin: 10px;
     padding: 20px;
