@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "PARTY", date: "2023-06-10", type: "temporal" },
         { text: "Riversgift", date: "2024-06-12", type: "temporal" },
         { text: "LNY2024", date: "2024-03-10", type: "temporal" },
-        { text: "to12fl6", date: "2024-06-13", type: "temporal" },
+        { text: "to12fl6", date: "2024-06-13", type: "expired" },
         { text: "to3dj", date: "2024-06-14", type: "temporal" },
     ];
 
