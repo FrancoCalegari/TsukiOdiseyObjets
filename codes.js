@@ -136,26 +136,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mostrar los primeros 5 códigos inactivos
-    inactiveCodes.slice(0, 5).forEach(codeElement => {
+    // Mostrar los primeros 4 códigos inactivos
+    inactiveCodes.slice(0, 4).forEach(codeElement => {
         inactiveCodesContainer.appendChild(codeElement);
     });
 
-    // Mostrar botón si hay más de 5 códigos inactivos
-    if (inactiveCodes.length > 5) {
+    // Mostrar botón si hay más de 4 códigos inactivos
+    if (inactiveCodes.length > 4) {
         toggleInactiveButton.classList.remove('hidden');
         let showingMore = false;
 
         toggleInactiveButton.addEventListener('click', () => {
             if (showingMore) {
                 // Ocultar los códigos inactivos extras
-                inactiveCodes.slice(5).forEach(codeElement => {
+                inactiveCodes.slice(4).forEach(codeElement => {
                     codeElement.style.display = 'none';
                 });
                 toggleInactiveButton.textContent = 'Mostrar más';
             } else {
                 // Mostrar los códigos inactivos extras
-                inactiveCodes.slice(5).forEach(codeElement => {
+                inactiveCodes.slice(4).forEach(codeElement => {
                     inactiveCodesContainer.appendChild(codeElement);
                     codeElement.style.display = 'block';
                 });

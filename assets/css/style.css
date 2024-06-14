@@ -23,7 +23,15 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: url(./wallpaper.jpg);
+    
     /* background-color: #A3C0AA; */
+	/* background: 
+		  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#437346 54% 57%,#0000 59%) 0 calc(144px/2),
+		  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#437346 54% 57%,#0000 59%) calc(144px/2) 0,
+		  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#437346 54% 57%,#0000 59%),
+		  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#437346 54% 57%,#0000 59%),
+		  #1A1818;
+	background-size: calc(144px/4.667) 144px,144px calc(144px/4.667); */
 }
 
 
@@ -929,6 +937,7 @@ footer p {
 #toggle-inactive {
     display: block;
     margin: 10px auto;
+    gap: 20px;
     padding: 10px 20px;
     background-color: #1a18189c;
     border-radius: 8px;
