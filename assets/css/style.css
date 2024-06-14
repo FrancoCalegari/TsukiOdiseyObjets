@@ -918,7 +918,43 @@ footer p {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+
 }
+
+
+.code-card {
+    transition: filter 500ms;
+}
+
+#toggle-inactive {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #1a18189c;
+    border-radius: 8px;
+    color: #DDD7BD;
+    font-family: CoffeFont;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-inactive:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Efecto visual para el código más reciente */
+.code-card {
+    transition: filter 500ms;
+}
+
+
+
 
 /*horas*/
 

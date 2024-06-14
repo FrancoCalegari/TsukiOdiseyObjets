@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "to3dj", date: "2024-06-14", type: "temporal" },
     ];
 
-    const TEMPORAL_DAYS = 4;
+    const TEMPORAL_DAYS = 3;
     const today = new Date();
     const activeCodesContainer = document.getElementById('active-codes');
     const inactiveCodesContainer = document.getElementById('inactive-codes');
+    const toggleInactiveButton = document.getElementById('toggle-inactive');
     const popup = document.getElementById('popup');
 
     function showPopup() {
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Obtener la fecha más reciente
     const mostRecentDate = codes[0].date;
 
+    const inactiveCodes = [];
     codes.forEach(code => {
         const issuedDate = new Date(code.date);
         let isActive = false;
@@ -130,9 +132,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     showPopup();
                 });
             });
-            inactiveCodesContainer.appendChild(codeElement);
+            inactiveCodes.push(codeElement);
         }
     });
+
+    // Mostrar los primeros 5 códigos inactivos
+    inactiveCodes.slice(0, 5).forEach(codeElement => {
+        inactiveCodesContainer.appendChild(codeElement);
+    });
+
+    // Mostrar botón si hay más de 5 códigos inactivos
+    if (inactiveCodes.length > 5) {
+        toggleInactiveButton.classList.remove('hidden');
+        let showingMore = false;
+
+        toggleInactiveButton.addEventListener('click', () => {
+            if (showingMore) {
+                // Ocultar los códigos inactivos extras
+                inactiveCodes.slice(5).forEach(codeElement => {
+                    codeElement.style.display = 'none';
+                });
+                toggleInactiveButton.textContent = 'Mostrar más';
+            } else {
+                // Mostrar los códigos inactivos extras
+                inactiveCodes.slice(5).forEach(codeElement => {
+                    inactiveCodesContainer.appendChild(codeElement);
+                    codeElement.style.display = 'block';
+                });
+                toggleInactiveButton.textContent = 'Mostrar menos';
+            }
+            showingMore = !showingMore;
+        });
+    }
 
     updateRemainingTime(); // Initial call to show remaining time immediately
 });
