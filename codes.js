@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const codes = [
-        { text: "TsukiLovesiceCream", date: "2024-06-07", type: "permanente" },
+        { text: "TsukiLovesiceCream", date: "2024-06-01", type: "permanente" },
         { text: "YOUROCK", date: "2024-06-06", type: "permanente" },
-        { text: "ElMariana", date: "2024-06-15", type: "temporal" },
-        { text: "AyorittGift", date: "2024-06-14", type: "temporal" },
+        { text: "ElMariana", date: "2024-06-11", type: "permanente" },
+        { text: "AyorittGift", date: "2024-06-10", type: "temporal" },
         { text: "to30vg7", date: "2024-06-10", type: "temporal" },
         { text: "to28lv9", date: "2024-05-29", type: "temporal" },
         { text: "tsukilovesmate", date: "2024-05-29", type: "temporal" },
@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "to30cg7", date: "2023-06-10", type: "temporal" },
         { text: "Matsuri23", date: "2023-06-10", type: "temporal" },
         { text: "PARTY", date: "2023-06-10", type: "temporal" },
-        { text: "Riversgift", date: "2024-06-14", type: "temporal" },
+        { text: "Riversgift", date: "2024-06-12", type: "temporal" },
         { text: "LNY2024", date: "2024-03-10", type: "temporal" },
         { text: "to12fl6", date: "2024-06-13", type: "temporal" },
         { text: "to3dj", date: "2024-06-14", type: "temporal" },
     ];
 
-    const TEMPORAL_DAYS = 3;
+    const TEMPORAL_DAYS = 4;
     const today = new Date();
     const activeCodesContainer = document.getElementById('active-codes');
     const inactiveCodesContainer = document.getElementById('inactive-codes');
@@ -69,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(updateRemainingTime, 1000); // Actualizar cada segundo
 
+    // Ordenar los códigos por fecha en orden descendente
+    codes.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Obtener la fecha más reciente
+    const mostRecentDate = codes[0].date;
+
     codes.forEach(code => {
         const issuedDate = new Date(code.date);
         let isActive = false;
@@ -84,6 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const codeElement = document.createElement('div');
         codeElement.id = code.text; // Usar el código como ID para actualizar el tiempo restante
         codeElement.className = 'code-card';
+
+        // Resaltar el código con la fecha más reciente
+        if (code.date === mostRecentDate) {
+            codeElement.style.filter = 'drop-shadow(1px 1px 20px #DDD7BD)';
+            codeElement.style.transition = '500ms all';
+        }
 
         const codeText = document.createElement('p');
         codeText.textContent = code.text;
