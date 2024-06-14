@@ -651,11 +651,13 @@ h1 {
 
 
 footer {
-    height: 5vh;
+    height: 3rem;
     margin-top: 1rem;
     background-color: #1a18189c;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     border-radius: 15px 15px 0px 0px;
     backdrop-filter: blur(3px);
     font-family: CoffeFont;
@@ -663,7 +665,7 @@ footer {
 }
 
 footer a{
-    padding-top: 0.8rem;
+    
     font-family: CoffeFont;
 }
 
@@ -1053,6 +1055,7 @@ footer p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: 500ms all;
 }
 
 #prev {
@@ -1064,5 +1067,7 @@ footer p {
 }
 
 #galeria-section button:hover {
-    background-color: #0056b3;
+    background-color: #ddd7bd8b;
+    filter: drop-shadow(1px 1px 20px  #DDD7BD);
+    transition: 500ms all;
 }
