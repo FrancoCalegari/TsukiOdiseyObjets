@@ -93,8 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Resaltar el código con la fecha más reciente
         if (code.date === mostRecentDate) {
-            codeElement.style.filter = 'drop-shadow(1px 1px 20px #DDD7BD)';
+            codeElement.style.filter = 'drop-shadow(1px 1px 30px #cab65e)';
             codeElement.style.transition = '500ms all';
+            codeElement.style.border = 'solid 3px #efcd36'
         }
 
         const codeText = document.createElement('p');
