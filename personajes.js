@@ -102,7 +102,7 @@ const characters = [
         image: './assets/img/personajes/PipiSprite.webp',
         sex: 'Female',
         date: '1',
-        description: 'Pipi es una ardilla alegre y entusiasta, siempre recogiendo nueces y haciendo amigos.'
+        description: 'Pipi es un cachorro de zorro con pelaje naranja. Mientras trabaja en la tienda general de Yori, usa un delantal rosa con un corazón.'
     },
     {
         name: 'Ratthew',
