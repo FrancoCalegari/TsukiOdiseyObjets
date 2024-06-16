@@ -102,7 +102,7 @@ const characters = [
         image: './assets/img/personajes/PipiSprite.webp',
         sex: 'Female',
         date: '1',
-        description: 'Pipi es un cachorro de zorro con pelaje naranja. Mientras trabaja en la tienda general de Yori, usa un delantal rosa con un corazón.'
+        description: 'Pipí es hija de yori, trabaja con su papá en el sector de adornos y golosinas y le gusta explorar el pueblo, es muy amable con todos en el pueblo.'
     },
     {
         name: 'Ratthew',
