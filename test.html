@@ -6,77 +6,78 @@
     <title>Character Gallery</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-}
-
-.gallery-section {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.character {
-    cursor: pointer;
-}
-
-.character img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-    max-width: 500px;
-    width: 80%;
-}
-
-.popup-content img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
+            font-family: Arial, sans-serif;
+        }
+        .personajes-section {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .personajes-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            width: 100%;
+        }
+        .personajes-gallery div {
+            background-color: #1a18189c;
+            width: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 8rem;
+            border-radius: 15px;
+        }
+        .personajes-character {
+            cursor: pointer;
+        }
+        .personajes-character img {
+            width: 60%;
+            border-radius: 8px;
+        }
+        .personajes-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .personajes-popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            max-width: 500px;
+            width: 80%;
+        }
+        .personajes-popup-content img {
+            width: 50%;
+            border-radius: 8px;
+        }
+        .personajes-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <section class="gallery-section">
-        <div class="gallery" id="gallery">
+    <section class="personajes-section">
+        <div class="personajes-gallery" id="gallery">
             <!-- Characters will be inserted here by JavaScript -->
         </div>
     </section>
 
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
+    <div id="popup" class="personajes-popup">
+        <div class="personajes-popup-content">
+            <span class="personajes-close" id="closePopup">&times;</span>
             <img id="popupImage" src="" alt="Character Image">
             <h2 id="popupName"></h2>
             <p id="popupSex"></p>
@@ -87,60 +88,177 @@
 
     <script>
         const characters = [
-    {
-        name: 'Character 1',
-        image: 'image1.jpg',
-        sex: 'Male',
-        date: '2024-01-01',
-        description: 'Description for character 1.'
-    },
-    {
-        name: 'Character 2',
-        image: 'image2.jpg',
-        sex: 'Female',
-        date: '2024-01-02',
-        description: 'Description for character 2.'
-    },
-    // Add 17 more characters here...
-];
+            {
+                name: 'Benny',
+                image: './assets/img/personajes/BennySprite.webp',
+                sex: 'Male',
+                date: '1',
+                description: 'Benny es un mapache muy ansioso y centrado en el trabajo. A veces tartamudea al hablar, y se lamenta ante Tsuki de las dificultades de gestionar toda una ciudad y ser incapaz de relajarse.'
+            },
+            {
+                name: 'Tsuki',
+                image: './assets/img/personajes/TsukiSprite.webp',
+                sex: 'Female',
+                date: '2',
+                description: 'Tsuki es una coneja amable y aventurera que siempre busca nuevas experiencias y amistades.'
+            },
+            {
+                name: 'Bobo',
+                image: './assets/img/personajes/BoboSprite.webp',
+                sex: 'Male',
+                date: '3',
+                description: 'Bobo es un panda relajado y despreocupado, siempre listo para una siesta o una comida abundante.'
+            },
+            {
+                name: 'Camille',
+                image: './assets/img/personajes/Chameleon3.webp',
+                sex: 'Female',
+                date: '4',
+                description: 'Camille es una camaleona talentosa en el arte de camuflarse y adaptarse a cualquier entorno.'
+            },
+            {
+                name: 'Chi',
+                image: './assets/img/personajes/ChiSprite.webp',
+                sex: 'Female',
+                date: '5',
+                description: 'Chi es una gata misteriosa y sigilosa, siempre observando desde las sombras.'
+            },
+            {
+                name: 'Dawn',
+                image: './assets/img/personajes/DawnSprite.webp',
+                sex: 'Female',
+                date: '6',
+                description: 'Dawn es una cierva llena de energía y optimismo, siempre dispuesta a ayudar a los demás.'
+            },
+            {
+                name: 'Draper',
+                image: './assets/img/personajes/DraperSprite.webp',
+                sex: 'Male',
+                date: '7',
+                description: 'Draper es un perro leal y trabajador, conocido por su valentía y dedicación.'
+            },
+            {
+                name: 'Elfie',
+                image: './assets/img/personajes/ElfieSprite.webp',
+                sex: 'Female',
+                date: '8',
+                description: 'Elfie es una elefanta sabia y paciente, siempre dispuesta a compartir su conocimiento.'
+            },
+            {
+                name: 'Gecko',
+                image: './assets/img/personajes/GeckoSprite.webp',
+                sex: 'Male',
+                date: '9',
+                description: 'Gecko es un pequeño lagarto ágil y curioso, explorador incansable de su entorno.'
+            },
+            {
+                name: 'Ken',
+                image: './assets/img/personajes/Ken.webp',
+                sex: 'Male',
+                date: '10',
+                description: 'Ken es un conejo robusto y valiente, siempre dispuesto a proteger a sus amigos.'
+            },
+            {
+                name: 'Moca',
+                image: './assets/img/personajes/MocaSprite.webp',
+                sex: 'Female',
+                date: '11',
+                description: 'Moca es una vaca dulce y tranquila, amante de la naturaleza y la serenidad.'
+            },
+            {
+                name: 'Momo',
+                image: './assets/img/personajes/MomoSprite.webp',
+                sex: 'Female',
+                date: '12',
+                description: 'Momo es una mona juguetona y traviesa, siempre en busca de diversión.'
+            },
+            {
+                name: 'Olson',
+                image: './assets/img/personajes/OlsonSprite.webp',
+                sex: 'Male',
+                date: '13',
+                description: 'Olson es un búho sabio y observador, conocido por su vasto conocimiento y consejos prudentes.'
+            },
+            {
+                name: 'Paige',
+                image: './assets/img/personajes/PaigeSprite.webp',
+                sex: 'Female',
+                date: '14',
+                description: 'Paige es una panda roja energética y creativa, con un talento especial para las artes.'
+            },
+            {
+                name: 'Pipi',
+                image: './assets/img/personajes/PipiSprite.webp',
+                sex: 'Female',
+                date: '15',
+                description: 'Pipi es una ardilla alegre y entusiasta, siempre recogiendo nueces y haciendo amigos.'
+            },
+            {
+                name: 'Ratthew',
+                image: './assets/img/personajes/RatthewSprite.webp',
+                sex: 'Male',
+                date: '16',
+                description: 'Ratthew es una rata ingeniosa y astuta, con un talento especial para resolver problemas.'
+            },
+            {
+                name: 'Rosemary',
+                image: './assets/img/personajes/RosemarySprite.webp',
+                sex: 'Female',
+                date: '17',
+                description: 'Rosemary es una zorra elegante y astuta, conocida por su encanto y gracia.'
+            },
+            {
+                name: 'Scarlett',
+                image: './assets/img/personajes/ScarlettSprite.webp',
+                sex: 'Female',
+                date: '18',
+                description: 'Scarlett es una leona valiente y decidida, siempre liderando con confianza.'
+            },
+            {
+                name: 'Yori',
+                image: './assets/img/personajes/YoriSprite.webp',
+                sex: 'Male',
+                date: '19',
+                description: 'Yori es un tigre poderoso y noble, respetado por su fuerza y sabiduría.'
+            }
+        ];
 
-const gallery = document.getElementById('gallery');
-const popup = document.getElementById('popup');
-const popupImage = document.getElementById('popupImage');
-const popupName = document.getElementById('popupName');
-const popupSex = document.getElementById('popupSex');
-const popupDate = document.getElementById('popupDate');
-const popupDescription = document.getElementById('popupDescription');
-const closePopup = document.getElementById('closePopup');
+        const gallery = document.getElementById('gallery');
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popupImage');
+        const popupName = document.getElementById('popupName');
+        const popupSex = document.getElementById('popupSex');
+        const popupDate = document.getElementById('popupDate');
+        const popupDescription = document.getElementById('popupDescription');
+        const closePopup = document.getElementById('closePopup');
 
-characters.forEach((character, index) => {
-    const charDiv = document.createElement('div');
-    charDiv.classList.add('character');
-    charDiv.innerHTML = `<img src="${character.image}" alt="${character.name}">`;
-    charDiv.addEventListener('click', () => openPopup(index));
-    gallery.appendChild(charDiv);
-});
+        characters.forEach((character, index) => {
+            const charDiv = document.createElement('div');
+            charDiv.classList.add('personajes-character');
+            charDiv.innerHTML = `<img src="${character.image}" alt="${character.name}">`;
+            charDiv.addEventListener('click', () => openPopup(index));
+            gallery.appendChild(charDiv);
+        });
 
-function openPopup(index) {
-    const character = characters[index];
-    popupImage.src = character.image;
-    popupName.textContent = character.name;
-    popupSex.textContent = `Sex: ${character.sex}`;
-    popupDate.textContent = `Appears on: ${character.date}`;
-    popupDescription.textContent = character.description;
-    popup.style.display = 'flex';
-}
+        function openPopup(index) {
+            const character = characters[index];
+            popupImage.src = character.image;
+            popupName.textContent = character.name;
+            popupSex.textContent = `Sexo: ${character.sex}`;
+            popupDate.textContent = `Aparece el día: ${character.date}`;
+            popupDescription.textContent = character.description;
+            popup.style.display = 'flex';
+        }
 
-closePopup.addEventListener('click', () => {
-    popup.style.display = 'none';
-});
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
 
-window.addEventListener('click', (event) => {
-    if (event.target === popup) {
-        popup.style.display = 'none';
-    }
-});
-
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
