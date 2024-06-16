@@ -39,7 +39,7 @@ function actualizarFoco() {
 prevButton.addEventListener('click', anteriorTarjeta);
 nextButton.addEventListener('click', siguienteTarjeta);
 
-setInterval(siguienteTarjeta, 10000); // Cambiar cada 10 segundos
+setInterval(siguienteTarjeta, 7000); // Cambiar cada 10 segundos
 
 // Inicializar
 mostrarTarjeta(index);
