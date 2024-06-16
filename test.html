@@ -3,140 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Consejos para el Juego</title>
+    <title>Character Gallery</title>
     <style>
         body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
 }
 
-#galeria-section {
+.gallery-section {
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #fff;
-    position: relative;
 }
 
-#galeria-container {
-    display: flex;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
 }
 
-.tarjeta {
-    flex: 0 0 auto;
-    width: 300px;
-    margin: 10px;
-    padding: 20px;
-    background-color: red;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tarjeta img {
-    max-width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.tarjeta p {
-    font-size: 1em;
-    color: #333;
-    text-align: center;
-}
-
-button {
-    background-color: #007bff61;
-    backdrop-filter: blur(2px);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+.character {
     cursor: pointer;
-    font-size: 1.5em;
+}
+
+.character img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 80%;
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.close {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
+    top: 10px;
     right: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
+    font-size: 24px;
+    cursor: pointer;
 }
 
     </style>
 </head>
 <body>
-    <section id="galeria-section">
-        <div id="galeria-container">
-            <div class="tarjeta">
-                <img src="imagen1.jpg" alt="Consejo 1 Imagen 1">
-                <p>Consejo 1: Mantén la calma en situaciones difíciles.</p>
-            </div>
-            <div class="tarjeta">
-                <img src="imagen2.jpg" alt="Consejo 2 Imagen 1">
-                <img src="imagen3.jpg" alt="Consejo 2 Imagen 2">
-                <p>Consejo 2: Utiliza los recursos sabiamente.</p>
-            </div>
-            <div class="tarjeta">
-                <img src="imagen4.jpg" alt="Consejo 3 Imagen 1">
-                <p>Consejo 3: Aprende de tus errores.</p>
-            </div>
-            <!-- Agrega más tarjetas según sea necesario -->
+    <section class="gallery-section">
+        <div class="gallery" id="gallery">
+            <!-- Characters will be inserted here by JavaScript -->
         </div>
-        <button id="prev">⬅️</button>
-        <button id="next">➡️</button>
     </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <img id="popupImage" src="" alt="Character Image">
+            <h2 id="popupName"></h2>
+            <p id="popupSex"></p>
+            <p id="popupDate"></p>
+            <p id="popupDescription"></p>
+        </div>
+    </div>
+
     <script>
-        const galeriaContainer = document.getElementById('galeria-container');
-const tarjetas = document.querySelectorAll('.tarjeta');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+        const characters = [
+    {
+        name: 'Character 1',
+        image: 'image1.jpg',
+        sex: 'Male',
+        date: '2024-01-01',
+        description: 'Description for character 1.'
+    },
+    {
+        name: 'Character 2',
+        image: 'image2.jpg',
+        sex: 'Female',
+        date: '2024-01-02',
+        description: 'Description for character 2.'
+    },
+    // Add 17 more characters here...
+];
 
-let index = 0;
-const totalTarjetas = tarjetas.length;
+const gallery = document.getElementById('gallery');
+const popup = document.getElementById('popup');
+const popupImage = document.getElementById('popupImage');
+const popupName = document.getElementById('popupName');
+const popupSex = document.getElementById('popupSex');
+const popupDate = document.getElementById('popupDate');
+const popupDescription = document.getElementById('popupDescription');
+const closePopup = document.getElementById('closePopup');
 
-function mostrarTarjeta(index) {
-    const tarjetaWidth = tarjetas[0].offsetWidth + 20; // 20 is the margin
-    const offset = index * tarjetaWidth;
-    galeriaContainer.scroll({
-        left: offset,
-        behavior: 'smooth'
-    });
+characters.forEach((character, index) => {
+    const charDiv = document.createElement('div');
+    charDiv.classList.add('character');
+    charDiv.innerHTML = `<img src="${character.image}" alt="${character.name}">`;
+    charDiv.addEventListener('click', () => openPopup(index));
+    gallery.appendChild(charDiv);
+});
+
+function openPopup(index) {
+    const character = characters[index];
+    popupImage.src = character.image;
+    popupName.textContent = character.name;
+    popupSex.textContent = `Sex: ${character.sex}`;
+    popupDate.textContent = `Appears on: ${character.date}`;
+    popupDescription.textContent = character.description;
+    popup.style.display = 'flex';
 }
 
-function siguienteTarjeta() {
-    index = (index + 1) % totalTarjetas;
-    mostrarTarjeta(index);
-}
+closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
 
-function anteriorTarjeta() {
-    index = (index - 1 + totalTarjetas) % totalTarjetas;
-    mostrarTarjeta(index);
-}
-
-prevButton.addEventListener('click', anteriorTarjeta);
-nextButton.addEventListener('click', siguienteTarjeta);
-
-setInterval(siguienteTarjeta, 10000); // Cambiar cada 10 segundos
+window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        popup.style.display = 'none';
+    }
+});
 
     </script>
 </body>
