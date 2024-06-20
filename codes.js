@@ -167,4 +167,68 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateRemainingTime(); // Initial call to show remaining time immediately
+
+    // Verificar si el navegador soporta notificaciones
+    if (!("Notification" in window)) {
+        alert("Este navegador no soporta notificaciones de escritorio.");
+    } else {
+        document.getElementById('enable-notifications').addEventListener('click', function() {
+            // Solicitar permiso para enviar notificaciones
+            Notification.requestPermission().then(function(result) {
+                if (result === 'granted') {
+                    // Permiso concedido
+                    console.log("Permiso para notificaciones concedido.");
+                    verificarNuevosCodigos(); // Ejecutar la verificación al habilitar notificaciones
+                }
+            });
+        });
+    }
+
+    // Función para mostrar una notificación
+    function mostrarNotificacion(titulo, mensaje, url) {
+        if (Notification.permission === 'granted') {
+            const opciones = {
+                body: mensaje,
+                icon: 'icono.png', // Puedes agregar un ícono de tu elección
+                data: { url: url }
+            };
+            const notificacion = new Notification(titulo, opciones);
+            notificacion.onclick = function() {
+                window.open(notificacion.data.url);
+            };
+        }
+    }
+
+    // Función para contar códigos válidos (no expirados)
+    function contarCodigos() {
+        return codes.filter(code => code.type !== 'expired').length;
+    }
+
+    // Almacenar la cantidad inicial de códigos válidos
+    if (!localStorage.getItem('cantidadCodigos')) {
+        localStorage.setItem('cantidadCodigos', contarCodigos());
+    }
+
+    // Función para verificar si hay nuevos códigos
+    function verificarNuevosCodigos() {
+    const cantidadGuardada = parseInt(localStorage.getItem('cantidadCodigos'), 10);
+    const cantidadActual = contarCodigos();
+
+    // Log en consola las variables del caché y las actuales
+    console.log(`Cantidad de códigos guardada en caché: ${cantidadGuardada}`);
+    console.log(`Cantidad de códigos actual en la página: ${cantidadActual}`);
+
+    if (cantidadActual > cantidadGuardada) {
+        const titulo = "¡Nuevo Código de Descuento!";
+        const mensaje = `Hay ${cantidadActual - cantidadGuardada} nuevos códigos de descuento disponibles.`;
+        const url = "https://www.tutienda.com/descuentos";
+        mostrarNotificacion(titulo, mensaje, url);
+        localStorage.setItem('cantidadCodigos', cantidadActual);
+    } else if (cantidadActual < cantidadGuardada) {
+        localStorage.setItem('cantidadCodigos', cantidadActual);
+    }
+}
+
+    // Verificar nuevos códigos cada 10 segundos
+    setInterval(verificarNuevosCodigos, 10000);
 });

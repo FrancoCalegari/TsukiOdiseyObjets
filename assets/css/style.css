@@ -161,6 +161,14 @@ header div p {
     box-shadow: 1px 1px 10px #FFECCF;
 }
 
+#enable-notifications {
+    background-color: transparent;
+    border: 0px;
+    font-family: CoffeFont;
+    color: #FFECCF;
+    font-size: 18px;
+}
+
 
 
 .search-bar {
