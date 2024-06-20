@@ -168,7 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateRemainingTime(); // Initial call to show remaining time immediately
 
-    // Verificar si el navegador soporta notificaciones
+
+    
+
+
+    //// Verificar si el navegador soporta notificaciones
     if (!("Notification" in window)) {
         alert("Este navegador no soporta notificaciones de escritorio.");
     } else {
@@ -184,12 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     // Función para mostrar una notificación
     function mostrarNotificacion(titulo, mensaje, url) {
         if (Notification.permission === 'granted') {
             const opciones = {
                 body: mensaje,
-                icon: 'icono.png', // Puedes agregar un ícono de tu elección
+                icon: 'https://francocalegari.github.io/TsukiOdiseyObjets/assets/img/Logo.png', // Puedes agregar un ícono de tu elección
                 data: { url: url }
             };
             const notificacion = new Notification(titulo, opciones);
@@ -221,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cantidadActual > cantidadGuardada) {
         const titulo = "¡Nuevo Código de Descuento!";
         const mensaje = `Hay ${cantidadActual - cantidadGuardada} nuevos códigos de descuento disponibles.`;
-        const url = "https://www.tutienda.com/descuentos";
+        const url = "https://francocalegari.github.io/TsukiOdiseyObjets/";
         mostrarNotificacion(titulo, mensaje, url);
         localStorage.setItem('cantidadCodigos', cantidadActual);
     } else if (cantidadActual < cantidadGuardada) {
