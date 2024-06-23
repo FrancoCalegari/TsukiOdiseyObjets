@@ -1,4 +1,8 @@
 id,name,price,image,description,category,rarity
-1,Estante de plantas,1500,./assets/img/objets/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas tambien parece disfrutarlo,Muebles,Común
-2,Antique Cabinet,2600,./assets/img/objets/item2.webp,"El cuerpo inerte de la rata cae al costado de su gabinete soltando las preciosas cerámicas. Caen al suelo rompiéndose en pedazos y alertando a todos los guardias de la propiedad" - Kobayashi,Muebles,Epico
-3,Bark Bookshelf,1250,./assets/img/objets/item3.png,The books are free of charge.,Muebles,Común
+1,Estante de plantas,1500,./assets/img/objets/item1.png,Creo que amontonar las plantas es muy agradable a la vista… y las plantas también parece disfrutarlo,Muebles,Común
+2,Antique Cabinet,2600,./assets/img/objets/item2.webp,"El cuerpo inerte de la rata cae al costado de su gabinete soltando las preciosas cerámicas. Caen al suelo rompiéndose en pedazos y alertando a todos los guardias de la propiedad" - Kobayashi,Muebles,Épico
+3,Estantería de Corteza,1250,./assets/img/objets/item3.png,Los libros son gratis.,Muebles,Común
+4,Lámpara de Pared de Calamar,1000,./assets/img/objets/item4.png,Iluminando tu habitación con un toque de cefalópodo blandito,Muebles,Común
+5,Coral Dedo,1200,./assets/img/objets/item5.png,Siente como si el océano nos estuviera lanzando un gesto no tan sutil,Decoración,Común
+6,Cajón de Pescado,650,./assets/img/objets/item6.png,A diferencia de lo que sugiere el nombre, realmente no deberías guardar peces aquí,Muebles,Común
+7,Bañera de Ballena,5700,./assets/img/objets/item7.png,Pásalo en grande en esta bañera,Muebles,Común
