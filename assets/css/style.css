@@ -1235,6 +1235,7 @@ footer p {
    filter: drop-shadow(1px 1px 15px  #ddd7bd3a);
   
    margin-top: 2rem;
+   margin-bottom: 2rem;
    
 
 }
@@ -1258,6 +1259,7 @@ footer p {
     filter: drop-shadow(2px 2px 20px  #ddd7bde1);
     transition: 500ms all;
     border: solid 3px #FFECCF;
+    transform: scale(1.15);
 }
 
 /*event cards*/
@@ -1327,4 +1329,5 @@ footer p {
 .event-card:hover{
     filter: drop-shadow(2px 2px 20px  #ddd7bde1);
     transition: 500ms all;
+    transform: scale(1.1);
 }
