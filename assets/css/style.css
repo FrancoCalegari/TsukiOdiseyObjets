@@ -438,14 +438,14 @@ header div p {
 #pin-info-box h2 {
     margin-top: 0;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     
 }
 
 
 
 #pin-description{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     background-color: #1a18189a;
     padding: 30px;
@@ -793,7 +793,7 @@ footer p {
     #pin-info-box h2 {
         margin-top: 0;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.8rem;
         
     }
 
