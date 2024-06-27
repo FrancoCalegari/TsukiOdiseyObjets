@@ -1297,6 +1297,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     background-color: #1a18189c;
     backdrop-filter: blur(3px);
@@ -1309,6 +1310,8 @@ footer p {
     border: 3px solid #DDD7BD;
 
     transition: all 500ms;
+
+    height: 18rem;
 }
 
 .event-card img {
