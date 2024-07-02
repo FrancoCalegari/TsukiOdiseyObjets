@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Notification.permission === 'granted') {
             const opciones = {
                 body: mensaje,
-                icon: 'https://francocalegari.github.io/TsukiOdiseyObjets/assets/img/Logo.png', // Puedes agregar un ícono de tu elección
+                icon: 'https://tsuki-odisey-objets.vercel.app/assets/img/Logo.png', // Puedes agregar un ícono de tu elección
                 data: { url: url }
             };
             const notificacion = new Notification(titulo, opciones);
@@ -224,9 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`Cantidad de códigos actual en la página: ${cantidadActual}`);
 
     if (cantidadActual > cantidadGuardada) {
-        const titulo = "¡Nuevo Código de Descuento!";
-        const mensaje = `Hay ${cantidadActual - cantidadGuardada} nuevos códigos de descuento disponibles.`;
-        const url = "https://francocalegari.github.io/TsukiOdiseyObjets/";
+        const titulo = "¡Nuevo Código de Tsuki :D!";
+        const mensaje = `Hay ${cantidadActual - cantidadGuardada} nuevos códigos de canje disponibles.`;
+        const url = "https://tsuki-odisey-objets.vercel.app/";
         mostrarNotificacion(titulo, mensaje, url);
         localStorage.setItem('cantidadCodigos', cantidadActual);
     } else if (cantidadActual < cantidadGuardada) {
