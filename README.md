@@ -21,7 +21,7 @@
 - **Fácil de Usar:** Interfaz intuitiva y fácil de navegar, diseñada para que tanto principiantes como jugadores avanzados puedan beneficiarse.
 - **Creado por un Fan para los Fans:** Franco Calegari, apasionado por Tsuki Odisey, ha desarrollado esta app pensando en la comunidad de jugadores.
 
-Explora todo lo que Tsuki Odisey Objets tiene para ofrecer y lleva tu juego al siguiente nivel. ¡Visítanos hoy en [Tsuki Odisey Objets](https://francocalegari.github.io/TsukiOdiseyObjets/)!
+Explora todo lo que Tsuki Odisey Objets tiene para ofrecer y lleva tu juego al siguiente nivel. ¡Visítanos hoy en [Tsuki Odisey Objets](https://tsuki-odisey-objets.vercel.app/)!
 
 ¡No esperes más y comienza tu viaje hacia la maestría en Tsuki Odisey!
 
