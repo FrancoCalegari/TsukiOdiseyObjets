@@ -94,60 +94,6 @@
 
 
 
-    <section id="evento">
-
-        <div class="event-container">
-
-            <h2>Eventos</h2>
-
-            <div class="event-card-container">
-
-                <a href="https://tsuki-odyssey.fandom.com/es/wiki/Festival_del_Mar" target="_blank"><div class="event-card">
-                    <h3>Evento del Mar</h3>
-                    <p>Evento Actual - 20/06/2024</p>
-                    <img src="./assets/img/events/Marine_Matters_Icon.webp" alt="Evento del Mar Tsuki Odisey">
-                </div></a>
-
-                <a href="https://tsuki-odyssey.fandom.com/es/wiki/Jester_Week" target="_blank"><div class="event-card">
-                    <h3>Semana del bufón 2024</h3>
-                    <p>10/05/2024</p>
-                    <img src="./assets/img/events/April_Fools_Icon.webp" alt="Semana del bufón 2024 Tsuki Odisey">
-                </div></a>
-
-                <a href="https://tsuki-odyssey.fandom.com/es/wiki/Navidad_2023" target="_blank"><div class="event-card">
-                    <h3>Navidad 2023</h3>
-                    <p>20/06/2024</p>
-                    <img src="./assets/img/events/Christmas_Icon.webp" alt="Navidad 2023 Tsuki Odisey">
-                </div></a>
-                
-                <a href="https://tsuki-odyssey.fandom.com/es/wiki/Halloween_2023" target="_blank"><div class="event-card">
-                    <h3>Halloween 2023</h3>
-                    <p>20/06/2024</p>
-                    <img src="./assets/img/events/Halloween_Icon.webp" alt="Halloween 2023 Tsuki Odisey">
-                </div></a>
-
-                <a href="https://tsuki-odyssey.fandom.com/es/wiki/Summer_Festival_2023" target="_blank"><div class="event-card">
-                    <h3>Festival de Verano 2023</h3>
-                    <img src="./assets/img/events/SummerFest_Icon.webp" alt="Festival de Verano 2023 Tsuki Odisey">
-                </div></a>
-
-                <a href="https://tsuki-odyssey.fandom.com/es/wiki/Pascua_2023" target="_blank"><div class="event-card">
-                    <h3>Pascua 2023</h3>
-                    <img src="./assets/img/events/Easter_Icon.webp" alt="Pascua 2023 Tsuki Odisey">
-                </div></a>
-
-                <!-- <a href="https://tsuki-odyssey.fandom.com/es/wiki/Pascua" target="_blank"><div class="event-card">
-                    <h3>Pascua</h3>
-                    <img src="./assets/img/events/Festival_del_Mar_Evento.webp" alt="Evento del Mar Tsuki Odisey">
-                </div></a> -->
-
-            </div>
-
-
-
-        </div>
-
-    </section>
 
     
     <section id="galeria-section">
@@ -198,31 +144,28 @@
 
 
     <section class="timelinefishes">
-
         <div class="time-container">
-            <h2>Línea de Tiempo de Pesca</h1>
+            <h2>Línea de Tiempo de Pesca</h2>
             <section id="reloj-section">
                 <h2>Hora:</h2>
                 <div id="reloj"></div>
                 <button id="toggleFormato">AM/PM</button>
             </section>
+            <input type="text" id="search-fish" placeholder="Buscar peces...">
             <div id="timeline"></div>
             <button id="show-all-schedules">Todos Los Horarios</button>
         </div>
     </section>
-
-
-
-
-        <!-- Menú emergente -->
-        <div id="schedule-popup" class="popup">
-            <div class="popup-content">
-                <span id="close-popup" class="close">&times;</span>
-                <div id="fish-schedules"></div>
-            </div>
+    <!-- Menú emergente -->
+    <div id="schedule-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <div id="fish-schedules"></div>
         </div>
+    </div>
     
-        <section id="custom-map">
+    
+    <section id="custom-map">
             <img src="./assets/img/mapa/Map.webp" alt="Mapa Personalizado de Tsuki Odissey" id="map-image">
             <img src="./assets/img/mapa/RosemarysPlantShop.png" class="pin" data-title="Rosemary's Plant Shop" 
                  data-description="Una pequeña florería al norte de Mushroom Village, administrada por Rosemary." 
@@ -239,61 +182,26 @@
                  data-common-fish="Anchovy, Black Seabass, Bluecrab, Bumper, Cod, Coral Shrimp, Damsel, Flounder, Flying Fish, Herring, Mackerel, Moon Wrasse, Seahorse, Squid" 
                  data-legendary-fish="Arapaima, Goliath Grouper, Hammerhead Shark, Marlin, Sand Shark, The Dragon King" 
                  style="top: 61.6%; left: 55.5%;">
-        </section>
-        <div id="overlay"></div>
-        <div id="pin-info-box">
-            <button class="close-btn">&times;</button>
-            <h2 id="pin-title"></h2>
-            <p id="pin-description"></p>
-            <div class="pin-div">
-                <div>           
-                    <h3>Peces Comunes</h3>
-                    <ul id="common-fish-list"></ul>
-                </div>
-                <div>
-                    <h3>Peces Legendarios</h3>
-                    <ul id="legendary-fish-list"></ul>
-                </div>
+    </section>
+    <div id="overlay"></div>
+    <div id="pin-info-box">
+        <button class="close-btn">&times;</button>
+        <h2 id="pin-title"></h2>
+        <p id="pin-description"></p>
+        <div class="pin-div">
+            <div>           
+                <h3>Peces Comunes</h3>
+                <ul id="common-fish-list"></ul>
+            </div>
+            <div>
+                <h3>Peces Legendarios</h3>
+                <ul id="legendary-fish-list"></ul>
             </div>
         </div>
+    </div>
 
-        <section class="personajes-section">
-            <div class="personajes-div">
-                <h2>Personajes</h2>
-                <div class="personajes-gallery" id="personajes-gallery">
-                    <!-- Characters will be inserted here by JavaScript -->
-                </div>
-            </div>
 
-        </section>
-    
-        <div id="personajes-popup" class="personajes-popup">
-            <div class="personajes-popup-content">
-                <span class="personajes-close" id="personajes-closePopup">&times;</span>
-                <img id="personajes-popupImage" src="" alt="Character Image">
-                <h2 id="personajes-popupName"></h2>
-                <p id="personajes-popupSex"></p>
-                <p id="personajes-popupDate"></p>
-                <p id="personajes-popupDescription"></p>
-            </div>
-        </div>
-    <!-- <section class="search-bar">
-        <input type="text" id="searchInput" placeholder="Buscar objetos...">
-        <select id="filterSelect">
-            <option value="">Todos</option>
-            <option value="común">Común</option>
-            <option value="raro">Raro</option>
-            <option value="épico">Épico</option>
-            <option value="Muebles">Mueble</option>
-            <option value="Objetos">Objetos</option>
-            <option value="Plantas">Plantas</option>
-        </select>
-        <button id="filterButton">Filtrar</button>
-    </section>
-    <section id="itemListContainer">
-         Las secciones de categorías y los objetos se insertarán aquí dinámicamente
-    </section>
--->
+
     <section id="colab">
 
         <div class="colab-container">
@@ -314,13 +222,13 @@
         <p>Preview 0.3 2024/06/20</p>
     </footer>
 
-    <script src="./script.js"></script>
-    <script src="./fishes.js"></script>
-    <script src="./codes.js"></script>
-    <script src="./hours.js"></script>
-    <script src="./tips.js"></script>
-    <script src="./personajes.js"></script>
-    <script src="notificaciones.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/fishes.js"></script>
+    <script src="./assets/js/codes.js"></script>
+    <script src="./assets/js/hours.js"></script>
+    <script src="./assets/js/tips.js"></script>
+    <script src="./assets/js/personajes.js"></script>
+    <script src="./assets/js/notificaciones.js"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCJ2HD3EYT"></script>
 <script>

@@ -87,81 +87,94 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    fishesAvailableNow.forEach(fish => {
-        const fishEntry = document.createElement('div');
-        fishEntry.className = 'fish-entry';
+    const displayFishes = (fishes) => {
+        timeline.innerHTML = '';
+        fishes.forEach(fish => {
+            const fishEntry = document.createElement('div');
+            fishEntry.className = 'fish-entry';
 
-        const fishTitle = document.createElement('h2');
-        fishTitle.textContent = `${fish.type}`;
+            const fishTitle = document.createElement('h2');
+            fishTitle.textContent = `${fish.type}`;
 
-        const fishDetails = document.createElement('p');
-        fishDetails.textContent = `Lugar: ${fish.place} | Hora de pesca: ${fish.startHour}:00 - ${fish.endHour}:00`;
+            const fishDetails = document.createElement('p');
+            fishDetails.textContent = `Lugar: ${fish.place} | Hora de pesca: ${fish.startHour}:00 - ${fish.endHour}:00`;
 
-        fishEntry.appendChild(fishTitle);
-        fishEntry.appendChild(fishDetails);
+            fishEntry.appendChild(fishTitle);
+            fishEntry.appendChild(fishDetails);
 
-        timeline.appendChild(fishEntry);
+            timeline.appendChild(fishEntry);
+        });
+
+        if (fishes.length === 0) {
+            const noFishMessage = document.createElement('p');
+            noFishMessage.className = "noFishMessage";
+            noFishMessage.textContent = 'No hay pescados disponibles para pescar en este momento.';
+            timeline.appendChild(noFishMessage);
+        }
+    };
+
+    displayFishes(fishesAvailableNow);
+
+    document.getElementById('show-all-schedules').addEventListener('click', () => {
+        const popup = document.getElementById('schedule-popup');
+        const fishSchedules = document.getElementById('fish-schedules');
+
+        // Limpiar el contenido anterior
+        fishSchedules.innerHTML = '';
+
+        // Agrupar peces por lugar
+        const fishByPlace = fishData.reduce((acc, fish) => {
+            if (!acc[fish.place]) {
+                acc[fish.place] = [];
+            }
+            acc[fish.place].push(fish);
+            return acc;
+        }, {});
+
+        // Crear el contenido del popup
+        for (const place in fishByPlace) {
+            const placeHeader = document.createElement('h3');
+            placeHeader.textContent = place;
+            fishSchedules.appendChild(placeHeader);
+
+            const fishList = document.createElement('ul');
+            fishByPlace[place].forEach(fish => {
+                const fishItem = document.createElement('li');
+                fishItem.textContent = `${fish.type}: ${fish.startHour}:00 - ${fish.endHour}:00`;
+                fishList.appendChild(fishItem);
+            });
+            fishSchedules.appendChild(fishList);
+        }
+
+        // Mostrar el popup y bloquear el scroll del body
+        popup.style.display = 'block';
+        document.body.style.overflowY = 'hidden';
     });
 
-    if (fishesAvailableNow.length === 0) {
-        const noFishMessage = document.createElement('p');
-        noFishMessage.className = "noFishMessage";
-        noFishMessage.textContent = 'No hay pescados disponibles para pescar en este momento.';
-        timeline.appendChild(noFishMessage);
-    }
-});
-
-
-
-
-document.getElementById('show-all-schedules').addEventListener('click', () => {
-    const popup = document.getElementById('schedule-popup');
-    const fishSchedules = document.getElementById('fish-schedules');
-    
-    // Limpiar el contenido anterior
-    fishSchedules.innerHTML = '';
-
-    // Agrupar peces por lugar
-    const fishByPlace = fishData.reduce((acc, fish) => {
-        if (!acc[fish.place]) {
-            acc[fish.place] = [];
-        }
-        acc[fish.place].push(fish);
-        return acc;
-    }, {});
-
-    // Crear el contenido del popup
-    for (const place in fishByPlace) {
-        const placeHeader = document.createElement('h3');
-        placeHeader.textContent = place;
-        fishSchedules.appendChild(placeHeader);
-
-        const fishList = document.createElement('ul');
-        fishByPlace[place].forEach(fish => {
-            const fishItem = document.createElement('li');
-            fishItem.textContent = `${fish.type}: ${fish.startHour}:00 - ${fish.endHour}:00`;
-            fishList.appendChild(fishItem);
-        });
-        fishSchedules.appendChild(fishList);
-    }
-
-    // Mostrar el popup y bloquear el scroll del body
-    popup.style.display = 'block';
-    document.body.style.overflowY = 'hidden';
-});
-
-// Ocultar el popup al hacer clic en la "x"
-document.getElementById('close-popup').addEventListener('click', () => {
-    const popup = document.getElementById('schedule-popup');
-    popup.style.display = 'none';
-    document.body.style.overflowY = 'auto'; // Rehabilitar el scroll del body
-});
-
-// Ocultar el popup al hacer clic fuera de él
-window.addEventListener('click', (event) => {
-    const popup = document.getElementById('schedule-popup');
-    if (event.target == popup) {
+    // Ocultar el popup al hacer clic en la "x"
+    document.getElementById('close-popup').addEventListener('click', () => {
+        const popup = document.getElementById('schedule-popup');
         popup.style.display = 'none';
         document.body.style.overflowY = 'auto'; // Rehabilitar el scroll del body
-    }
+    });
+
+    // Ocultar el popup al hacer clic fuera de él
+    window.addEventListener('click', (event) => {
+        const popup = document.getElementById('schedule-popup');
+        if (event.target == popup) {
+            popup.style.display = 'none';
+            document.body.style.overflowY = 'auto'; // Rehabilitar el scroll del body
+        }
+    });
+
+    // Funcionalidad de búsqueda
+    document.getElementById('search-fish').addEventListener('input', (event) => {
+        const searchQuery = event.target.value.toLowerCase();
+        if (searchQuery === '') {
+            displayFishes(fishesAvailableNow);
+        } else {
+            const filteredFishes = fishData.filter(fish => fish.type.toLowerCase().includes(searchQuery));
+            displayFishes(filteredFishes);
+        }
+    });
 });
