@@ -15,6 +15,8 @@
 
 html{
     scroll-behavior: smooth;
+    scrollbar-color: var(--ColorText) var(--Boxshadow);
+    scrollbar-width: thin;
 }
 
 body.no-scroll {
@@ -27,6 +29,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: url(./wallpaper.jpg);
+
+    
     
     /* background-color: #A3C0AA; */
 	/* background: 
@@ -578,6 +582,17 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    scrollbar-color: var(--ColorText) var(--backgroundColorCards);
+    scrollbar-width: thin;
+    
+}
+
+.timeline-scroll {
+    max-height: 400px; /* Ajusta este valor según tu diseño */
+    overflow-y: auto;
+    border-radius: 15px;
+    border: solid 3px var(--bordercolor);
+    padding: 8px;
 }
 
 .fish-entry {
@@ -833,6 +848,31 @@ footer p {
         font-size: 1rem;
     }
     
+    .code-card {
+        max-width: 20rem;
+        background-color: #1a18188e;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 1rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 15px;
+        justify-content: center;
+        text-align: center;
+        transition: 500ms all;
+    }
+
+    .code-card p {
+        margin: 0;
+        background-color: transparent;
+        border: 3px double #ffd000;
+        padding: 3px;
+        border-radius: 5px;
+        font-size: .5rem;
+    }
+
 }
 
 
@@ -869,7 +909,7 @@ footer p {
 }
 
 .code-card {
-    width: 10rem;
+    width: fit-content;
     max-width: 20rem;
     background-color: #1a18188e;
     border: 1px solid #ddd;

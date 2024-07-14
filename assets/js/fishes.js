@@ -111,6 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
             noFishMessage.textContent = 'No hay pescados disponibles para pescar en este momento.';
             timeline.appendChild(noFishMessage);
         }
+
+        // Agregar la clase para el scroll si hay más de 5 peces
+        if (fishes.length > 5) {
+            timeline.classList.add('timeline-scroll');
+        } else {
+            timeline.classList.remove('timeline-scroll');
+        }
     };
 
     displayFishes(fishesAvailableNow);
