@@ -700,13 +700,13 @@ h2 {
 
 
 footer {
-    height: 3rem;
+    height: fit-content;
     margin-top: 1rem;
     background-color: var(--backgroundColorCards);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 15px 15px 0px 0px;
     backdrop-filter: blur(3px);
     font-family: CoffeFont;
@@ -723,9 +723,18 @@ footer a:visited{
     
 }
 
-footer p {
-    margin-left: 0.8rem;
+footer div {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+.cafecito {
+    margin-top: 1rem;
+}
+
 
 
 @media only screen and (max-width: 600px) {
