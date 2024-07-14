@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mostRecentDate = codes[0].date;
 
     const inactiveCodes = [];
+    let hasActiveCodes = false;
+
     codes.forEach(code => {
         const issuedDate = new Date(code.date);
         let isActive = false;
@@ -98,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (code.date === mostRecentDate) {
             codeElement.style.filter = 'drop-shadow(1px 1px 30px #cab65e)';
             codeElement.style.transition = '500ms all';
-            codeElement.style.border = 'solid 3px #efcd36'
+            codeElement.style.border = 'solid 3px #efcd36';
         }
 
         const codeText = document.createElement('p');
@@ -110,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         codeElement.appendChild(releaseDate);
 
         if (isActive) {
+            hasActiveCodes = true;
             if (code.type === "temporal") {
                 const expiraEn = document.createElement('p');
                 expiraEn.className = 'expira-en';
@@ -136,6 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
             inactiveCodes.push(codeElement);
         }
     });
+
+    if (!hasActiveCodes) {
+        const noActiveCodesMessage = document.createElement('p');
+        noActiveCodesMessage.textContent = "No hay códigos activos por el momento :(";
+        activeCodesContainer.appendChild(noActiveCodesMessage);
+    }
 
     // Mostrar los primeros 4 códigos inactivos
     inactiveCodes.slice(0, 4).forEach(codeElement => {
@@ -168,10 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateRemainingTime(); // Initial call to show remaining time immediately
 
-
-    
-
-
     //// Verificar si el navegador soporta notificaciones
     if (!("Notification" in window)) {
         alert("Este navegador no soporta notificaciones de escritorio.");
@@ -187,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
 
     // Función para mostrar una notificación
     function mostrarNotificacion(titulo, mensaje, url) {
@@ -216,23 +220,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para verificar si hay nuevos códigos
     function verificarNuevosCodigos() {
-    const cantidadGuardada = parseInt(localStorage.getItem('cantidadCodigos'), 10);
-    const cantidadActual = contarCodigos();
+        const cantidadGuardada = parseInt(localStorage.getItem('cantidadCodigos'), 10);
+        const cantidadActual = contarCodigos();
 
-    // Log en consola las variables del caché y las actuales
-    console.log(`Cantidad de códigos guardada en caché: ${cantidadGuardada}`);
-    console.log(`Cantidad de códigos actual en la página: ${cantidadActual}`);
+        // Log en consola las variables del caché y las actuales
+        console.log(`Cantidad de códigos guardada en caché: ${cantidadGuardada}`);
+        console.log(`Cantidad de códigos actual en la página: ${cantidadActual}`);
 
-    if (cantidadActual > cantidadGuardada) {
-        const titulo = "¡Nuevo Código de Tsuki :D!";
-        const mensaje = `Hay ${cantidadActual - cantidadGuardada} nuevos códigos de canje disponibles.`;
-        const url = "https://tsuki-odisey-objets.vercel.app/";
-        mostrarNotificacion(titulo, mensaje, url);
-        localStorage.setItem('cantidadCodigos', cantidadActual);
-    } else if (cantidadActual < cantidadGuardada) {
-        localStorage.setItem('cantidadCodigos', cantidadActual);
+        if (cantidadActual > cantidadGuardada) {
+            const titulo = "¡Nuevo Código de Tsuki :D!";
+            const mensaje = `Hay ${cantidadActual - cantidadGuardada} nuevos códigos de canje disponibles.`;
+            const url = "https://tsuki-odisey-objets.vercel.app/";
+            mostrarNotificacion(titulo, mensaje, url);
+            localStorage.setItem('cantidadCodigos', cantidadActual);
+        } else if (cantidadActual < cantidadGuardada) {
+            localStorage.setItem('cantidadCodigos', cantidadActual);
+        }
     }
-}
 
     // Verificar nuevos códigos cada 10 segundos
     setInterval(verificarNuevosCodigos, 10000);
