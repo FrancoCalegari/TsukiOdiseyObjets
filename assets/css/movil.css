@@ -1,0 +1,197 @@
+@media (max-width: 600px) {
+    .Backgoundz {
+        background-color: var(--backgroundColorCards); 
+        padding: 2rem;
+        border-radius: 15px;
+        backdrop-filter: blur(3px);
+        box-shadow: var(--backgroundColorCards) 2px 2px 10px;
+        max-width: 60rem;
+        width: 80%;
+    }
+
+    .presentation img{
+        filter: drop-shadow(1px 1px 120px #e3797767);
+        width: 80%;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        margin: 1rem;
+    }
+
+    .header-div li a {
+        color: var(--ColorText);
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    header {
+        color: var(--ColorText);
+        text-align: center;
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        height: fit-content;
+        font-family: CoffeFont;
+    }
+
+    .header-div li {
+        background-color: var(--backgroundColorCards);
+        margin-left: 0rem;
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: #1a1818 2px 2px 10px;
+        transition: 500ms all;
+    }
+
+    div ul {
+        padding-inline-start: 0px;
+    }
+
+    .pin {
+        position: absolute;
+        width: auto; /* Ajusta el tamaño de los pines según sea necesario */
+        height: 2.5rem;
+        cursor: pointer;
+        transition: all 700ms;
+        border-radius: 25%;
+        filter: drop-shadow(1px 3px 1px #202020a2);
+        animation: scaleUp 5s infinite;
+    }
+
+    .item {
+        display: block;
+        border: 3px solid #DDD7BD;
+        border-radius: 15px;
+        width: fit-content;
+        margin: 1em;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+        background-color: var(--defaultCard);
+        box-shadow: #4B4B4B 2px 2px 10px;
+        position: relative;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    #pin-info-box h2 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    #pin-description {
+        font-size: 1rem;
+        text-align: center;
+        background-color: #1a18189a;
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid #FEE6CA;
+        filter: drop-shadow(1px 1px 120px #fee6ca9f);
+    }
+
+    .pin-div div h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .pin-div div li {
+        font-size: 1rem;
+    }
+
+    .code-container {
+        padding: 10px;
+    }
+
+    /*options*/
+
+    .options {
+        flex-direction: column; /* Cambia a columna para disposición vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+        gap: 0.5rem; /* Reduce el espacio entre los botones */
+        margin-top: 1rem; /* Reduce el margen superior */
+        margin-bottom: 1rem; /* Reduce el margen inferior */
+    }
+
+    .options div {
+        width: 90%; /* Ajusta el ancho al 100% del contenedor */
+        padding: 0.5rem; /* Reduce el padding */
+    }
+
+    .options div ul {
+        flex-direction: column; /* Cambia a columna para disposición vertical */
+        gap: 0.5rem; /* Reduce el espacio entre los elementos de la lista */
+    }
+
+    .options div ul li {
+        width: 80%; /* Ajusta el ancho al 100% del contenedor */
+        padding: 0.5rem; /* Reduce el padding */
+        margin: auto;
+    }
+
+    .options div ul li a {
+        font-size: 1rem; /* Ajusta el tamaño de fuente si es necesario */
+    }
+
+    /*Colab*/
+
+    .colab-container {
+        padding: 1rem; /* Reduce el padding */
+        margin-top: 2rem; /* Reduce el margen superior */
+        margin-bottom: 3rem; /* Reduce el margen inferior */
+    }
+
+    .colab-container-card {
+        height: 10rem; /* Ajusta la altura automáticamente */
+        width: 16rem; /* Ajusta el ancho al 100% del contenedor */
+        flex-direction: column; /* Cambia a columna para disposición vertical */
+        gap: 1rem; /* Espacio entre los elementos */
+    }
+
+    .colab-container-card img {
+        height: auto; /* Ajusta la altura automáticamente */
+        width: 100%; /* Ajusta el ancho al 100% */
+        max-width: fit-content; /* Ancho máximo */
+        border-radius: 15px;
+    }
+
+    .colabdivcontainer {
+        flex-direction: column; /* Cambia a columna para disposición vertical */
+        gap: 1rem; /* Espacio entre los elementos */
+    }
+
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .gachaboy-container {
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .gachaboy-container-card {
+        height: 10rem;
+        width: 16rem;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 8px;
+    }
+
+    .gachaboy-container-card img {
+        height: auto;
+        width: 100%;
+        max-width: auto;
+        border-radius: 15px;
+    }
+
+    .gachaboy-div-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

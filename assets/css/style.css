@@ -737,130 +737,8 @@ footer div {
 
 
 
-@media only screen and (max-width: 600px) {
-
-    .Backgoundz {
-        background-color: var(--backgroundColorCards); 
-        padding: 2rem;
-        border-radius: 15px;
-        backdrop-filter: blur(3px);
-        box-shadow: var(--backgroundColorCards) 2px 2px 10px;
-        max-width: 60rem;
-        width: 80%;
-    }
-
-    .presentation img{
-        filter: drop-shadow( 1px 1px 120px #e3797767);
-        width: 80%;
-    }
-
-    .logo {
-        font-size: 1.8rem;
-        margin: 1rem;
-    }
-
-    .header-div li a {
-        color: var(--ColorText);
-        text-decoration: none;
-        font-size: 1rem;
-    }
-
-    header {
-
-        color: var(--ColorText);
-    
-        text-align: center;
-    
-        padding: 1em 0;
-    
-        display: flex;
-
-        flex-direction: column;
-        justify-content: center;
-    
-        align-items: center;
-    
-        z-index: 1;
-    
-        height: fit-content;
-    
-        font-family: CoffeFont;
-        
-    }
-
-    
-    .header-div li {
-        background-color: var(--backgroundColorCards);
-        margin-left: 0rem;
-        margin: 0.5rem;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: #1a1818 2px 2px 10px;
-        transition: 500ms all;
-    }
 
 
-
-    div ul{
-        padding-inline-start: 0px;
-    }
-
-    .pin {
-        position: absolute;
-        width: auto; /* Ajusta el tamaño de los pines según sea necesario */
-        height: 2.5rem;
-        cursor: pointer;
-        transition: all 700ms;
-        border-radius: 25%;
-        filter: drop-shadow( 1px 3px 1px #202020a2);
-        animation: scaleUp 5s infinite;
-    }
-
-    .item {
-        display: block;
-        border: 3px solid #DDD7BD;
-        border-radius: 15px;
-        width: fit-content;
-        margin: 1em;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: box-shadow 0.3s ease;
-        background-color: var(--defaultCard);
-        box-shadow: #4B4B4B 2px 2px 10px;
-        position: relative;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-
-    #pin-info-box h2 {
-        margin-top: 0;
-        text-align: center;
-        font-size: 1.8rem;
-        
-    }
-
-    #pin-description{
-        font-size: 1rem;
-        text-align: center;
-        background-color: #1a18189a;
-        padding: 30px;
-        border-radius: 15px;
-        border: 1px solid #FEE6CA;
-        filter: drop-shadow( 1px 1px 120px #fee6ca9f);
-    }
-
-    .pin-div div h3 {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-    
-    .pin-div div li {
-        font-size: 1rem;
-    }
-
-
-
-
-}
 
 
 
@@ -958,11 +836,6 @@ footer div {
     gap: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .code-container {
-        padding: 10px;
-    }
-}
 
 #active-codes {
     display: flex;
@@ -1478,6 +1351,7 @@ footer div {
     width: max-content;
     border-radius: 15px;
     transition: 500ms all;
+    flex-wrap: wrap;
 }
 
 .gachaboy-container-card img {
