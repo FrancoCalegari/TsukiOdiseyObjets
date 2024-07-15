@@ -856,31 +856,9 @@ footer div {
     .pin-div div li {
         font-size: 1rem;
     }
-    
-    .code-card {
-        max-width: 20rem;
-        background-color: #1a18188e;
-        border: 1px solid #ddd;
-        margin-bottom: 10px;
-        padding: 1rem;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        border-radius: 15px;
-        justify-content: center;
-        text-align: center;
-        transition: 500ms all;
-    }
 
-    .code-card p {
-        margin: 0;
-        background-color: transparent;
-        border: 3px double #ffd000;
-        padding: 3px;
-        border-radius: 5px;
-        font-size: .5rem;
-    }
+
+
 
 }
 
@@ -1441,11 +1419,17 @@ footer div {
     list-style: none;
 }
 
+.options div ul li a:visited {
+    color: #DDD7BD;
+    list-style: none;
+}
+
 .options div ul li a{
     text-decoration: none;
     justify-content: center;
     display: flex;
     align-items: center;
+    color: #DDD7BD;
 }
 
 .options div ul li:hover {
