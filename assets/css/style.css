@@ -1399,3 +1399,51 @@ footer div {
     filter: drop-shadow(2px 2px 20px  #ddd7bde1);
 }
 
+.options {
+    display: flex; /* Cambia a flex para disposición horizontal */
+    justify-content: center;
+
+    color: #DDD7BD;
+    font-family: CoffeFont;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    list-style: none;
+    gap: 1rem; /* Espacio entre los botones */
+}
+
+.options div {
+    width: auto; /* Ajusta el ancho automáticamente */
+    background-color: #1a18189c;
+    backdrop-filter: blur(3px);
+    padding: 1rem;
+    box-shadow: #1a1818 2px 2px 10px;
+    border-radius: 15px;
+}
+
+.options div ul {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex; /* Cambia a flex para disposición horizontal */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    gap: 1rem; /* Espacio entre los elementos de la lista */
+}
+
+.options div ul li {
+    background-color: var(--backgroundColorCards);
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+.options div ul li a:visited {
+    color: #DDD7BD;
+    text-decoration: none;
+    list-style: none;
+}
+
+.options div ul li:hover {
+    transform: scale(1.2);
+    transition: all 500ms;
+    box-shadow: 1px 1px 10px #FFECCF;
+}
