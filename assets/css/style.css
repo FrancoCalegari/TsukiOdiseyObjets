@@ -1438,8 +1438,14 @@ footer div {
 
 .options div ul li a:visited {
     color: #DDD7BD;
-    text-decoration: none;
     list-style: none;
+}
+
+.options div ul li a{
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .options div ul li:hover {
