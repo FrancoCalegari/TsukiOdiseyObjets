@@ -1289,13 +1289,14 @@ footer div {
     align-items: center;
     background-color: #1a18189c;
     height: 10rem;
-    width: 100%;
+    width: 13rem;
     border-radius: 15px;
     transition: 500ms all;
 }
 
 .colab-container-card img {
     height: 120px;
+    border-radius: 15px;
 }
 
 .colab-container-card:hover{
@@ -1304,7 +1305,11 @@ footer div {
     border: solid 3px #FFECCF;
     transform: scale(1.15);
 }
-
+.colabdivcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 /*event cards*/
 
 

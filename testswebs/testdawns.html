@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinar Cosméticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #cosmetic-section {
+            display: flex;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .cosmetic-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #combination-section {
+            margin: 20px;
+        }
+
+        #selected-items {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .selected-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .operator {
+            font-size: 24px;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 2px 5px;
+        }
+
+        #combine-button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section id="cosmetic-section">
+        <!-- Los elementos se insertarán aquí dinámicamente -->
+    </section>
+
+    <div id="combination-section">
+        <h2>Combinar Cosméticos</h2>
+        <div id="selected-items">
+            <!-- Elementos seleccionados aparecerán aquí -->
+        </div>
+        <button id="combine-button" onclick="combineItems()">Combinar</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div id="popup-details"></div>
+        </div>
+    </div>
+
+    <script>
+        // Base de datos de cosméticos
+        const cosmetics = [
+            { id: 1, nombre: 'Lápiz labial común', descripcion: 'Un lápiz labial común', precio: 10, rareza: 'común', categoria: 'labios', imagen: 'https://via.placeholder.com/100', especialId: 3 },
+            { id: 2, nombre: 'Lápiz labial raro', descripcion: 'Un lápiz labial raro', precio: 20, rareza: 'raro', categoria: 'labios', imagen: 'https://via.placeholder.com/100', especialId: 4 },
+            { id: 3, nombre: 'Lápiz labial especial', descripcion: 'Un lápiz labial especial', precio: 30, rareza: 'especial', categoria: 'labios', imagen: 'https://via.placeholder.com/100', especialId: 0 },
+            { id: 4, nombre: 'Lápiz labial ultra especial', descripcion: 'Un lápiz labial ultra especial', precio: 50, rareza: 'ultra especial', categoria: 'labios', imagen: 'https://via.placeholder.com/100', especialId: 0 }
+        ];
+
+        let selectedItems = [];
+
+        // Función para mostrar los cosméticos en la página
+        function displayCosmetics() {
+            const section = document.getElementById('cosmetic-section');
+            cosmetics.forEach(cosmetic => {
+                const div = document.createElement('div');
+                div.className = 'cosmetic-item';
+                div.onclick = () => selectItem(cosmetic);
+                div.innerHTML = `
+                    <img src="${cosmetic.imagen}" alt="${cosmetic.nombre}">
+                    <h3>${cosmetic.nombre}</h3>
+                `;
+                section.appendChild(div);
+            });
+        }
+
+        // Función para seleccionar un cosmético
+        function selectItem(cosmetic) {
+            if (selectedItems.length < 3) {
+                selectedItems.push(cosmetic);
+                updateSelectedItems();
+            } else {
+                alert('Solo puedes seleccionar 3 elementos.');
+            }
+        }
+
+        // Función para eliminar un cosmético seleccionado
+        function removeItem(index) {
+            selectedItems.splice(index, 1);
+            updateSelectedItems();
+        }
+
+        // Función para actualizar la visualización de los elementos seleccionados
+        function updateSelectedItems() {
+            const selectedSection = document.getElementById('selected-items');
+            selectedSection.innerHTML = '';
+            selectedItems.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'selected-item';
+                div.innerHTML = `
+                    <button class="remove-btn" onclick="removeItem(${index})">X</button>
+                    <img src="${item.imagen}" alt="${item.nombre}">
+                    <h4>${item.nombre}</h4>
+                `;
+                selectedSection.appendChild(div);
+
+                if (index < 2) {
+                    const plusDiv = document.createElement('div');
+                    plusDiv.className = 'operator';
+                    plusDiv.innerText = '+';
+                    selectedSection.appendChild(plusDiv);
+                } else if (index === 2) {
+                    const equalsDiv = document.createElement('div');
+                    equalsDiv.className = 'operator';
+                    equalsDiv.innerText = '=';
+                    selectedSection.appendChild(equalsDiv);
+                }
+            });
+        }
+
+        // Función para combinar los elementos seleccionados
+function combineItems() {
+    if (selectedItems.length === 3) {
+        const specialId = selectedItems[0].especialId;
+        if (selectedItems.every(item => item.id === selectedItems[0].id)) {
+            if (specialId !== 0) {
+                const combined = cosmetics.find(item => item.id === specialId);
+                const combinedDiv = document.createElement('div');
+                combinedDiv.className = 'selected-item';
+                combinedDiv.innerHTML = `
+                    <img src="${combined.imagen}" alt="${combined.nombre}">
+                    <h4>${combined.nombre}</h4>
+                `;
+                document.getElementById('selected-items').appendChild(combinedDiv);
+                showPopup(combined);
+                selectedItems = [combined];
+            } else {
+                showPopup({ nombre: 'Sin combinaciones', descripcion: 'No hay combinaciones para este objeto.', precio: '', rareza: '', categoria: '', imagen: '' });
+                selectedItems = [];
+            }
+            updateSelectedItems();
+        } else {
+            alert('Para combinar, debes seleccionar 3 elementos iguales.');
+        }
+    } else {
+        alert('Necesitas seleccionar 3 elementos para combinar.');
+    }
+}
+
+        // Función para mostrar el popup con detalles del cosmético
+        function showPopup(cosmetic) {
+            const popup = document.getElementById('popup');
+            const popupDetails = document.getElementById('popup-details');
+            popupDetails.innerHTML = cosmetic.nombre === 'Sin combinaciones' ? `
+                <p>${cosmetic.descripcion}</p>
+            ` : `
+                <img src="${cosmetic.imagen}" alt="${cosmetic.nombre}">
+                <h3>${cosmetic.nombre}</h3>
+                <p>${cosmetic.descripcion}</p>
+                <p>Precio: ${cosmetic.precio}</p>
+                <p>Rareza: ${cosmetic.rareza}</p>
+                <p>Categoría: ${cosmetic.categoria}</p>
+            `;
+            popup.style.display = 'flex';
+        }
+
+        // Función para cerrar el popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Inicializa la visualización de los cosméticos
+        displayCosmetics();
+    </script>
+</body>
+</html>
