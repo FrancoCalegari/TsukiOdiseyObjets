@@ -1165,6 +1165,7 @@ footer div {
     width: 13rem;
     border-radius: 15px;
     transition: 500ms all;
+    border: solid 3px transparent;
 }
 
 .colab-container-card img {
@@ -1334,6 +1335,7 @@ footer div {
    font-family: CoffeFont;
    filter: drop-shadow(1px 1px 15px  #ddd7bd3a);
    padding: 1rem;
+   padding-bottom: 2rem;
 }
 
 .gachaboy-container-card{
@@ -1346,11 +1348,13 @@ footer div {
     border-radius: 15px;
     transition: 500ms all;
     flex-wrap: wrap;
+    border: solid 3px transparent;
 }
 
 .gachaboy-container-card img {
     height: 120px;
     border-radius: 15px;
+    padding: 1rem;
 }
 
 .gachaboy-container-card:hover{

@@ -5,13 +5,35 @@
         border-radius: 15px;
         backdrop-filter: blur(3px);
         box-shadow: var(--backgroundColorCards) 2px 2px 10px;
-        max-width: 60rem;
+        max-width: 50rem;
         width: 80%;
     }
 
     .presentation img{
         filter: drop-shadow(1px 1px 120px #e3797767);
-        width: 80%;
+        width: 70%;
+    }
+
+    .presentation img{
+        filter: drop-shadow( 1px 1px 120px #e3797767);
+        width: 60%;
+    }
+    
+    .presentation h2 {
+        font-size: 1.5rem;
+    }
+    
+    .presentation p {
+        font-size: 1.1rem;
+    }
+
+    .presentacion-ul li {
+        background-color: var(--backgroundColorCards);
+        padding: 8px;
+        margin: 0px 10px;
+        border-radius: 8px;
+        box-shadow: #1a1818 2px 2px 10px;
+        transition: 500ms all;
     }
 
     .logo {
