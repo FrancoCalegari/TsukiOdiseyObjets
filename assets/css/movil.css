@@ -195,6 +195,7 @@
         padding: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding-bottom: 2.5rem;
     }
 
     .gachaboy-container-card {
@@ -202,14 +203,16 @@
         width: 16rem;
         flex-direction: column;
         gap: 1rem;
-        padding: 8px;
+        padding: 1rem;
+        
     }
 
     .gachaboy-container-card img {
         height: auto;
-        width: 100%;
+        width: 90%;
         max-width: auto;
         border-radius: 15px;
+        
     }
 
     .gachaboy-div-container {
