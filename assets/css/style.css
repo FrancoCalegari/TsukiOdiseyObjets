@@ -1353,6 +1353,7 @@ footer div {
 
 .gachaboy-container-card img {
     height: 120px;
+    
     border-radius: 15px;
     padding: 1rem;
 }
@@ -1362,6 +1363,7 @@ footer div {
     transition: 500ms all;
     border: solid 3px #FFECCF;
     transform: scale(1.15);
+    
 }
 .gachaboy-div-container{
     display: flex;
