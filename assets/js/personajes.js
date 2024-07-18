@@ -4,21 +4,38 @@ const characters = [
         image: './assets/img/personajes/BennySprite.webp',
         sex: 'Male',
         date: '1',
-        description: 'Benny es un mapache muy ansioso y centrado en el trabajo. A veces tartamudea al hablar, y se lamenta ante Tsuki de las dificultades de gestionar toda una ciudad y ser incapaz de relajarse.'
+        description: 'Benny es un mapache muy ansioso y centrado en el trabajo. A veces tartamudea al hablar, y se lamenta ante Tsuki de las dificultades de gestionar toda una ciudad y ser incapaz de relajarse.',
+  
     },
     {
         name: 'Tsuki',
         image: './assets/img/personajes/TsukiSprite.webp',
         sex: 'Male',
         date: '1',
-        description: 'Tsuki hace lo que quiere durante el día. El jugador puede entrar y salir del juego para ver qué está haciendo. De vez en cuando, Tsuki interactúa aleatoriamente con un objeto comprado a Pipi, creando publicaciones en Parsnap.'
+        description: 'Tsuki hace lo que quiere durante el día. El jugador puede entrar y salir del juego para ver qué está haciendo. De vez en cuando, Tsuki interactúa aleatoriamente con un objeto comprado a Pipi, creando publicaciones en Parsnap.',
+  
     },
     {
         name: 'Bobo',
         image: './assets/img/personajes/BoboSprite.webp',
         sex: 'Male',
         date: '12',
-        description: 'Bobo es un panda relajado y despreocupado, siempre listo para una siesta o una comida abundante.'
+        description: 'Bobo es un panda fuerte, despreocupado y muy simple :D , siguió a sus sueños hasta su tienda de Ramen,siempre listo para una siesta o una comida abundante.',
+        advice: [
+           
+            `<h3> ¿Bobo no te dio un sartenazo? </h3>
+            <div>
+            <h6>Pasos:</h6>
+            <ul>
+                <li> Activa el sistema de fastidio (pester system)</li>
+                <li> Espera a que hayan 2 o 3 clientes en el carrito</li>
+                <li> Bobo debe estar mirando hacia el puesto de Momo (hacia la izquierda - cocinando)</li>
+                <li> Fastidia a los clientes hasta que estén molestos</li>
+                <li> Fastidia a Bobo hasta que te pegue</li>
+                <li> Puedes intentarlo alrededor del mediodía ya que los vendedores van a almorzar a esa hora</li>
+            </ul>
+            </div>`
+        ]
     },
     {
         name: 'Camille',
@@ -141,6 +158,7 @@ const characters = [
     },
 ];
 
+
 const gallery = document.getElementById('personajes-gallery');
 const popup = document.getElementById('personajes-popup');
 const popupImage = document.getElementById('personajes-popupImage');
@@ -149,6 +167,8 @@ const popupSex = document.getElementById('personajes-popupSex');
 const popupDate = document.getElementById('personajes-popupDate');
 const popupDescription = document.getElementById('personajes-popupDescription');
 const closePopup = document.getElementById('personajes-closePopup');
+const popupAdvice = document.getElementById('personajes-popupAdvice');
+const adviceContainer = document.getElementById('advice-container'); // Nuevo contenedor para los consejos
 
 characters.forEach((character, index) => {
     const charDiv = document.createElement('div');
@@ -165,15 +185,39 @@ function openPopup(index) {
     popupSex.textContent = `Sexo: ${character.sex}`;
     popupDate.textContent = `Aparece el día: ${character.date}`;
     popupDescription.textContent = character.description;
+    popupAdvice.innerHTML = ''; // Limpiar el contenido previo
+    adviceContainer.innerHTML = ''; // Limpiar el contenido de consejos previo
+
+    if (character.advice && character.advice.length > 0) {
+        character.advice.forEach((advice, idx) => {
+            const adviceButton = document.createElement('button');
+            adviceButton.textContent = `Consejo ${idx + 1}`;
+            adviceButton.addEventListener('click', () => displayAdvice(advice));
+            popupAdvice.appendChild(adviceButton);
+        });
+        popupAdvice.style.display = 'block';
+    } else {
+        popupAdvice.style.display = 'none';
+    }
+
     popup.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Bloquear el scroll del body
+}
+
+function displayAdvice(advice) {
+    adviceContainer.innerHTML = `<div class="advice-content">${advice}</div>`;
 }
 
 closePopup.addEventListener('click', () => {
     popup.style.display = 'none';
+    adviceContainer.innerHTML = ''; // Limpiar al cerrar el popup
+    document.body.style.overflow = 'auto'; // Restaurar el scroll del body
 });
 
 window.addEventListener('click', (event) => {
     if (event.target === popup) {
         popup.style.display = 'none';
+        adviceContainer.innerHTML = ''; // Limpiar al hacer clic fuera del popup
+        document.body.style.overflow = 'auto'; // Restaurar el scroll del body
     }
 });

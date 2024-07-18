@@ -1046,6 +1046,8 @@ footer div {
 
 /*Personajes section*/
 
+/*Personajes section*/
+
 .personajes-section {
     padding: 20px;
     justify-content: center;
@@ -1071,7 +1073,6 @@ footer div {
     gap: 10px;
     justify-content: center; /* Centrar los elementos horizontalmente */
     width: 100%;
-
 }
 .personajes-gallery div {
     background-color: #1a18189c;
@@ -1101,27 +1102,29 @@ footer div {
     justify-content: center;
     align-items: center;
     z-index: 2;
+
 }
 .personajes-popup-content {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     position: relative;
-    max-width: 500px;
+    max-width: 600px;
     width: 80%;
-
+    height: 80vh;
     background-color: var(--backgroundColorCards);
     padding: 1rem;
     border-radius: 10px;
     box-shadow: var(--Boxshadow) 2px 2px 10px;
     color: var(--ColorText);
     font-family: CoffeFont;
-    filter: drop-shadow(1px 1px 15px  #ddd7bd3a);
+    filter: drop-shadow(1px 1px 15px #ddd7bd3a);
     border: double 3px var(--bordercolor);
-    
+    overflow-y: auto; /* Habilitar el overflow en el popup */
+
 }
 .personajes-popup-content img {
-    width: 50%;
+    width: 8rem;
     border-radius: 8px;
 }
 .personajes-close {
@@ -1131,6 +1134,51 @@ footer div {
     font-size: 24px;
     cursor: pointer;
 }
+
+.personajes-popupDescriptionDiv {
+    border: 2px var(--bordercolor) solid;
+    padding: 0rem 1rem 1rem 1rem;
+    border-radius: 15px;
+    
+}
+
+#personajes-popupAdvice button{
+    background-color: var(--backgroundColorCards);
+    color: var(--bordercolor);
+    font-family: CoffeFont;
+    border: var(--bordercolor) 2px solid;
+    height: 30px;
+    width: 8rem;
+    border-radius: 0px 0px 12px 12px;
+    transition: 500ms ease-in-out;
+}
+
+#personajes-popupAdvice button:hover {
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 20px  #DDD7BD);
+    transition: 500ms ease-in-out;
+}
+
+
+
+.personajes-popup-advice {
+    background-color: transparent;
+    
+}
+.advice-container {
+    margin-top: 20px;
+    text-align: left; /* Alinear el texto a la izquierda */
+    
+}
+
+.advice-content {
+    border: 3px var(--bordercolor) solid;
+    padding: 12px;
+    border-radius: 15px;
+}
+
+
+/*Colab section*/
 
 
 .colab {
@@ -1370,3 +1418,6 @@ footer div {
     flex-direction: row;
     gap: 20px;
 }
+
+
+/*test*/
