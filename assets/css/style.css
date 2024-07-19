@@ -1177,6 +1177,18 @@ footer div {
     border-radius: 15px;
 }
 
+.advice-content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.advice-content div img {
+    width: 50%;
+    height: auto;
+    margin: 8px;
+}
 
 /*Colab section*/
 

@@ -10,6 +10,7 @@ const characters = [
             `<h3> ¿Como consigo el tercer piso? </h3>
             <div>
                 <p> Al actualizar tu casa haciendo clic en los planos junto al escritorio de Benny (en horario laboral horas laborales > 7:00 am - 6:59 pm), se inicia la construcción y tus objetos sobrantes se guardan en una vasija. Antes de retirarlos con un clic, captura una imagen con la cámara del juego.</p>
+                <img src="./assets/img/peronajesconsejos/bennyimg1.jpg" alt="consejos de benny" >
             </div>`,
             `<h3> ¿Cuando puedo decorar el Muelle/Marmind? </h3>
             <div>
