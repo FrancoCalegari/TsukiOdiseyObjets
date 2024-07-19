@@ -5,6 +5,29 @@ const characters = [
         sex: 'Male',
         date: '1',
         description: 'Benny es un mapache muy ansioso y centrado en el trabajo. A veces tartamudea al hablar, y se lamenta ante Tsuki de las dificultades de gestionar toda una ciudad y ser incapaz de relajarse.',
+        advice: [
+           
+            `<h3> ¿Como consigo el tercer piso? </h3>
+            <div>
+                <p> Al actualizar tu casa haciendo clic en los planos junto al escritorio de Benny (en horario laboral horas laborales > 7:00 am - 6:59 pm), se inicia la construcción y tus objetos sobrantes se guardan en una vasija. Antes de retirarlos con un clic, captura una imagen con la cámara del juego.</p>
+            </div>`,
+            `<h3> ¿Cuando puedo decorar el Muelle/Marmind? </h3>
+            <div>
+                <p>El tiempo que toma completar la tarea de decorar el muelle con Benny no está definido. Es necesario hablar con él diariamente para progresar, y él te avisará cuando la decoración esté lista. Se estima que el proceso puede durar alrededor de 30 días, pero esta información no es oficial. A diferencia de las interacciones con Chi y Moca, no hay un logro específico para monitorizar el avance en esta tarea.</p>
+            </div>`,
+            `<h3> ¿Puedo recuprar los lapiceros de Benny? </h3>
+            <div>
+                <p>Las lapiceras de Benny es un objeto inrremplazable por ende solo los puedes conseguir en su evento asique no se puede.</p>
+            </div>`,
+            `<h3> ¡Perdi mi 3cer piso y ahora tengo 2! </h3>
+            <div>
+                <p>¡Remodela tu hogar a tu gusto! Ahora puedes optar por una casa de 2 o 3 pisos. Para iniciar el proceso de cambio, simplemente haz clic en los planos azules del ayuntamiento. Recuerda que existe un período de espera de aproximadamente 24 horas entre un cambio y otro.</p>
+            </div>`,
+            `<h3> ¿Como puedo robarle los lapiceros de Benny? </h3>
+            <div>
+                <p>Cuando en el periodico diario te aparezca lo relacionado con las lapiceras/boligrafos de Benny, en su escritorio con las "tijeras de podar" puedes robarle, IMPORTANTE no hablarle antes si planeas robarlas, si el pregunta para ayudarlo a buscar sus cosas robadas dile que si.</p>
+            </div>`,
+        ]
   
     },
     {
