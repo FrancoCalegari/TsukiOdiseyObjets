@@ -230,7 +230,7 @@ const characters = [
         name: 'Rosemary',
         image: './assets/img/personajes/RosemarySprite.webp',
         sex: 'Female',
-        date: '9',
+        date: '7',
         description: 'Se ve que Rosemary es gentil y cariñosa con sus plantas. Muestra un aprecio genuino por la naturaleza y le encanta hablar de ella con otras personas que comparten el mismo interés. Este lado de ella, sin embargo, se atenúa por la noche. Cerca de la hora de cierre, le hacía pasar a Tsuki para que se diera prisa y saliera de la tienda. Al visitarla después de la hora de cierre, contemplará su vida y se da a entender que está deprimida.'
     },
     {
