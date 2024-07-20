@@ -97,12 +97,18 @@ const characters = [
                 
             </div>`,
             `<h3> ¿Para que sirbe la maquina? </h3>
-            <div style=" display: block;">
+            <div style=" display: flex; flex-direction:column; ">
                 <p>Para usar la máquina, primero debes activarla haciendo clic en la luz o en la palanca. Una vez activada, podrás seleccionar 3 objetos que deseas usar para crear una nueva versión brillante (shiny). La máquina seleccionará aleatoriamente uno de los 3 objetos, pero se los comerá todos. Luego, te dará la versión brillante del objeto que eligió. Es importante tener en cuenta que la máquina consumirá los 3 objetos que ingreses, incluso si no son el que se seleccionó. A cambio, solo te dará la versión brillante de 1 de ellos.</p>
                 <ul >
                     <li>No puedes poner objetos brillantes en la máquina.</li>
                     <li>No todos los objetos tienen una versión brillante.</li>
                 </ul>
+                <img src="./assets/img/peronajesconsejos/Dawnconsejoimg1.jpg" alt="Dawnmaquina">
+            </div>`,
+            `<h3> ¿Como Rompo la maquina?/¿Como hago para que me electrocuten? </h3>
+            <div>
+                <p>La misión requiere un total de 5 tréboles. Usa 3 para el primer circuito y los 2 restantes para los otros dos. Para obtener el logro de la electrocución, es importante que realices estas acciones durante la mañana mientras Dawn está ocupada. La secuencia correcta es: dañar el primer circuito, provoca a Dawn para que te electrocute y, finalmente, daña los dos circuitos restantes.</p>
+                
             </div>`,
         ]
     },
