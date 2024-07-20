@@ -66,7 +66,15 @@ const characters = [
         image: './assets/img/personajes/Chameleon3.webp',
         sex: 'Female',
         date: '1',
-        description: 'Aparece cada 3 horas (aproximadamente) en distintos lugares de la Aldea Hongo y recompensará con 1200Carrots tras ver un anuncio.'
+        description: 'Aparece cada 3 horas (aproximadamente) en distintos lugares de la Aldea Hongo y recompensará con 1200Carrots tras ver un anuncio.',
+        advice: [
+           
+            `<h3> ¿Donde lo encuentro? </h3>
+            <div>
+                <p>Lo puedes encontrar en distintas partes del mapa, asegurate de ver cada detalle.</p>
+                
+            </div>`,
+        ]
     },
     {
         name: 'Chi',
@@ -80,7 +88,23 @@ const characters = [
         image: './assets/img/personajes/DawnSprite.webp',
         sex: 'Female',
         date: '5',
-        description: 'Dawn aparece en el Ayuntamiento alrededor de las 8 - 10am y en la Tienda general de Yori a partir de las 5pm. También se dará un baño alrededor de las 4am. Es el constructora del puéblo reparan todo y en su tienda vende cosas para decorar pareded y pizos'
+        description: 'Dawn aparece en el Ayuntamiento alrededor de las 8 - 10am y en la Tienda general de Yori a partir de las 5pm. También se dará un baño alrededor de las 4am. Es el constructora del puéblo reparan todo y en su tienda vende cosas para decorar pareded y pizos',
+        advice: [
+           
+            `<h3> ¿Como arreglo la maquina? </h3>
+            <div>
+                <p>Para poder usar la máquina de Dawn, primero debes ayudarla en varias ocasiones. Las tareas que necesitas completar se te asignarán como misiones en los periódicos diarios. Una vez que hayas reparado los 3 circuitos que se encuentran en el exterior de la máquina, estará lista para usar. Si ya has ayudado a Dawn pero aún no has visto los circuitos reparados, significa que ella aún no ha terminado el trabajo y es posible que tengas misiones pendientes. Esta misión en particular se desarrolla a lo largo de 6 periódicos, pero ten en cuenta que estos pueden no aparecer consecutivamente, ya que puedes recibir otros periódicos no relacionados con la misión en el medio. Ten paciencia y continúa ayudando a Dawn, eventualmente completarás la misión y podrás usar la máquina. Recuerda que Dawn te pedirá 2 objetos durante el transcurso de la misión.</p>
+                
+            </div>`,
+            `<h3> ¿Para que sirbe la maquina? </h3>
+            <div style=" display: block;">
+                <p>Para usar la máquina, primero debes activarla haciendo clic en la luz o en la palanca. Una vez activada, podrás seleccionar 3 objetos que deseas usar para crear una nueva versión brillante (shiny). La máquina seleccionará aleatoriamente uno de los 3 objetos, pero se los comerá todos. Luego, te dará la versión brillante del objeto que eligió. Es importante tener en cuenta que la máquina consumirá los 3 objetos que ingreses, incluso si no son el que se seleccionó. A cambio, solo te dará la versión brillante de 1 de ellos.</p>
+                <ul >
+                    <li>No puedes poner objetos brillantes en la máquina.</li>
+                    <li>No todos los objetos tienen una versión brillante.</li>
+                </ul>
+            </div>`,
+        ]
     },
     {
         name: 'Draper',
