@@ -71,7 +71,8 @@ const characters = [
            
             `<h3> ¿Donde lo encuentro? </h3>
             <div>
-                <p>Lo puedes encontrar en distintas partes del mapa, asegurate de ver cada detalle.</p>
+                <p>Lo puedes encontrar en distintas partes del mapa, asegurate de ver cada detalle. Aparece cada 3 horas (aproximadamente) en distintos lugares de la Aldea Hongo y recompensará con 1200 CarrotIcon tras ver un anuncio. <a href="https://tsuki-odyssey.fandom.com/es/wiki/Camille">Rutina de Camille.</a></p>
+
                 
             </div>`,
         ]
@@ -161,7 +162,26 @@ const characters = [
         image: './assets/img/personajes/MocaSprite.webp',
         sex: 'Male',
         date: '7',
-        description: 'A Moca le gusta tomar siestas, comer papas fritas, beber té y cuidar su bonsái. Cuando se le solicite, puede pedirle a Tsuki que compre una nueva maceta para su árbol bonsái después de que la vieja se rompa. Aparece en la tienda de Yori alrededor de las 11 a.m. y las 2. 30 horas.'
+        description: 'A Moca le gusta tomar siestas, comer papas fritas, beber té y cuidar su bonsái. Cuando se le solicite, puede pedirle a Tsuki que compre una nueva maceta para su árbol bonsái después de que la vieja se rompa. Aparece en la tienda de Yori alrededor de las 11 a.m. y las 2. 30 horas.',
+        advice: [
+
+            `<h3> ¿Como consigo su casa? </h3>
+            <div>
+                <p>Habla con Moca y los otros personajes todos los días para que te quieran. Cuando estén listos, te pedirán que les ayudes a decorar sus espacios. ¡Puedes ver tu progreso en la sección de "Logros"!</p>
+                
+            </div>`,
+           
+            `<h3> ¿Dónde se pueden encontrar reproductores en el juego? </h3>
+            <div>
+                <p>En la casa de Moca, el ayuntamiento y el bar hay Reproductores de casset para escuchar música. Más adelante, Yori te venderá estas Reproductores de casset para que puedas ponerlas en los lugares que hayas desbloqueado y disfrutar de tus cassettes favoritos. Sin embargo, los cassettes no se pueden vender.</p>
+                
+            </div>`,
+            `<h3> ¿Moca tiene objetos especiales? </h3>
+            <div>
+                <p>si, tiene el El Bonsai de Moca que su abuela le dejó, "The Old Lady"</p>
+                
+            </div>`,
+        ]
     },
     {
         name: 'Momo',
@@ -189,7 +209,15 @@ const characters = [
         image: './assets/img/personajes/PipiSprite.webp',
         sex: 'Female',
         date: '1',
-        description: 'Pipí es hija de yori, trabaja con su papá en el sector de adornos y golosinas y le gusta explorar el pueblo, es muy amable con todos en el pueblo.'
+        description: 'Pipí es hija de yori, trabaja con su papá en el sector de adornos y golosinas y le gusta explorar el pueblo, es muy amable con todos en el pueblo.',
+        advice: [
+
+            `<h3> ¿Pipi tiene objetos especiales? </h3>
+            <div>
+                <p>Si Todas las pinturas de Pipi (las que puedes obtener una vez te salen las misiones en el periódico)</p>
+                
+            </div>`,
+        ]
     },
     {
         name: 'Ratthew',
