@@ -125,7 +125,15 @@ const characters = [
         image: './assets/img/personajes/GeckoSprite.webp',
         sex: 'Male',
         date: '30',
-        description: 'Gecko es un pequeño lagarto ágil y curioso, explorador incansable de su entorno.Gecko es encontrado y capturado por Bobo, quien se refiere al gecko como un "bribón". Bobo luego le ofrece a Tsuki que adopte al gecko. Al hacerlo, el jugador puede nombrar al gecko como desee.'
+        description: 'Gecko es un pequeño lagarto ágil y curioso, explorador incansable de su entorno.Gecko es encontrado y capturado por Bobo, quien se refiere al gecko como un "bribón". Bobo luego le ofrece a Tsuki que adopte al gecko. Al hacerlo, el jugador puede nombrar al gecko como desee.',
+        advice: [
+           
+            `<h3> Ya le puse nombre ¿Que hago? </h3>
+            <div>
+                <p>Al ponerle nombre, el gecko se unirá oficialmente a tu familia. Sin embargo, hasta que le prepares su espacio con los muebles especiales para mascotas, lo encontrarás explorando por todas partes. ¡Pero no te preocupes! Una vez tenga su rinconcito, estará más seguido en casa.</p>
+                <img src="./assets/img/peronajesconsejos/geckoconsejoimg1.png" alt="Gecko Diario foto" >
+            </div>`,
+        ]
     },
     {
         name: 'Ken',
@@ -239,7 +247,7 @@ function openPopup(index) {
     if (character.advice && character.advice.length > 0) {
         character.advice.forEach((advice, idx) => {
             const adviceButton = document.createElement('button');
-            adviceButton.textContent = `Consejo ${idx + 1}`;
+            adviceButton.textContent = `Spoiler ${idx + 1}`;
             adviceButton.addEventListener('click', () => displayAdvice(advice));
             popupAdvice.appendChild(adviceButton);
         });
