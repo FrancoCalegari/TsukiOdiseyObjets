@@ -93,7 +93,7 @@ const characters = [
            
             `<h3> ¿Como arreglo la maquina? </h3>
             <div>
-                <p>Para poder usar la máquina de Dawn, primero debes ayudarla en varias ocasiones. Las tareas que necesitas completar se te asignarán como misiones en los periódicos diarios. Una vez que hayas reparado los 3 circuitos que se encuentran en el exterior de la máquina, estará lista para usar. Si ya has ayudado a Dawn pero aún no has visto los circuitos reparados, significa que ella aún no ha terminado el trabajo y es posible que tengas misiones pendientes. Esta misión en particular se desarrolla a lo largo de 6 periódicos, pero ten en cuenta que estos pueden no aparecer consecutivamente, ya que puedes recibir otros periódicos no relacionados con la misión en el medio. Ten paciencia y continúa ayudando a Dawn, eventualmente completarás la misión y podrás usar la máquina. Recuerda que Dawn te pedirá 2 objetos durante el transcurso de la misión.</p>
+                <p>Para poder usar la máquina de Dawn, primero debes ayudarla en varias ocasiones. Las tareas que necesitas completar se te asignarán como misiones en los periódicos diarios. <br><br> Una vez que hayas reparado los 3 circuitos que se encuentran en el exterior de la máquina, estará lista para usar.<br> Si ya has ayudado a Dawn pero aún no has visto los circuitos reparados, significa que ella aún no ha terminado el trabajo y es posible que tengas misiones pendientes. <br>Esta misión en particular se desarrolla a lo largo de 6 periódicos, pero ten en cuenta que estos pueden no aparecer consecutivamente, ya que puedes recibir otros periódicos no relacionados con la misión en el medio.<br><br> Ten paciencia y continúa ayudando a Dawn, eventualmente completarás la misión y podrás usar la máquina. Recuerda que Dawn te pedirá 2 objetos durante el transcurso de la misión.</p>
                 
             </div>`,
             `<h3> ¿Para que sirbe la maquina? </h3>
@@ -140,7 +140,15 @@ const characters = [
         image: './assets/img/personajes/Ken.webp',
         sex: 'Male',
         date: '10',
-        description: 'Ken tiene un exterior duro, pero por dentro se preocupa por sus amigos. Se enorgullece de su fuerza y de su exterior aterrador.'
+        description: 'Ken tiene un exterior duro, pero por dentro se preocupa por sus amigos. Se enorgullece de su fuerza y de su exterior aterrador.',
+        advice: [
+           
+            `<h3> ¿Cuando Ken me cambia las figuras? </h3>
+            <div>
+                <p>Las figuras de Ken se intercambian según lo que indiquen los periódicos del juego. No hay un día fijo para esto, ya que la frecuencia con la que recibes los periódicos varía entre jugadores.</p>
+                
+            </div>`,
+        ]
     },
     {
         name: 'Moca',
