@@ -1442,9 +1442,9 @@ footer div {
     flex-direction: column;
     gap: 20px;
     overflow-y: auto;
-    padding: 1rem;
+    padding: .5rem;
     
-    height: 80vh;
+    height: 70vh;
     border-radius: 15px;
     width: 90%;
     margin: auto;
@@ -1490,7 +1490,7 @@ footer div {
 
 .object-container {
     background-color: blanchedalmond;
-    padding: 15px;
+    padding: 10px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
