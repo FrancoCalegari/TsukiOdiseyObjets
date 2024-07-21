@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`);
             }
             combinations = await response.json();
-            loadCombinations();
+            loadCombinations(); // Cargar las primeras combinaciones al inicio
         } catch (error) {
             console.error('Error loading combinations:', error.message);
         }
@@ -65,13 +65,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cargar combinaciones al inicio
     loadCombinationsFromFile();
 
-    container.addEventListener('scroll', () => {
-        if (container.scrollTop + container.clientHeight >= container.scrollHeight && loadedCount < combinations.length) {
+    // Detectar el evento de desplazamiento
+    const handleScroll = () => {
+        // Añadir un margen de 100 píxeles para detectar el final
+        const margin = 100;
+        if (container.scrollTop + container.clientHeight + margin >= container.scrollHeight && loadedCount < combinations.length) {
             loadCombinations();
+        }
+    };
+
+    container.addEventListener('scroll', handleScroll);
+
+    // Detectar cambios en la orientación de la pantalla y ajustar el estilo
+    window.addEventListener('resize', () => {
+        // Asegúrate de que el contenedor tenga suficiente altura para el desplazamiento
+        if (window.innerWidth <= 768) { // Ajustar según sea necesario para dispositivos móviles
+            container.style.maxHeight = '80vh'; // Ajusta la altura máxima según tus necesidades
+        } else {
+            container.style.maxHeight = 'none';
         }
     });
 
-    if (combinations.length > 5) {
-        container.style.overflowY = 'auto';
-    }
+    // Llama a resize para establecer el estilo inicial
+    window.dispatchEvent(new Event('resize'));
 });

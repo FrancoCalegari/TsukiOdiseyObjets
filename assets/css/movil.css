@@ -256,7 +256,7 @@
         overflow-y: auto;
         padding: .5rem;
         
-        height: 50vh;
+        height: 60vh;
         border-radius: 15px;
         width: 90%;
         margin: auto;
@@ -278,5 +278,20 @@
         height: 40px;
     }
 
+    .combination-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: auto;
+        padding: .5rem;
+        
+        height: 50vh;
+        border-radius: 15px;
+        width: 90%;
+        margin: auto;
+        border: solid var(--bordercolor) 2px;
+        
+        
+    }
 
 }

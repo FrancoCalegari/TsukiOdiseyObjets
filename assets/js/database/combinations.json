@@ -13,7 +13,7 @@
             "./assets/img/objets/goldennightshade.png",
             "./assets/img/objets/infernalwormweed.png"
         ],
-        "result": "./assets/img/objets/assortedpotions.png"
+        "result": "./assets/img/objets/ravenousrotflower.png"
     },
     {
         "objets": [
@@ -22,5 +22,61 @@
             "./assets/img/objets/mocaportrait.png"
         ],
         "result": "./assets/img/objets/bfff.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/officechair.png",
+            "./assets/img/objets/comfylounge.png",
+            "./assets/img/objets/officedesk.png"
+        ],
+        "result": "./assets/img/objets/aeron.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/safe.png",
+            "./assets/img/objets/stonewardrobe.png",
+            "./assets/img/objets/woodenchest.png"
+        ],
+        "result": "./assets/img/objets/bankvault.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/witchscauldron.png",
+            "./assets/img/objets/eyeofnewt.png",
+            "./assets/img/objets/mysticalspellbook.png"
+        ],
+        "result": "./assets/img/objets/eldritchabomination.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/glowinggemstone.png",
+            "./assets/img/objets/sweetcake.png",
+            "./assets/img/objets/assortedpotions.png"
+        ],
+        "result": "./assets/img/objets/gemstonecake.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/overgrownmushrooms.png",
+            "./assets/img/objets/assortedpotions.png",
+            "./assets/img/objets/woodenlamp.png"
+        ],
+        "result": "./assets/img/objets/glowshrooms.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/samuraiarmor.png",
+            "./assets/img/objets/godofwisdom.png",
+            "./assets/img/objets/katanas.png"
+        ],
+        "result": "./assets/img/objets/godofwar.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/refrigerator.png",
+            "./assets/img/objets/kitchenstove.png",
+            "./assets/img/objets/kitchensink.png"
+        ],
+        "result": "./assets/img/objets/kitchensuite.png"
     }
 ]
