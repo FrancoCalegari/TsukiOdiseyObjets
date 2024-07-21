@@ -1350,24 +1350,24 @@ footer div {
     gap: 1rem; /* Espacio entre los elementos de la lista */
 }
 
-.options div ul li {
+.options div ul li, .linjspersonaje {
     background-color: var(--backgroundColorCards);
     padding: 1rem;
     width: fit-content;
     border-radius: 15px;
 }
 
-.options div ul li a:visited {
+.options div ul li a:visited, .linjspersonaje a:visited {
     color: #DDD7BD;
     list-style: none;
 }
 
-.options div ul li a:visited {
+.options div ul li a:visited, .linjspersonaje a:visited{
     color: #DDD7BD;
     list-style: none;
 }
 
-.options div ul li a{
+.options div ul li a, .linjspersonaje a{
     text-decoration: none;
     justify-content: center;
     display: flex;

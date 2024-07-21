@@ -91,12 +91,6 @@ const characters = [
         date: '5',
         description: 'Dawn aparece en el Ayuntamiento alrededor de las 8 - 10am y en la Tienda general de Yori a partir de las 5pm. También se dará un baño alrededor de las 4am. Es el constructora del puéblo reparan todo y en su tienda vende cosas para decorar pareded y pizos',
         advice: [
-           
-            `<h3> ¿Como arreglo la maquina? </h3>
-            <div>
-                <p>Para poder usar la máquina de Dawn, primero debes ayudarla en varias ocasiones. Las tareas que necesitas completar se te asignarán como misiones en los periódicos diarios. <br><br> Una vez que hayas reparado los 3 circuitos que se encuentran en el exterior de la máquina, estará lista para usar.<br> Si ya has ayudado a Dawn pero aún no has visto los circuitos reparados, significa que ella aún no ha terminado el trabajo y es posible que tengas misiones pendientes. <br>Esta misión en particular se desarrolla a lo largo de 6 periódicos, pero ten en cuenta que estos pueden no aparecer consecutivamente, ya que puedes recibir otros periódicos no relacionados con la misión en el medio.<br><br> Ten paciencia y continúa ayudando a Dawn, eventualmente completarás la misión y podrás usar la máquina. Recuerda que Dawn te pedirá 2 objetos durante el transcurso de la misión.</p>
-                
-            </div>`,
             `<h3> ¿Para que sirbe la maquina? </h3>
             <div style=" display: flex; flex-direction:column; ">
                 <p>Para usar la máquina, primero debes activarla haciendo clic en la luz o en la palanca. Una vez activada, podrás seleccionar 3 objetos que deseas usar para crear una nueva versión brillante (shiny). La máquina seleccionará aleatoriamente uno de los 3 objetos, pero se los comerá todos. Luego, te dará la versión brillante del objeto que eligió. Es importante tener en cuenta que la máquina consumirá los 3 objetos que ingreses, incluso si no son el que se seleccionó. A cambio, solo te dará la versión brillante de 1 de ellos.</p>
@@ -105,7 +99,15 @@ const characters = [
                     <li>No todos los objetos tienen una versión brillante.</li>
                 </ul>
                 <img src="./assets/img/peronajesconsejos/Dawnconsejoimg1.jpg" alt="Dawnmaquina">
+                <div class="linjspersonaje"><a href="./combinaciones.html">Combinaciones Down <img src="./assets/img/personajes/DawnSprite.webp" alt="Down btn" width="20px" height="26px" ></a></div>
             </div>`,
+           
+            `<h3> ¿Como arreglo la maquina? </h3>
+            <div>
+                <p>Para poder usar la máquina de Dawn, primero debes ayudarla en varias ocasiones. Las tareas que necesitas completar se te asignarán como misiones en los periódicos diarios. <br><br> Una vez que hayas reparado los 3 circuitos que se encuentran en el exterior de la máquina, estará lista para usar.<br> Si ya has ayudado a Dawn pero aún no has visto los circuitos reparados, significa que ella aún no ha terminado el trabajo y es posible que tengas misiones pendientes. <br>Esta misión en particular se desarrolla a lo largo de 6 periódicos, pero ten en cuenta que estos pueden no aparecer consecutivamente, ya que puedes recibir otros periódicos no relacionados con la misión en el medio.<br><br> Ten paciencia y continúa ayudando a Dawn, eventualmente completarás la misión y podrás usar la máquina. Recuerda que Dawn te pedirá 2 objetos durante el transcurso de la misión.</p>
+                
+            </div>`,
+       
             `<h3> ¿Como Rompo la maquina?/¿Como hago para que me electrocuten? </h3>
             <div>
                 <p>La misión requiere un total de 5 tréboles. Usa 3 para el primer circuito y los 2 restantes para los otros dos. Para obtener el logro de la electrocución, es importante que realices estas acciones durante la mañana mientras Dawn está ocupada. La secuencia correcta es: dañar el primer circuito, provoca a Dawn para que te electrocute y, finalmente, daña los dos circuitos restantes.</p>
