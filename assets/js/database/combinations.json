@@ -118,5 +118,53 @@
             "./assets/img/objets/piratemug.png"
         ],
         "result": "./assets/img/objets/rumbarrel.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/leviathanmaw.png",
+            "./assets/img/objets/shipwreckbed.png",
+            "./assets/img/objets/woodenpedestal.png"
+        ],
+        "result": "./assets/img/objets/sharkpedestal.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/pirateflag.png",
+            "./assets/img/objets/duskwardrobe.png",
+            "./assets/img/objets/stonecookingstove.png"
+        ],
+        "result": "./assets/img/objets/skullcastle.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/pyramid.png",
+            "./assets/img/objets/egyptiantorchbearer.png",
+            "./assets/img/objets/egyptiantombguardian.png"
+        ],
+        "result": "./assets/img/objets/sphinx.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/oasis.png",
+            "./assets/img/objets/feudalstaircasedrawer.png",
+            "./assets/img/objets/bookstaircase.png"
+        ],
+        "result": "./assets/img/objets/staircasebed.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/mahoganybed.png",
+            "./assets/img/objets/mahoganyshard.png",
+            "./assets/img/objets/mahoganyrabbitstatue.png"
+        ],
+        "result": "./assets/img/objets/wildbarkbed.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/zengarden.png",
+            "./assets/img/objets/zencastle.png",
+            "./assets/img/objets/oasis.png"
+        ],
+        "result": "./assets/img/objets/zenoasis.png"
     }
 ]
