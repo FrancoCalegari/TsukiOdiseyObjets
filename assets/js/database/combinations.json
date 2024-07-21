@@ -1,0 +1,26 @@
+[
+    {
+        "objets": [
+            "./assets/img/objets/dataterminal.png",
+            "./assets/img/objets/interstellarbed.png",
+            "./assets/img/objets/interstellarrocket.png"
+        ],
+        "result": "./assets/img/objets/voyager.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/bowingwillow.png",
+            "./assets/img/objets/goldennightshade.png",
+            "./assets/img/objets/infernalwormweed.png"
+        ],
+        "result": "./assets/img/objets/assortedpotions.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/tsukiportrait.png",
+            "./assets/img/objets/chiportrait.png",
+            "./assets/img/objets/mocaportrait.png"
+        ],
+        "result": "./assets/img/objets/bfff.png"
+    }
+]
