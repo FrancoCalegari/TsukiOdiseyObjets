@@ -78,5 +78,45 @@
             "./assets/img/objets/kitchensink.png"
         ],
         "result": "./assets/img/objets/kitchensuite.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/naiadfountain.png",
+            "./assets/img/objets/coastaltable.png",
+            "./assets/img/objets/stonetub.png"
+        ],
+        "result": "./assets/img/objets/naiadbath.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/sweetheartpiano.png",
+            "./assets/img/objets/gardenwall.png",
+            "./assets/img/objets/plantedshelf.png"
+        ],
+        "result": "./assets/img/objets/overgrownpiano.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/gargoylestatue.png",
+            "./assets/img/objets/candlestick.png",
+            "./assets/img/objets/stonepillarlamp.png"
+        ],
+        "result": "./assets/img/objets/perchedgargoyle.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/plasticbin.png",
+            "./assets/img/objets/garbagecan.png",
+            "./assets/img/objets/woodentrashbin.png"
+        ],
+        "result": "./assets/img/objets/poop.png"
+    },
+    {
+        "objets": [
+            "./assets/img/objets/waterdispenser.png",
+            "./assets/img/objets/barrel.png",
+            "./assets/img/objets/piratemug.png"
+        ],
+        "result": "./assets/img/objets/rumbarrel.png"
     }
 ]
