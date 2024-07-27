@@ -62,6 +62,7 @@ const fishData = [
     { type: 'Comuns Crab', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 10 },
     { type: 'Cangrejo Vampiro', place: 'Dawns Workshop/Rosemarys Plant Shop', startHour: 8, endHour: 11 },
     { type: 'Tilapia', place: 'Rosemarys Plant Shop', startHour: 0, endHour: 4 },
+    { type: 'Pez Cherna Guaza / Goliat mero', place: 'Mermaid Coast/Muelle', startHour: 0, endHour: 23 },
     // { type: 'default', place: 'default', startHour: 0, endHour: 1 },
     // { type: 'default', place: 'default', startHour: 0, endHour: 1 },
     // { type: 'default', place: 'default', startHour: 0, endHour: 1 },
