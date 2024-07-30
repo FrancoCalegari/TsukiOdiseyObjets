@@ -1515,7 +1515,7 @@ footer div {
     flex-direction: column;
 }
 
-.card {
+.quiz-card {
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -1526,20 +1526,20 @@ footer div {
     border-radius: 10px;
     background-color: #fff;
     text-align: center;
-    animation: fadeIn 0.5s forwards;
+    animation: quiz-fadeIn 0.5s forwards;
 }
 
-.card.active {
+.quiz-card.active {
     display: flex;
 }
 
-.options {
+.quiz-options {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.option {
+.quiz-option {
     padding: 10px;
     border: 2px solid #000;
     border-radius: 5px;
@@ -1547,12 +1547,12 @@ footer div {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.option:hover {
+.quiz-option:hover {
     background-color: #000;
     color: #fff;
 }
 
-@keyframes fadeIn {
+@keyframes quiz-fadeIn {
     from {
         opacity: 0;
         transform: translateY(10px);
@@ -1562,3 +1562,4 @@ footer div {
         transform: translateY(0);
     }
 }
+
