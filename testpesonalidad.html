@@ -46,7 +46,7 @@
         });
     }
     </script>
-
+    <script src="./assets/js/quiz.js"></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@
         </div>
         <div >
             <ul class="header-div">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="./index.html">Inicio</a></li>
                 <!-- <li><a href="#itemListContainer">Objetos</a></li> -->
                 <li><a href="https://discord.gg/ht4G99vm2X" target="_blank">Discord</a></li>
                 <li><a href="https://t.me/TsukiOdysseyObjets" target="_blank">Telegram</a></li>
@@ -65,14 +65,38 @@
     </header>
 
 
-
-
-
-    <main id="quiz-container">
-        <!-- Las tarjetas de preguntas se generarán aquí dinámicamente -->
-    </main>
-
-
+<section>
+    <div class="quiz-container">
+        <div class="quiz-card" id="quiz-intro-card">
+            <h1>¿Qué personaje eres de Tsuki's Odyssey?</h1>
+            <p>Descubre a qué personaje te pareces más respondiendo estas preguntas.</p>
+            <img src="intro-image.jpg" alt="Intro Image">
+            <button onclick="startQuiz()">Comenzar</button>
+        </div>
+        
+        <div class="quiz-card quiz-question-card" id="quiz-question-card" style="display: none;">
+            <h2 id="quiz-question-title"></h2>
+            <p id="quiz-question-description"></p>
+            <img id="quiz-question-image" src="" alt="Question Image">
+            <div class="quiz-answers">
+                <button onclick="selectAnswer(0)"></button>
+                <button onclick="selectAnswer(1)"></button>
+                <button onclick="selectAnswer(2)"></button>
+                <button onclick="selectAnswer(3)"></button>
+                <button onclick="selectAnswer(4)"></button>
+            </div>
+        </div>
+        
+        <div class="quiz-card quiz-result-card" id="quiz-result-card" style="display: none;">
+            <h2 id="quiz-result-title"></h2>
+            <img id="quiz-result-image" src="" alt="Result Image">
+            <div id="quiz-result-chart" class="quiz-result-chart"></div>
+            <button onclick="restartQuiz()">Volver a empezar</button>
+            <button onclick="window.location.href='https://example.com'">Visitar web</button>
+        </div>
+    </div>
+    <script src="./assets/js/quiz.js"></script>
+</section>
 
 
 
@@ -87,7 +111,7 @@
 
 
     </footer>
-    <script src="./assets/js/quiz.js"></script>
+    
        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCJ2HD3EYT"></script>
 <script>
