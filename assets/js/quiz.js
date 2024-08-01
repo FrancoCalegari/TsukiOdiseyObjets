@@ -27,25 +27,49 @@ const questions = [
         title: "Que comida te gusta mas?",
         description: "Descripción de la pregunta 3",
         image: "question2.jpg",
-        answers: ["Zhanahorias", "Ramen", "Te'", "Frutas", "Queso"]
+        answers: [
+            { text: "Zhanahorias", points: [1, 0, 0, 0, 0] },
+            { text: "Ramen", points: [0, 1, 0, 0, 0] },
+            { text: "Te", points: [0, 0, 1, 0, 0] },
+            { text: "Frutas", points: [0, 0, 0, 1, 0] },
+            { text: "Queso", points: [0, 0, 0, 0, 1] }
+        ]
     },
     {
         title: "Cual personaje te cae bien?",
         description: "Descripción de la pregunta 4",
         image: "question2.jpg",
-        answers: ["Pipi", "Rosemary", "Momo", "Bobo", "Scarlett"]
+        answers: [
+            { text: "Pipi", points: [1, 0, 0, 0, 0] },
+            { text: "Rosemary", points: [0, 1, 0, 0, 0] },
+            { text: "Momo", points: [0, 0, 1, 0, 0] },
+            { text: "Bobo", points: [0, 0, 0, 1, 0] },
+            { text: "Scarlett", points: [0, 0, 0, 0, 1] }
+        ]
     },
     {
         title: "Cual personaje te cae mal?",
         description: "Descripción de la pregunta 5",
         image: "question2.jpg",
-        answers: ["Ninguno", "Chi", "Bobo", "Benny", "Todos"]
+        answers: [
+            { text: "Ninguno", points: [1, 0, 0, 0, 0] },
+            { text: "Chi", points: [0, 1, 0, 0, 0] },
+            { text: "Bobo", points: [0, 0, 1, 0, 0] },
+            { text: "Benny", points: [0, 0, 0, 1, 0] },
+            { text: "Todos", points: [0, 0, 0, 0, 1] }
+        ]
     },
     {
         title: "Cual es tu horario de dormir?",
         description: "Descripción de la pregunta 6",
         image: "question2.jpg",
-        answers: ["No duermo", "12pm", "11pm", "insomnio", "8am"]
+        answers: [
+            { text: "No duermo", points: [1, 0, 0, 0, 0] },
+            { text: "12pm", points: [0, 1, 0, 0, 0] },
+            { text: "11pm", points: [0, 0, 1, 0, 0] },
+            { text: "insomnio", points: [0, 0, 0, 1, 0] },
+            { text: "8am", points: [0, 0, 0, 0, 1] }
+        ]
     }
     // Agregar más preguntas aquí...
 ];
