@@ -4,11 +4,11 @@ const questions = [
         description: "Descripción de la pregunta 1",
         image: "question1.jpg",
         answers: [
-            { text: "Comer", points: [1, 0, 0, 0, 0] }, // Tsuki recibe 1 punto
-            { text: "Leer", points: [0, 1, 0, 0, 0] }, // Chi recibe 1 punto
-            { text: "Música", points: [0, 0, 1, 0, 0] }, // Moca recibe 1 punto
-            { text: "Cuidar Plantas", points: [0, 0, 0, 1, 0] }, // Rosemary recibe 1 punto
-            { text: "Me gusta el Chismesito", points: [0, 0, 0, 0, 1] } // Ratthew recibe 1 punto
+            { text: "Comer", points: [1, 0, 0, 0, 0] },
+            { text: "Leer", points: [0, 1, 0, 0, 0] },
+            { text: "Música", points: [0, 0, 1, 0, 0] },
+            { text: "Cuidar Plantas", points: [0, 0, 0, 1, 0] },
+            { text: "Me gusta el Chismesito", points: [0, 0, 0, 0, 1] }
         ]
     },
     {
@@ -24,11 +24,11 @@ const questions = [
         ]
     },
     {
-        title: "Que comida te gusta mas?",
+        title: "¿Qué comida te gusta más?",
         description: "Descripción de la pregunta 3",
         image: "question2.jpg",
         answers: [
-            { text: "Zhanahorias", points: [1, 0, 0, 0, 0] },
+            { text: "Zanahoria", points: [1, 0, 0, 0, 0] },
             { text: "Ramen", points: [0, 1, 0, 0, 0] },
             { text: "Te", points: [0, 0, 1, 0, 0] },
             { text: "Frutas", points: [0, 0, 0, 1, 0] },
@@ -36,7 +36,7 @@ const questions = [
         ]
     },
     {
-        title: "Cual personaje te cae bien?",
+        title: "¿Cuál personaje te cae bien?",
         description: "Descripción de la pregunta 4",
         image: "question2.jpg",
         answers: [
@@ -48,8 +48,17 @@ const questions = [
         ]
     },
     {
-        title: "Cual personaje te cae mal?",
+        title: "¿Te gusta el Sol o La Luna?",
         description: "Descripción de la pregunta 5",
+        image: "question2.jpg",
+        answers: [
+            { text: "Luna", points: [1, 0, 0, 1, 1] },
+            { text: "Sol", points: [0, 1, 1, 0, 0] }
+        ]
+    },
+    {
+        title: "¿Cuál personaje te cae mal?",
+        description: "Descripción de la pregunta 6",
         image: "question2.jpg",
         answers: [
             { text: "Ninguno", points: [1, 0, 0, 0, 0] },
@@ -60,14 +69,14 @@ const questions = [
         ]
     },
     {
-        title: "Cual es tu horario de dormir?",
-        description: "Descripción de la pregunta 6",
+        title: "¿Cuál es tu horario de dormir?",
+        description: "Descripción de la pregunta 7",
         image: "question2.jpg",
         answers: [
             { text: "No duermo", points: [1, 0, 0, 0, 0] },
             { text: "12pm", points: [0, 1, 0, 0, 0] },
             { text: "11pm", points: [0, 0, 1, 0, 0] },
-            { text: "insomnio", points: [0, 0, 0, 1, 0] },
+            { text: "Insomnio", points: [0, 0, 0, 1, 0] },
             { text: "8am", points: [0, 0, 0, 0, 1] }
         ]
     }
@@ -97,10 +106,13 @@ function showQuestion() {
         document.getElementById('quiz-question-title').textContent = question.title;
         document.getElementById('quiz-question-description').textContent = question.description;
         document.getElementById('quiz-question-image').src = question.image;
-        const buttons = document.querySelectorAll('.quiz-answers button');
-        buttons.forEach((button, index) => {
-            button.textContent = question.answers[index].text;
+        const buttonsContainer = document.querySelector('.quiz-answers');
+        buttonsContainer.innerHTML = ''; // Clear previous buttons
+        question.answers.forEach((answer, index) => {
+            const button = document.createElement('button');
+            button.textContent = answer.text;
             button.onclick = () => selectAnswer(index);
+            buttonsContainer.appendChild(button);
         });
         console.log(`Mostrando pregunta ${currentQuestion + 1}`);
     } else {
