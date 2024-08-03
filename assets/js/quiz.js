@@ -24,7 +24,7 @@ const questions = [
         ]
     },
     {
-        title: "¿Qué comida te gusta más?",
+        title: "¿Qué comida o bebida te gusta más?",
         description: "Descripción de la pregunta 3",
         image: "question2.jpg",
         answers: [
@@ -74,14 +74,112 @@ const questions = [
         image: "question2.jpg",
         answers: [
             { text: "No duermo", points: [1, 0, 0, 0, 0] },
-            { text: "12pm", points: [0, 1, 0, 0, 0] },
-            { text: "11pm", points: [0, 0, 1, 0, 0] },
-            { text: "Insomnio", points: [0, 0, 0, 1, 0] },
-            { text: "8am", points: [0, 0, 0, 0, 1] }
+            { text: "Temprano", points: [0, 1, 0, 0, 0] },
+            { text: "Tarde", points: [0, 0, 1, 0, 0] },
+            { text: "Insomnio", points: [0, 0, 0, 1, 0] }
+        ]
+    },
+  
+    {
+        title: "¿Cómo describirías tu personalidad?",
+        description: "Descripción de la pregunta 1",
+        image: "question1.jpg",
+        answers: [
+            { text: "Aventurero/a", points: [1, 0, 0, 0, 0] },
+            { text: "Tranquilo/a", points: [0, 1, 0, 0, 0] },
+            { text: "Energético/a", points: [0, 0, 1, 0, 0] },
+            { text: "Curioso/a", points: [0, 0, 0, 1, 0] },
+            { text: "Amigable", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿En qué ámbito te sientes más cómodo/a?",
+        description: "Descripción de la pregunta 2",
+        image: "question2.jpg",
+        answers: [
+            { text: "Naturaleza", points: [1, 0, 0, 0, 0] },
+            { text: "Ciudad", points: [0, 1, 0, 0, 0] },
+            { text: "Playa", points: [0, 0, 1, 0, 0] },
+            { text: "Montaña", points: [0, 0, 0, 1, 0] },
+            { text: "Espacio", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿Cuál de estas actitudes te describe mejor?",
+        description: "Descripción de la pregunta 3",
+        image: "question3.jpg",
+        answers: [
+            { text: "Enojón/a", points: [1, 0, 0, 0, 0] },
+            { text: "Depresivo/a", points: [0, 1, 0, 0, 0] },
+            { text: "Feliz", points: [0, 0, 1, 0, 0] },
+            { text: "Serio/a", points: [0, 0, 0, 1, 0] },
+            { text: "Relajado/a", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿Qué tipo de vestimenta prefieres?",
+        description: "Descripción de la pregunta 4",
+        image: "question4.jpg",
+        answers: [
+            { text: "Ropa deportiva, colores oscuros", points: [1, 0, 0, 0, 0] },
+            { text: "Casual, colores pasteles", points: [0, 1, 0, 0, 0] },
+            { text: "Elegante, colores vibrantes", points: [0, 0, 1, 0, 0] },
+            { text: "Bohemio, colores tierra", points: [0, 0, 0, 1, 0] },
+            { text: "Formal, colores neutros", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿Qué colores prefieres?",
+        description: "Descripción de la pregunta 5",
+        image: "question5.jpg",
+        answers: [
+            { text: "Verde y marrón", points: [1, 0, 0, 0, 0] },
+            { text: "Azul y blanco", points: [0, 1, 0, 0, 0] },
+            { text: "Rojo y negro", points: [0, 0, 1, 0, 0] },
+            { text: "Amarillo y naranja", points: [0, 0, 0, 1, 0] },
+            { text: "Violeta y rosa", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿Qué actividades disfrutas más?",
+        description: "Descripción de la pregunta 7",
+        image: "question7.jpg",
+        answers: [
+            { text: "Basket", points: [1, 0, 0, 0, 0] },
+            { text: "Yoga", points: [0, 1, 0, 0, 0] },
+            { text: "Natación", points: [0, 0, 1, 0, 0] },
+            { text: "Senderismo", points: [0, 0, 0, 1, 0] },
+            { text: "Escribir", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿Tienes alguna característica física notable?",
+        description: "Descripción de la pregunta 8",
+        image: "question8.jpg",
+        answers: [
+            { text: "Lunares", points: [1, 0, 0, 0, 0] },
+            { text: "Marcas de nacimiento", points: [0, 1, 0, 0, 0] },
+            { text: "Pecas", points: [0, 0, 1, 0, 0] },
+            { text: "Tatuajes", points: [0, 0, 0, 1, 0] },
+            { text: "Ninguna", points: [0, 0, 0, 0, 1] }
+        ]
+    },
+    {
+        title: "¿Cuál es la inicial de tu nombre?",
+        description: "Descripción de la pregunta 11",
+        image: "question11.jpg",
+        answers: [
+            { text: "A-E", points: [1, 0, 0, 0, 0] },
+            { text: "F-J", points: [0, 1, 0, 0, 0] },
+            { text: "K-O", points: [0, 0, 1, 0, 0] },
+            { text: "P-T", points: [0, 0, 0, 1, 0] },
+            { text: "U-Z", points: [0, 0, 0, 0, 1] }
         ]
     }
+    ];
+    
     // Agregar más preguntas aquí...
-];
+
 
 const results = [
     { name: "Tsuki", image: "./assets/img/personajes/TsukiSprite.webp" },
