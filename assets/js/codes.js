@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "to12fl6", date: "2024-06-13", type: "expired" },
         { text: "to3dj", date: "2024-06-14", type: "expired" },
         { text: "HUGYOURDAD24", date: "2024-06-16", type: "expired" },
+        { text: "MATSURI24", date: "2024-08-5", type: "temporal" },
     ];
 
     const TEMPORAL_DAYS = 3;

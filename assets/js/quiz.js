@@ -131,7 +131,7 @@ const questions = [
     {
         title: "¿Qué colores prefieres?",
         description: "Descripción de la pregunta 12",
-        image: "./assets/img/quiz/question2.jpg",
+        image: "./assets/img/quiz/question5.jpg",
         answers: [
             { text: "Verde y marrón", points: [1, 0, 0, 0, 0] },
             { text: "Azul y blanco", points: [0, 1, 0, 0, 0] },
