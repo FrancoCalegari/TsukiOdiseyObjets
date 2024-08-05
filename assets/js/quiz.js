@@ -82,8 +82,8 @@ const questions = [
   
     {
         title: "¿Cómo describirías tu personalidad?",
-        description: "Descripción de la pregunta 1",
-        image: "./assets/img/quiz/question1.jpg",
+        description: "Descripción de la pregunta 8",
+        image: "./assets/img/quiz/question6.jpg",
         answers: [
             { text: "Aventurero/a", points: [1, 0, 0, 0, 0] },
             { text: "Tranquilo/a", points: [0, 1, 0, 0, 0] },
@@ -94,8 +94,8 @@ const questions = [
     },
     {
         title: "¿En qué ámbito te sientes más cómodo/a?",
-        description: "Descripción de la pregunta 2",
-        image: "./assets/img/quiz/question1.jpg",
+        description: "Descripción de la pregunta 9",
+        image: "./assets/img/quiz/question6.jpg",
         answers: [
             { text: "Naturaleza", points: [1, 0, 0, 0, 0] },
             { text: "Ciudad", points: [0, 1, 0, 0, 0] },
@@ -106,8 +106,8 @@ const questions = [
     },
     {
         title: "¿Cuál de estas actitudes te describe mejor?",
-        description: "Descripción de la pregunta 3",
-        image: "./assets/img/quiz/question1.jpg",
+        description: "Descripción de la pregunta 10",
+        image: "./assets/img/quiz/question4.jpg",
         answers: [
             { text: "Enojón/a", points: [1, 0, 0, 0, 0] },
             { text: "Depresivo/a", points: [0, 1, 0, 0, 0] },
@@ -118,8 +118,8 @@ const questions = [
     },
     {
         title: "¿Qué tipo de vestimenta prefieres?",
-        description: "Descripción de la pregunta 4",
-        image: "./assets/img/quiz/question1.jpg",
+        description: "Descripción de la pregunta 11",
+        image: "./assets/img/quiz/question3.jpg",
         answers: [
             { text: "Ropa deportiva, colores oscuros", points: [1, 0, 0, 0, 0] },
             { text: "Casual, colores pasteles", points: [0, 1, 0, 0, 0] },
@@ -130,8 +130,8 @@ const questions = [
     },
     {
         title: "¿Qué colores prefieres?",
-        description: "Descripción de la pregunta 5",
-        image: "./assets/img/quiz/question1.jpg",
+        description: "Descripción de la pregunta 12",
+        image: "./assets/img/quiz/question2.jpg",
         answers: [
             { text: "Verde y marrón", points: [1, 0, 0, 0, 0] },
             { text: "Azul y blanco", points: [0, 1, 0, 0, 0] },
@@ -142,7 +142,7 @@ const questions = [
     },
     {
         title: "¿Qué actividades disfrutas más?",
-        description: "Descripción de la pregunta 7",
+        description: "Descripción de la pregunta 13",
         image: "./assets/img/quiz/question1.jpg",
         answers: [
             { text: "Basket", points: [1, 0, 0, 0, 0] },
@@ -154,7 +154,7 @@ const questions = [
     },
     {
         title: "¿Tienes alguna característica física notable?",
-        description: "Descripción de la pregunta 8",
+        description: "Descripción de la pregunta 14",
         image: "./assets/img/quiz/question1.jpg",
         answers: [
             { text: "Lunares", points: [1, 0, 0, 0, 0] },
@@ -166,7 +166,7 @@ const questions = [
     },
     {
         title: "¿Cuál es la inicial de tu nombre?",
-        description: "Descripción de la pregunta 11",
+        description: "Descripción de la pregunta 15",
         image: "./assets/img/quiz/question1.jpg",
         answers: [
             { text: "A-E", points: [1, 0, 0, 0, 0] },
