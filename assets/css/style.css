@@ -42,6 +42,9 @@ body {
 	background-size: calc(144px/4.667) 144px,144px calc(144px/4.667); */
 }
 
+body, a, a:hover{
+    cursor:url(./assets/img/cursor/NaLexnuCursosrChi.png), auto 
+}
 
 header {
     color: var(--ColorText);

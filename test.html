@@ -1,104 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qué personaje eres de Tsuki's Odyssey?</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
+    <meta name="description" content="Encuentra herramientas y códigos para Tsuki Odissey. Descubre cuándo pescar, qué comprar y más. Únete a nuestra comunidad en Discord y Telegram.">
+    <meta name="keywords" content="Tsuki Odissey, códigos, zanahorias, pesca, herramientas, juegos, Discord, Telegram">
+    <meta name="author" content="Franco Calegari">
+    <title>Tsuki Odissey Objects - Inicio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/movil.css">
+    <link rel="shortcut icon" href="./assets/img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-.quiz-container {
-    width: 80%;
-    max-width: 600px;
-}
+    <!-- Meta tags para Open Graph -->
+    <meta property="og:title" content="Tsuki Odissey Objects - Inicio">
+    <meta property="og:description" content="Encuentra herramientas y códigos para Tsuki Odissey. Descubre cuándo pescar, qué comprar y más. Únete a nuestra comunidad en Discord y Telegram.">
+    <meta property="og:image" content="https://francocalegari.github.io/TsukiOdiseyObjets/assets/img/tsukiportada.jpg">
+    <meta property="og:url" content="https://francocalegari.github.io/TsukiOdiseyObjets/">
+    <meta property="og:type" content="website">
 
-.quiz-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
+    <!-- Meta tags para Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tsuki Odissey Objects - Inicio">
+    <meta name="twitter:description" content="Encuentra herramientas y códigos para Tsuki Odissey. Descubre cuándo pescar, qué comprar y más. Únete a nuestra comunidad en Discord y Telegram.">
+    <meta name="twitter:image" content="https://francocalegari.github.io/TsukiOdiseyObjets/assets/img/tsukiportada.jpg">
+    <meta name="twitter:site" content="@FrancoCalegari3" />
 
-.quiz-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2843631821567070"
+     crossorigin="anonymous"></script>
 
-.quiz-card button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
-}
+    <meta name="google-adsense-account" content="ca-pub-2843631821567070">
 
-.quiz-card button:hover {
-    background: #0056b3;
-}
+     <!-- pwa manifets -->
 
-.quiz-answers {
-    display: flex;
-    flex-direction: column;
-}
-
-.quiz-answers button {
-    margin: 5px 0;
-}
-
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
+     <link rel="manifest" href="./manifest.json">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./assets/js/service-worker.js')
+            .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(error => {
+            console.log('Service Worker registration failed:', error);
+            });
+        });
+    }
+    </script>
 
 
-    </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <div class="quiz-card" id="quiz-intro-card">
-            <h1>¿Qué personaje eres de Tsuki's Odyssey?</h1>
-            <p>Descubre a qué personaje te pareces más respondiendo estas preguntas.</p>
-            <img src="intro-image.jpg" alt="Intro Image">
-            <button onclick="startQuiz()">Comenzar</button>
+    <header>
+        <div>
+            <p class="logo">Tsuki Odyssey Objects</p>
         </div>
-        
-        <div class="quiz-card quiz-question-card" id="quiz-question-card" style="display: none;">
-            <h2 id="quiz-question-title"></h2>
-            <p id="quiz-question-description"></p>
-            <img id="quiz-question-image" src="" alt="Question Image">
-            <div class="quiz-answers">
-                <button onclick="selectAnswer(0)"></button>
-                <button onclick="selectAnswer(1)"></button>
-                <button onclick="selectAnswer(2)"></button>
-                <button onclick="selectAnswer(3)"></button>
-                <button onclick="selectAnswer(4)"></button>
+        <div >
+            <ul class="header-div">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="https://discord.gg/ht4G99vm2X" target="_blank">Discord</a></li>
+                <li><a href="https://t.me/TsukiOdysseyObjets" target="_blank">Telegram</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="presentation">
+
+        <div class="Backgoundz">
+            <img src="./assets/img/Tsukis_Odyssey_Portada.png" alt="Portada de Tsuki's Odyssey">
+            <div>
+                <h1>Tsuki Odyssey Objects</h1>
+                <p> Web y herramienta donde puedes encontrar códigos para zanahorias, saber cuándo pescar, qué comprar y más por venir. Únete a nuestro Discord o Telegram para novedades y aporta para mejorar esta herramienta innovadora :D Activa la campanita para estar al tanto 🔔.
+                </p>
+                <ul class="presentacion-ul">
+                    <li><a href="https://discord.gg/ht4G99vm2X" target="_blank">Discord</a></li>
+                    <li><a href="https://t.me/TsukiOdysseyObjets" target="_blank">Telegram</a></li>
+                    <li><button id="enable-notifications">🔔</button></li>
+
+                </ul>
             </div>
         </div>
-        
-        <div class="quiz-card quiz-result-card" id="quiz-result-card" style="display: none;">
-            <h2 id="quiz-result-title"></h2>
-            <img id="quiz-result-image" src="" alt="Result Image">
-            <div id="quiz-result-details"></div>
+    </section>
+
+
+
+
+    <section class="options" id="options">
+        <div>
+            <ul>
+                <li><a href="./personajes.html">Personajes <span class="material-symbols-outlined">
+                    group
+                    </span></a></li>
+                <li><a href="./eventos.html">Eventos <span class="material-symbols-outlined">
+                        local_activity
+                        </span></a></li>
+                <li><a href="#TimelineTitile">Peces <span class="material-symbols-outlined">
+                    set_meal
+                    </span></a></li>
+                <li><a href="./gachaboy.html">Gachaboy  <img src="./assets/img/Gachaboy.png" alt="GachaBoy" width="20px" height="auto" ></a></li>
+                <li><a href="./combinaciones.html">Combinaciones Down <img src="./assets/img/personajes/DawnSprite.webp" alt="Down btn" width="20px" height="auto" ></a></li>
+                <li><a href="./testpesonalidad.html">Test de personalidad (Beta) <img src="./assets/img/personajes/DawnSprite.webp" alt="TestPersonaje btn" width="20px" height="auto" ></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="codes-section">
+
+        <div class="code-container">
+            <h2>Códigos de Canje - Tsuki Odisey Objects</h2>
+            <p>--Presionar Para Copiar--</p>
+            <div class="code-containercards">
+                <div class="code-section">
+                    <h2>Códigos Funcionales</h2>
+                    <div id="active-codes"></div>
+                </div>
+                <div class="code-section">
+                    <h2>Códigos Inactivos</h2>
+                    <div id="inactive-codes"></div>
+                    <button id="toggle-inactive" class="hidden">Mostrar más</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+        <div id="popup" class="code-popup">Código copiado</div>
+
+
+
+
+
+    <section id="galeria-section">
+        <div id="galeria-container">
+
+            <div class="tarjeta">
+                <img src="./assets/img/tips/Picsart_24-08-05_19-26-14-732.jpg" alt="Consejo 1: No comprar todo par tsuki">
+                <p>Ten cuidado con los objetos que compres para tsuki porque algunos no se pueden vender, los muebles y decoraciones si :D</p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/photo_1_2024-06-13_17-30-34.jpg" alt="Consejo 2: En el ayuntamiento en el buzón se canjean los códigos de las zanahorias">
+                <p>Consejo 2: En el ayuntamiento en el buzon se anjean los codigos de las zanahorias.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/tipCalabaza.jpg" alt="Consejo 3: No dejar pasar una hora para recolectar las calabazas maduras">
+                <p>Consejo 3: Una vez que maduren las Calavazas no dejar pasar una hora porque, pasada esa hora se pudren :(
+                </p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/tippesca.jpeg" alt="Consejo 4: Esperar 2 horas 6 minutos después de pescar 18 o 20 peces">
+                <p>Consejo 4: Una vez pescado los 18 o 20 peces maximo y te sale la primera basura, tenes que esperar 2Horas 6Min para que vuelvan los peces.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/TipDescuento.jpg" alt="Consejo 5: Comprar en descuento y vender a precio original para ganar más zanahorias">
+                <p>Consejo 5: Llegando al dia 12 o 10 cuando aparecen los descuentos en la tienda de Yori, comprar todo lo que se pueda vender para luego venderselas a Yori al precio original y conseguis mas zanahorias</p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/tipTreboles.jpg" alt="Consejo 6: treboles">
+                <p>Consejo 6: Poner los treboles en esta posicion, se ponen a brillar y te dan las mejoras de suerte.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/tipcaña.jpg" alt="Consejo 7: Pipi consejo">
+                <p>Consejo 7: Si compras la caña de pesca profecional de pipi, vas a poder sacar peces mas rapido y obtener legendarios :D</p>
+            </div>
+            <div class="tarjeta">
+                <img src="./assets/img/tips/tipcaña.jpg" alt="Consejo 8: Caña de pescar profesional">
+                <p>Consejo 8: Camille aparece por varias partes del mapa, fijase en la casa si esta el empleado de publicdad eso quiere decir que por el mapa esta Camille :D</p>
+            </div>
+           
+        </div>
+        <button id="prev">⇐</button>
+        <button id="next">⇒</button>
+    </section>
+
+
+    <section class="timelinefishes">
+        <div class="time-container">
+            <h2 id="TimelineTitile">Línea de Tiempo de Pesca</h2>
+            <p style="color: blanchedalmond;">
+                Los peces que aparecen en el menu son los que estan disponibles actualmente, depende de la hora del dia cambian.
+                <br>El Pez Cherna Guaza / Goliat mero, solo sale si te aparece en el peridco por la mañana</p>
+            <section id="reloj-section">
+                <h2>Hora:</h2>
+                <div id="reloj"></div>
+                <button id="toggleFormato">AM/PM</button>
+            </section>
+            <input type="text" id="search-fish" placeholder="Buscar peces...">
+            <div id="timeline" class="timeline-scroll"></div>
+            <button id="show-all-schedules">Todos Los Horarios</button>
+        </div>
+    </section>
+    
+    <div id="schedule-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <div id="fish-schedules"></div>
         </div>
     </div>
 
-    <script src="./assets/js/quiz.js"></script>
+
+    <section id="custom-map">
+            <img src="./assets/img/mapa/Map.webp" alt="Mapa Personalizado de Tsuki Odissey" id="map-image">
+            <img src="./assets/img/mapa/RosemarysPlantShop.png" class="pin" data-title="Rosemary's Plant Shop"
+                 data-description="Una pequeña florería al norte de Mushroom Village, administrada por Rosemary."
+                 data-common-fish="Betta, Crayfish, Danio, Flying Fox, Goldfish, Guppy, Hermitcrab, Molly, Mosquitofish Mud Crab, Neon Tetra Pond Snail, Pumpkin Seed, Scup Tench"
+                 data-legendary-fish="Arrowana, Butterflyfish, Sawfish, Sturgeon, Tiger Fish"
+                 style="top: 22.4%; left: 56.42%;" alt="Rosemary's Plant Shop pin">
+            <img src="./assets/img/mapa/DawnsWorkshop.png" class="pin" data-title="Dawn's Workshop"
+                 data-description="El Taller de Dawn se puede ubicar en el extremo izquierdo del mapa en el nivel inferior."
+                 data-common-fish="Angel fish, Archer Fish, Bluegill, Caracha, Carp, Crappie, Grasscarp, Largemouth Bass, Loach, Milkfish, Minnow, Porgy, Rosette, Trout"
+                 data-legendary-fish="Bull Shark, Giant Catfish, Giant Stingray, Snake Head, Tiger Fish"
+                 style="top: 48.4%; left: 20%;" alt="Dawn's Workshop pin">
+            <img src="./assets/img/mapa/MermaidCoast.png" class="pin" data-title="Mermaid Coast"
+                 data-description="Mermaid Coast se encuentra en el extremo sur de Mushroom Village, donde puedes encontrar un faro con un muelle."
+                 data-common-fish="Anchovy, Black Seabass, Bluecrab, Bumper, Cod, Coral Shrimp, Damsel, Flounder, Flying Fish, Herring, Mackerel, Moon Wrasse, Seahorse, Squid"
+                 data-legendary-fish="Arapaima, Goliath Grouper, Hammerhead Shark, Marlin, Sand Shark, The Dragon King"
+                 style="top: 61.6%; left: 55.5%;" alt="Mermaid Coast pin">
+    </section>
+    <div id="overlay"></div>
+    <div id="pin-info-box">
+        <button class="close-btn">&times;</button>
+        <h2 id="pin-title"> </h2>
+        <p id="pin-description"> </p>
+        <div class="pin-div">
+            <div>
+                <h3>Peces Comunes</h3>
+                <ul id="common-fish-list"></ul>
+            </div>
+            <div>
+                <h3>Peces Legendarios</h3>
+                <ul id="legendary-fish-list"></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="colab">
+
+        <div class="colab-container">
+            <h2>Colaboradores y Fuentes</h2>
+            <div class="colabdivcontainer">
+                <a href="https://tsukisodyssey.wiki.gg/es/wiki/Tsuki's_Odyssey_Wiki" target="_blank">
+                    <div class="colab-container-card">
+                        <img src="./assets/img/wikicolabLogo.webp" alt="Wiki Tsuki español">
+                    </div>
+                </a>
+
+                <a href="https://discord.gg/93jeEep3U5" target="_blank">
+                    <div class="colab-container-card">
+                        <img src="./assets/img/ColabDiscordNaxlenu.jpg" alt="Naxlenu colab">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+         
+        <div>
+            
+            <a href="https://francocalegari.github.io/PortfolioFrancoCalegari/">Make by Franco Calegari</a>
+            <p>Preview 0.5 2024/07/14</p>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Ayudame en Ko-fi', '#29abe0', 'T6T411BTB2');kofiwidget2.draw();</script> 
+        </div>
+
+
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/fishes.js"></script>
+    <script src="./assets/js/codes.js"></script>
+    <script src="./assets/js/hours.js"></script>
+    <script src="./assets/js/tips.js"></script>
+    <script src="./assets/js/personajes.js"></script>
+    <script src="./assets/js/notificaciones.js"></script>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCJ2HD3EYT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MCJ2HD3EYT');
+</script>
+
 </body>
 </html>
