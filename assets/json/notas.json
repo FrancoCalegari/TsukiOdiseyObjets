@@ -1,0 +1,54 @@
+{
+    "wallpapers": [
+        {
+            "category": "mobile",
+            "name": "Barclay Wallpaper",
+            "img": "./assets/img/wallpapers/BarclayWallpaperyByFrancoCalegari.jpg",
+            "price": 0,
+            "link": "https://t.me/TsukiOdysseyObjets/121"
+        },
+        {
+            "category": "mobile",
+            "name": "Cinder Wallpaper",
+            "img": "./assets/img/wallpapers/CinderWallpaperByFrancoCalegari.jpg",
+            "price": 0,
+            "link": "https://t.me/TsukiOdysseyObjets/130"
+        },
+        {
+            "category": "mobile",
+            "name": "Elife Wallpaper",
+            "img": "./assets/img/wallpapers/ElifeWallpaperbyFrancoCalegari.jpg",
+            "price": 0,
+            "link": "https://t.me/TsukiOdysseyObjets/116"
+        },
+        {
+            "category": "mobile",
+            "name": "Tofu Wallpaper",
+            "img": "./assets/img/wallpapers/TofuWallpaperByFrancoCalegari.jpg",
+            "price": 0,
+            "link": "https://t.me/TsukiOdysseyObjets/128"
+        },
+        {
+            "category": "mobile",
+            "name": "Tsuki Halloween Wallpaper",
+            "img": "./assets/img/wallpapers/TsukiWallpaperbyFrancoCalegari.jpg",
+            "price": 0,
+            "link": "https://t.me/TsukiOdysseyObjets/118"
+        },
+        {
+            "category": "pc",
+            "name": "Tsuki Dynamic Wallpaper 1",
+            "img": "./assets/img/wallpapers/TsukiwallpaperpcByFrancoCalegari.jpg",
+            "price": 1,
+            "link": "https://ko-fi.com/s/fc3905417f"
+        },
+        {
+            "category": "pc",
+            "name": "Tsuki Dynamic Wallpaper 2",
+            "img": "./assets/img/wallpapers/Tsukiwallpaperpc2ByFrancoCalegari.jpg",
+            "price": 1,
+            "link": "https://example.com/wallpaper4"
+        }
+    ]
+}
+
