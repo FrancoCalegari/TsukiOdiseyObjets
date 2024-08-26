@@ -731,11 +731,14 @@ footer {
     backdrop-filter: blur(3px);
     font-family: CoffeFont;
     color: #DDD7BD;
+    font-size: 13px;
 }
 
 footer a{
     color: #DDD7BD;
     font-family: CoffeFont;
+    margin-left: 6px;
+   
 }
 
 footer a:visited{
@@ -749,6 +752,12 @@ footer div {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 .cafecito {
@@ -1343,7 +1352,7 @@ footer div {
 .options {
     display: flex; /* Cambia a flex para disposición horizontal */
     justify-content: center;
-
+    flex-wrap: wrap;
     color: #DDD7BD;
     font-family: CoffeFont;
     margin-top: 2rem;

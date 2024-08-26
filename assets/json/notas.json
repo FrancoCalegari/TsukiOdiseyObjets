@@ -48,7 +48,13 @@
             "img": "./assets/img/wallpapers/Tsukiwallpaperpc2ByFrancoCalegari.jpg",
             "price": 1,
             "link": "https://example.com/wallpaper4"
+        },
+        {
+            "category": "mobile",
+            "name": "Tsuki Campo",
+            "img": "./assets/img/wallpapers/TsukiCampoWallpaperByNalexnu.jpg",
+            "price": 0,
+            "link": "https://t.me/TsukiOdysseyObjets/133"
         }
     ]
 }
-
