@@ -65,6 +65,7 @@ const questions = [
             { text: "Chi", points: [0, 1, 0, 0, 0] },
             { text: "Bobo", points: [0, 0, 1, 0, 0] },
             { text: "Benny", points: [0, 0, 0, 1, 0] },
+            { text: "Moca", points: [0, 0, 0, 0, 1] },
             { text: "Todos", points: [0, 0, 0, 0, 1] }
         ]
     },
@@ -83,7 +84,7 @@ const questions = [
     {
         title: "¿Cómo describirías tu personalidad?",
         description: "Descripción de la pregunta 8",
-        image: "./assets/img/quiz/question6.jpg",
+        image: "./assets/img/quiz/question8.jpg",
         answers: [
             { text: "Aventurero/a", points: [1, 0, 0, 0, 0] },
             { text: "Tranquilo/a", points: [0, 1, 0, 0, 0] },
@@ -95,19 +96,19 @@ const questions = [
     {
         title: "¿En qué ámbito te sientes más cómodo/a?",
         description: "Descripción de la pregunta 9",
-        image: "./assets/img/quiz/question6.jpg",
+        image: "./assets/img/quiz/question9.jpg",
         answers: [
-            { text: "Naturaleza", points: [1, 0, 0, 0, 0] },
-            { text: "Ciudad", points: [0, 1, 0, 0, 0] },
-            { text: "Playa", points: [0, 0, 1, 0, 0] },
-            { text: "Montaña", points: [0, 0, 0, 1, 0] },
+            { text: "Trabajando", points: [1, 0, 0, 0, 0] },
+            { text: "En compania", points: [0, 1, 0, 0, 0] },
+            { text: "Solo", points: [0, 0, 1, 0, 0] },
+            { text: "Relajado", points: [0, 0, 0, 1, 0] },
             { text: "Espacio", points: [0, 0, 0, 0, 1] }
         ]
     },
     {
         title: "¿Cuál de estas actitudes te describe mejor?",
         description: "Descripción de la pregunta 10",
-        image: "./assets/img/quiz/question4.jpg",
+        image: "./assets/img/quiz/question10.jpg",
         answers: [
             { text: "Enojón/a", points: [1, 0, 0, 0, 0] },
             { text: "Depresivo/a", points: [0, 1, 0, 0, 0] },
@@ -119,7 +120,7 @@ const questions = [
     {
         title: "¿Qué tipo de vestimenta prefieres?",
         description: "Descripción de la pregunta 11",
-        image: "./assets/img/quiz/question3.jpg",
+        image: "./assets/img/quiz/question11.jpg",
         answers: [
             { text: "Ropa deportiva, colores oscuros", points: [1, 0, 0, 0, 0] },
             { text: "Casual, colores pasteles", points: [0, 1, 0, 0, 0] },
@@ -145,11 +146,11 @@ const questions = [
         description: "Descripción de la pregunta 13",
         image: "./assets/img/quiz/question1.jpg",
         answers: [
-            { text: "Basket", points: [1, 0, 0, 0, 0] },
-            { text: "Yoga", points: [0, 1, 0, 0, 0] },
-            { text: "Natación", points: [0, 0, 1, 0, 0] },
-            { text: "Senderismo", points: [0, 0, 0, 1, 0] },
-            { text: "Escribir", points: [0, 0, 0, 0, 1] }
+            { text: "Socializar", points: [1, 0, 0, 0, 0] },
+            { text: "Comer juntos", points: [0, 1, 0, 0, 0] },
+            { text: "Trabajar", points: [0, 0, 1, 0, 0] },
+            { text: "Leer", points: [0, 0, 0, 1, 0] },
+            { text: "Bellesa", points: [0, 0, 0, 0, 1] }
         ]
     },
     {
@@ -167,7 +168,7 @@ const questions = [
     {
         title: "¿Cuál es la inicial de tu nombre?",
         description: "Descripción de la pregunta 15",
-        image: "./assets/img/quiz/question1.jpg",
+        image: "./assets/img/quiz/question15.jpg",
         answers: [
             { text: "A-E", points: [1, 0, 0, 0, 0] },
             { text: "F-J", points: [0, 1, 0, 0, 0] },
