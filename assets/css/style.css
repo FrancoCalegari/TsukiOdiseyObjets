@@ -75,6 +75,7 @@ header div p {
 
 .header-div li {
     background-color: #1a18188e;
+    backdrop-filter: blur(15px);
     margin-left: 2rem;
     padding: 10px;
     border-radius: 8px;
@@ -721,17 +722,16 @@ h2 {
 
 footer {
     height: fit-content;
-    margin-top: 1rem;
     background-color: var(--backgroundColorCards);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 15px 15px 0px 0px;
     backdrop-filter: blur(15px);
     font-family: CoffeFont;
     color: #DDD7BD;
-    font-size: 13px;
+    font-size: 1rem;
+    border-radius: 15px 15px 0px 0px;
 }
 
 footer a{
@@ -995,6 +995,8 @@ footer ul{
     margin: 10px;
     padding: 20px;
     background-color: #1a181860;
+    backdrop-filter: blur(10px);
+    box-shadow: #1a1818 2px 2px 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     scroll-snap-align: center;
@@ -1230,22 +1232,13 @@ footer ul{
 }
 
 .colab-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: #1a18189c;
-   backdrop-filter: blur(15px);
-   padding: 1rem;
-   box-shadow: #1a1818 2px 2px 10px;
-   color: #DDD7BD;
-   font-family: CoffeFont;
-   filter: drop-shadow(1px 1px 15px  #ddd7bd3a);
-  
-   margin-top: 2rem;
-   margin-bottom: 2rem;
-   
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #DDD7BD;
+    font-family: CoffeFont;
 }
 
 .colab-container-card{
@@ -1375,6 +1368,8 @@ footer ul{
 
 .options li, .linjspersonaje {
     background-color: var(--backgroundColorCards);
+    box-shadow: #1a1818 2px 2px 10px;
+    backdrop-filter: blur(10px);
     padding: 1rem;
     width: fit-content;
     border-radius: 15px;
