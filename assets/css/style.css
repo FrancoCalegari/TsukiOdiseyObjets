@@ -97,6 +97,7 @@ header div p {
     transform: scale(1.2);
     transition: all 500ms;
     box-shadow: 1px 1px 10px #FFECCF;
+    cursor: pointer;
 }
  
 
@@ -169,6 +170,7 @@ header div p {
     transform: scale(1.2);
     transition: all 500ms;
     box-shadow: 1px 1px 10px #FFECCF;
+    cursor: pointer;
 }
 
 #enable-notifications {
@@ -224,6 +226,7 @@ header div p {
 #filterButton:hover {
     background-color: #45a049;
     transition: all 500ms;
+    cursor: pointer;
 }
 
 
@@ -317,6 +320,7 @@ header div p {
 .item:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 500ms;
+    cursor: pointer;
 }
 
 .item img {
@@ -460,6 +464,7 @@ header div p {
     transition: all 700ms;
     filter: drop-shadow( 1px 1px 10px var(--lightshadow));
     backdrop-filter: blur(1px);
+    cursor: pointer;
 }
 
 
@@ -590,6 +595,7 @@ body.no-scroll {
     transform: scale(1.2);
     transition: all 500ms;
     box-shadow: 1px 1px 10px #FFECCF;
+    cursor: pointer;
 }
 
 h2 {
@@ -765,13 +771,6 @@ footer ul{
     margin-top: 1rem;
 }
 
-
-
-
-
-
-
-
 .code-container {
     max-width: 900px;
     margin: auto;
@@ -818,14 +817,12 @@ footer ul{
     justify-content: center;
     text-align: center;
     transition: 500ms all;
-
-    
-    
 }
 
 .code-card:hover{
     filter: drop-shadow(1px 1px 20px  #DDD7BD);
     transition: 500ms all;
+    cursor: pointer;
 }
 
 .code-card p {
@@ -906,6 +903,7 @@ footer ul{
 
 #toggle-inactive:hover {
     background-color: #45a049;
+    cursor: pointer;
 }
 
 .hidden {
@@ -1074,6 +1072,7 @@ footer ul{
     background-color: #ddd7bd8b;
     filter: drop-shadow(1px 1px 20px  #DDD7BD);
     transition: 500ms all;
+    cursor: pointer;
 }
 
 /*Personajes section*/
@@ -1191,6 +1190,7 @@ footer ul{
     cursor: pointer;
     filter: drop-shadow(1px 1px 20px  #DDD7BD);
     transition: 500ms ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -1239,13 +1239,21 @@ footer ul{
     padding: 1rem;
     color: #DDD7BD;
     font-family: CoffeFont;
+    h2 {
+        text-align: center;
+        background-color: var(--backgroundColorCards);
+        padding: 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(15px);
+    }
 }
 
 .colab-container-card{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1a18189c;
+    background-color: var(--backgroundColorCards);
+    backdrop-filter: blur(15px);
     height: 10rem;
     width: 13rem;
     border-radius: 15px;
@@ -1263,6 +1271,7 @@ footer ul{
     transition: 500ms all;
     border: solid 3px #FFECCF;
     transform: scale(1.15);
+    cursor: pointer;
 }
 .colabdivcontainer{
     display: flex;
@@ -1339,6 +1348,7 @@ footer ul{
     transform: translateY(-1rem);
     z-index: 2;
     filter: drop-shadow(2px 2px 20px  #ddd7bde1);
+    cursor: pointer;
 }
 
 /*Options*/
@@ -1397,6 +1407,7 @@ footer ul{
     transform: scale(1.2);
     transition: all 500ms;
     box-shadow: 1px 1px 10px #FFECCF;
+    cursor: pointer;
 }
 /* gachaboy container*/
 #gachaboy {
@@ -1443,7 +1454,7 @@ footer ul{
     transition: 500ms all;
     border: solid 3px #FFECCF;
     transform: scale(1.15);
-    
+    cursor: pointer;
 }
 .gachaboy-div-container{
     display: flex;
@@ -1562,6 +1573,7 @@ footer ul{
 
 .quiz-card button:hover {
     background: #0056b3;
+    cursor: pointer;
 }
 
 .quiz-answers {
