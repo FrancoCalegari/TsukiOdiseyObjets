@@ -88,10 +88,12 @@ header div p {
     color: var(--ColorText);
     text-decoration: none;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .header-div li a:visited {
     color: var(--ColorText);
+    cursor: pointer;
 } 
 
 .header-div li:hover {
@@ -161,10 +163,12 @@ header div p {
     color: var(--ColorText);
     text-decoration: none;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .presentacion-ul li a:visited {
     color: var(--ColorText);
+    cursor: pointer;
 } 
 
 .presentacion-ul li:hover {
@@ -1389,11 +1393,13 @@ footer ul{
 .options li a:visited, .linjspersonaje a:visited {
     color: #DDD7BD;
     list-style: none;
+    cursor: pointer;
 }
 
 .options li a:visited, .linjspersonaje a:visited{
     color: #DDD7BD;
     list-style: none;
+    cursor: pointer;
 }
 
 .options  li a, .linjspersonaje a{
@@ -1402,6 +1408,7 @@ footer ul{
     display: flex;
     align-items: center;
     color: #DDD7BD;
+    cursor: pointer;
 }
 
 .options  li:hover {
