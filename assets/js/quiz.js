@@ -144,7 +144,7 @@ const questions = [
     {
         title: "¿Qué actividades disfrutas más?",
         description: "Descripción de la pregunta 13",
-        image: "./assets/img/quiz/question1.jpg",
+        image: "./assets/img/quiz/question13.jpg",
         answers: [
             { text: "Socializar", points: [1, 0, 0, 0, 0] },
             { text: "Comer juntos", points: [0, 1, 0, 0, 0] },
