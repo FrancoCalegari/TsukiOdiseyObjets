@@ -2,7 +2,7 @@ const questions = [
     {
         title: "¿Cuál es tu pasatiempo favorito?",
         description: "Descripción de la pregunta 1",
-        image: "./assets/img/quiz/question1.jpg",
+        image: "./assets/img/quiz/question1.webp",
         answers: [
             { text: "Comer", points: [1, 0, 0, 0, 0] },
             { text: "Leer", points: [0, 1, 0, 0, 0] },
@@ -14,7 +14,7 @@ const questions = [
     {
         title: "¿Qué color te gusta?",
         description: "Descripción de la pregunta 2",
-        image: "./assets/img/quiz/question2.jpg",
+        image: "./assets/img/quiz/question2.webp",
         answers: [
             { text: "Naranja", points: [1, 0, 0, 0, 0] },
             { text: "Amarillo", points: [0, 1, 0, 0, 0] },
@@ -26,7 +26,7 @@ const questions = [
     {
         title: "¿Qué comida o bebida te gusta más?",
         description: "Descripción de la pregunta 3",
-        image: "./assets/img/quiz/question3.jpg",
+        image: "./assets/img/quiz/question3.webp",
         answers: [
             { text: "Zanahoria", points: [1, 0, 0, 0, 0] },
             { text: "Ramen", points: [0, 1, 0, 0, 0] },
@@ -38,7 +38,7 @@ const questions = [
     {
         title: "¿Cuál personaje te cae bien?",
         description: "Descripción de la pregunta 4",
-        image: "./assets/img/quiz/question4.jpg",
+        image: "./assets/img/quiz/question4.webp",
         answers: [
             { text: "Pipi", points: [1, 0, 0, 0, 0] },
             { text: "Rosemary", points: [0, 1, 0, 0, 0] },
@@ -50,7 +50,7 @@ const questions = [
     {
         title: "¿Te gusta el Sol o La Luna?",
         description: "Descripción de la pregunta 5",
-        image: "./assets/img/quiz/question5.jpg",
+        image: "./assets/img/quiz/question5.webp",
         answers: [
             { text: "Luna", points: [1, 0, 0, 1, 1] },
             { text: "Sol", points: [0, 1, 1, 0, 0] }
@@ -59,7 +59,7 @@ const questions = [
     {
         title: "¿Cuál personaje te cae mal?",
         description: "Descripción de la pregunta 6",
-        image: "./assets/img/quiz/question6.jpg",
+        image: "./assets/img/quiz/question6.webp",
         answers: [
             { text: "Ninguno", points: [1, 0, 0, 0, 0] },
             { text: "Chi", points: [0, 1, 0, 0, 0] },
@@ -72,7 +72,7 @@ const questions = [
     {
         title: "¿Cuál es tu horario de dormir?",
         description: "Descripción de la pregunta 7",
-        image: "./assets/img/quiz/question7.jpg",
+        image: "./assets/img/quiz/question7.webp",
         answers: [
             { text: "No duermo", points: [1, 0, 0, 0, 0] },
             { text: "Temprano", points: [0, 1, 0, 0, 0] },
@@ -84,7 +84,7 @@ const questions = [
     {
         title: "¿Cómo describirías tu personalidad?",
         description: "Descripción de la pregunta 8",
-        image: "./assets/img/quiz/question8.jpg",
+        image: "./assets/img/quiz/question8.webp",
         answers: [
             { text: "Aventurero/a", points: [1, 0, 0, 0, 0] },
             { text: "Tranquilo/a", points: [0, 1, 0, 0, 0] },
@@ -96,7 +96,7 @@ const questions = [
     {
         title: "¿En qué ámbito te sientes más cómodo/a?",
         description: "Descripción de la pregunta 9",
-        image: "./assets/img/quiz/question9.jpg",
+        image: "./assets/img/quiz/question9.webp",
         answers: [
             { text: "Trabajando", points: [1, 0, 0, 0, 0] },
             { text: "En compania", points: [0, 1, 0, 0, 0] },
@@ -108,7 +108,7 @@ const questions = [
     {
         title: "¿Cuál de estas actitudes te describe mejor?",
         description: "Descripción de la pregunta 10",
-        image: "./assets/img/quiz/question10.jpg",
+        image: "./assets/img/quiz/question10.webp",
         answers: [
             { text: "Enojón/a", points: [1, 0, 0, 0, 0] },
             { text: "Depresivo/a", points: [0, 1, 0, 0, 0] },
@@ -120,7 +120,7 @@ const questions = [
     {
         title: "¿Qué tipo de vestimenta prefieres?",
         description: "Descripción de la pregunta 11",
-        image: "./assets/img/quiz/question11.jpg",
+        image: "./assets/img/quiz/question11.webp",
         answers: [
             { text: "Ropa deportiva, colores oscuros", points: [1, 0, 0, 0, 0] },
             { text: "Casual, colores pasteles", points: [0, 1, 0, 0, 0] },
@@ -132,7 +132,7 @@ const questions = [
     {
         title: "¿Qué colores prefieres?",
         description: "Descripción de la pregunta 12",
-        image: "./assets/img/quiz/question5.jpg",
+        image: "./assets/img/quiz/question5.webp",
         answers: [
             { text: "Verde y marrón", points: [1, 0, 0, 0, 0] },
             { text: "Azul y blanco", points: [0, 1, 0, 0, 0] },
@@ -144,7 +144,7 @@ const questions = [
     {
         title: "¿Qué actividades disfrutas más?",
         description: "Descripción de la pregunta 13",
-        image: "./assets/img/quiz/question13.jpg",
+        image: "./assets/img/quiz/question13.webp",
         answers: [
             { text: "Socializar", points: [1, 0, 0, 0, 0] },
             { text: "Comer juntos", points: [0, 1, 0, 0, 0] },
@@ -156,7 +156,7 @@ const questions = [
     {
         title: "¿Tienes alguna característica física notable?",
         description: "Descripción de la pregunta 14",
-        image: "./assets/img/quiz/question1.jpg",
+        image: "./assets/img/quiz/question1.webp",
         answers: [
             { text: "Lunares", points: [1, 0, 0, 0, 0] },
             { text: "Marcas de nacimiento", points: [0, 1, 0, 0, 0] },
@@ -168,7 +168,7 @@ const questions = [
     {
         title: "¿Cuál es la inicial de tu nombre?",
         description: "Descripción de la pregunta 15",
-        image: "./assets/img/quiz/question15.jpg",
+        image: "./assets/img/quiz/question15.webp",
         answers: [
             { text: "A-E", points: [1, 0, 0, 0, 0] },
             { text: "F-J", points: [0, 1, 0, 0, 0] },
