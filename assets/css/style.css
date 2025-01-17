@@ -1250,6 +1250,7 @@ footer ul{
         padding: 20px;
         border-radius: 15px;
         backdrop-filter: var(--blur);
+        box-shadow: var(--Boxshadow) 2px 2px 10px;
     }
 }
 
@@ -1258,12 +1259,14 @@ footer ul{
     justify-content: center;
     align-items: center;
     background-color: var(--backgroundColorCards);
+    box-shadow: var(--Boxshadow) 2px 2px 10px;
     backdrop-filter: var(--blur);
     height: 10rem;
-    width: 13rem;
+    width: auto;
     border-radius: 15px;
     transition: 500ms all;
     border: solid 3px transparent;
+    object-fit: cover;
 }
 
 .colab-container-card img {
@@ -1274,9 +1277,11 @@ footer ul{
 .colab-container-card:hover{
     filter: drop-shadow(2px 2px 20px  #ddd7bde1);
     transition: 500ms all;
-    border: solid 3px #FFECCF;
+    border: solid 3px var(--bordercolor);
     transform: scale(1.15);
     cursor: pointer;
+    z-index: 5;
+    position: relative;
 }
 .colabdivcontainer{
     display: flex;
@@ -1626,6 +1631,22 @@ footer ul{
     width: 120px;
 }
 
-.btn-container {
-    margin-bottom:1rem ;
+
+
+i {
+    font-size: 25px;
+    background-color: var(--backgroundColorCards);
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--ColorText);
+    border: solid 2px var(--ColorText);
+    cursor: pointer;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 500ms;
+}
+
+i:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 500ms;
 }
