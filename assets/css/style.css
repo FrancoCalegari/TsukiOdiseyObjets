@@ -37,14 +37,23 @@ body {
 	/* background: 
 		  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#437346 54% 57%,#0000 59%) 0 calc(144px/2),
 		  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#437346 54% 57%,#0000 59%) calc(144px/2) 0,
-		  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#437346 54% 57%,#0000 59%),
-		  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#437346 54% 57%,#0000 59%),
-		  #1A1818;
-	background-size: calc(144px/4.667) 144px,144px calc(144px/4.667); */
+          radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#437346 54% 57%,#0000 59%),
+          radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#437346 54% 57%,#0000 59%),
+          #1A1818;
+    background-size: calc(144px/4.667) 144px,144px calc(144px/4.667); */
 }
 
-body, a, a:hover{
-    cursor:url(./assets/img/cursor/NaLexnuCursosrChi.png), auto 
+body{
+    cursor: url('../img/cursor/NaLexnuCursosrChi.png'), auto;
+}
+
+a, button, [role="button"], input[type="submit"], .clickable, 
+.header-div li:hover, .presentacion-ul li:hover, #filterButton:hover,
+.item:hover, .pin:hover, .time-container button:hover, .code-card:hover,
+.tarjeta:hover, #galeria-section button:hover, .personajes-character:hover,
+.event-card:hover, .options li:hover, .gachaboy-container-card:hover,
+.quiz-card button:hover, i:hover, colab-container-card:hover, .colabdivcontainer, .colabdivcontainer a {
+    cursor: url('../img/cursor/Chipointer.png'), pointer !important;
 }
 
 header {
