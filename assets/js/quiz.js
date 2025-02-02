@@ -227,37 +227,77 @@ function selectAnswer(index) {
     currentQuestion++;
     showQuestion();
 }
-
 function showResults() {
     document.getElementById('quiz-question-card').style.display = 'none';
     document.getElementById('quiz-result-card').style.display = 'block';
+
+    // Calcular el resultado final
     const maxPoints = Math.max(...points);
     const resultIndex = points.indexOf(maxPoints);
     const result = results[resultIndex];
+
+    // Mostrar el nombre del personaje principal
     document.getElementById('quiz-result-title').textContent = `¡Te pareces a ${result.name}!`;
+
+    // Mostrar la imagen del personaje principal
     document.getElementById('quiz-result-image').src = result.image;
-    
-    const chart = document.getElementById('quiz-result-chart');
-    chart.innerHTML = '';
-    points.forEach((point, index) => {
-        const barContainer = document.createElement('div');
-        const barLabel = document.createElement('div');
-        const bar = document.createElement('div');
-        
-        barLabel.textContent = results[index].name;
-        barLabel.classList.add('quiz-result-label');
-        
-        bar.style.width = `${(point / questions.length) * 100}%`;
-        bar.textContent = point;
-        bar.classList.add('quiz-result-bar');
-        
-        barContainer.appendChild(barLabel);
-        barContainer.appendChild(bar);
-        chart.appendChild(barContainer);
+
+    // Calcular el porcentaje de similitud del personaje principal
+    const totalPoints = points.reduce((a, b) => a + b, 0);
+    const percentage = ((maxPoints / totalPoints) * 100).toFixed(2);
+
+    // Actualizar la barra de progreso del personaje principal
+    const progressBar = document.getElementById('quiz-result-progress');
+    progressBar.style.width = `${percentage}%`;
+
+    // Mostrar el porcentaje en texto del personaje principal
+    document.getElementById('quiz-result-percentage').textContent = `${percentage}%`;
+
+    // Generar la cuadrícula de personajes
+    const charactersGrid = document.getElementById('characters-grid');
+    charactersGrid.innerHTML = ''; // Limpiar el contenido anterior
+
+    results.forEach((character, index) => {
+        const characterPercentage = ((points[index] / totalPoints) * 100).toFixed(2);
+
+        const characterCard = document.createElement('div');
+        characterCard.classList.add('character-card');
+
+        const characterImage = document.createElement('img');
+        characterImage.src = character.image;
+        characterImage.alt = character.name;
+
+        const characterName = document.createElement('div');
+        characterName.classList.add('character-name');
+        characterName.textContent = character.name;
+
+        const characterPercentageText = document.createElement('div');
+        characterPercentageText.classList.add('character-percentage');
+        characterPercentageText.textContent = `${characterPercentage}%`;
+
+        // Contenedor de la barra de progreso
+        const progressBarContainer = document.createElement('div');
+        progressBarContainer.classList.add('progress-bar-container');
+
+        // Barra de progreso
+        const progressBar = document.createElement('div');
+        progressBar.classList.add('progress-bar');
+        progressBar.style.width = `${characterPercentage}%`;
+
+        progressBarContainer.appendChild(progressBar);
+
+        characterCard.appendChild(characterImage);
+        characterCard.appendChild(characterName);
+        characterCard.appendChild(characterPercentageText);
+        characterCard.appendChild(progressBarContainer);
+
+        charactersGrid.appendChild(characterCard);
     });
 
-    console.log(`Resultado final: ${result.name}`);
+    console.log(`Resultado final: ${result.name} con ${percentage}% de similitud`);
 }
+
+
 
 function restartQuiz() {
     currentQuestion = 0;
@@ -265,3 +305,7 @@ function restartQuiz() {
     document.getElementById('quiz-result-card').style.display = 'none';
     document.getElementById('quiz-intro-card').style.display = 'block';
 }
+
+
+  
+  

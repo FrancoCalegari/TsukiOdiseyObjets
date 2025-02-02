@@ -1659,3 +1659,94 @@ i:hover {
     transform: scale(1.2);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 500ms;
 }
+
+/*test*/
+/* Estilos para el contenedor de resultados */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Contenedor de la imagen del personaje principal */
+.result-image-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+/* Imagen del personaje principal */
+#quiz-result-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Texto del porcentaje principal */
+.result-percentage {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 10px 0;
+}
+
+/* Estilos base para todas las barras de progreso */
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: #007BFF;
+    border-radius: 6px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Cuadrícula de personajes */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+    padding-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Tarjetas de personajes */
+.character-card {
+    background: var(--backgroundColorCards);
+    backdrop-filter: var(--blur);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--Boxshadow);
+    padding: 15px;
+    text-align: center;
+    color: var(--ColorText);
+}
+
+.character-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.character-card .character-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.character-card .character-percentage {
+    font-size: 14px;
+    color: #007BFF;
+    margin: 8px 0;
+}

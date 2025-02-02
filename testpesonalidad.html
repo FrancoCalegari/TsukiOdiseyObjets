@@ -92,8 +92,22 @@
         
         <div class="quiz-card quiz-result-card" id="quiz-result-card" style="display: none;">
             <h2 id="quiz-result-title"></h2>
-            <img id="quiz-result-image" src="" alt="Result Image">
-            <div id="quiz-result-chart" class="quiz-result-chart"></div>
+            <div class="result-container">
+                <div class="result-image-container">
+                    <img id="quiz-result-image" src="" alt="Result Image">
+                </div>
+                <!-- Barra de progreso horizontal para el resultado principal -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="quiz-result-progress"></div>
+                </div>
+                <div class="result-percentage" id="quiz-result-percentage"></div>
+            </div>
+        
+            <!-- Contenedor para la cuadrícula de personajes -->
+            <div class="characters-grid" id="characters-grid">
+                <!-- Aquí se generarán dinámicamente las tarjetas de los personajes -->
+            </div>
+        
             <button onclick="restartQuiz()">Volver a empezar</button>
             <button onclick="window.location.href='./personajes.html'">Personajes</button>
         </div>
