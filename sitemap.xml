@@ -3,35 +3,35 @@
 
     <url>
         <loc>https://tsuki-odisey-objets.vercel.app/</loc>
-        <lastmod>2024-07-19</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2025-03-16</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://tsuki-odisey-objets.vercel.app/personajes.html</loc>
-        <lastmod>2024-07-19</lastmod>
+        <lastmod>2025-03-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://tsuki-odisey-objets.vercel.app/eventos.html</loc>
-        <lastmod>2024-07-19</lastmod>
+        <lastmod>2025-03-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://tsuki-odisey-objets.vercel.app/gachaboy.html</loc>
-        <lastmod>2024-07-19</lastmod>
+        <lastmod>2025-03-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
-        <url>
+    <url>
         <loc>https://tsuki-odisey-objets.vercel.app/combinaciones.html</loc>
-        <lastmod>2024-07-21</lastmod>
+        <lastmod>2025-03-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
